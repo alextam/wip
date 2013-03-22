@@ -1,0 +1,139 @@
+@charset 'UTF-8';
+
+.cyan {
+	background:url("../img/cyan.png") !important;
+	background-size: 100px 100px !important;
+	background-color: #b7ccc3 !important;
+	border:1px solid #b7ccc3 !important;	
+}
+
+.goLogo {
+	background:url("../img/logo.png") no-repeat;
+	width:355px;
+	height:138px;
+}
+
+.seperator {
+	background:url("../img/seperator-bg.png") !important;
+	background-color: #b7ccc3 !important;
+	height:136px;
+}
+
+.coffee-cup {
+	background:url("../img/coffeecup-bg.png") !important;
+	background-color:#e2ded3 !important;
+}
+
+.coffee-napkin {
+	border-top:1px solid #908e82 !important;
+	border-bottom:1px solid #908e82 !important;
+	background:url("../img/coffee-napkin.png") !important;
+	background-color:#c3c1b5 !important;
+}
+
+.cyan-mat {
+	background:url("../img/cyan-mat.png") !important;
+	background-color:#b3c8bf !important;
+}
+
+.coffee-black {
+	/*background:url("../img/coffee-black.png") !important;*/
+	background-color:#313131 !important;
+}
+
+.footer {
+	background:#222222 !important
+}
+
+.orange {
+	background:#fb8308;
+}
+
+
+.cream {
+	background:#fdeacc;
+}
+
+.lightcream {
+	background:#e3dfd4;
+}
+
+h1.cream {
+
+}
+
+h1.coffee {
+	background:#312d24;
+}
+
+.header {
+	background: #b7ccc3;
+	font-weight: 600;
+	color:#ffffff;
+	text-align: center;
+	height:215px;
+}
+
+
+.contact {
+	width:460px;
+	height:460px;
+}
+
+.contact p {
+	font-weight: 600;
+	color:#eee8dc;
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+.goTabBar-belt {		
+	background: #b7ccc3 !important;
+	border:2px solid white !important;
+	width:640px;
+	padding:8px;
+}
+
+.goCreamHeader {
+	font-weight: 600;
+	color:#eee8dc;
+	margin-top:0px;
+	text-align: center !important;
+	padding-top:20px;
+	text-transform: uppercase;
+	font-size:0.9em;
+}
+
+.goCoffeeHeader {
+	font-weight: 600;
+	color:#322d27;
+	margin-top:0px;
+	text-align: center !important;
+	padding-top:20px;
+	text-transform: uppercase;
+	font-size:0.9em;
+}
+
+.goTabBar {
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: 0px -1px 2px rgba(150, 150, 150, 1) !important;
+	color:#ffffff !important;
+	background:none !important;
+	font-weight: 600;
+	font-size:0.9em !important;
+	text-transform: uppercase;
+	border:none !important;
+	padding-bottom:3px !important;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.goTabBar.active {
+	border-bottom:4px solid #fb8308 !important;
+}
+
+.goBlueButton {
+	background:#3ba2c5 !important;
+}
