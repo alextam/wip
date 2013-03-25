@@ -1,8 +1,9 @@
-/* Requires postMan and validator */
+/* Requires Validator */
 enyo.kind({
     name: "go.ContactForm",
     kind: "Control",
     label:"",
+    fullURL: "",
     components: [
         {
         	tag:"div",
@@ -50,43 +51,6 @@ enyo.kind({
                     }
         		},
                 {
-                    kind:"onyx.InputDecorator",
-                    components:[
-                        {
-                            name:"txtTestInDeco1",
-                            kind:"Input"
-                            
-                        }
-
-                    ]
-                },
-                {
-                    kind:"onyx.InputDecorator",
-                    components:[
-                        {
-                            name:"txtTestInDeco2",
-                            kind:"Input"
-                            
-                        }
-                        
-                    ]
-                },
-                {
-                    components:[
-                        {
-                            name:"txtTestInDiv1",
-                            kind:"Input",
-                            attributes: { 
-                                required:"required" 
-                            }
-                        },
-                        {
-                            name:"txtTestInDiv2",
-                            kind:"Input"
-                        }
-                    ]
-                },
-        		{
         			kind:"onyx.Button",
         			content:"Send >",
         			onclick:"handleBtnSend",
@@ -122,21 +86,27 @@ enyo.kind({
         }
     },
     handleBtnSend:function(inSender,inEvent){
+        var self = this;
         this.validUtil = new go.Validator();
-        this.validUtil.validate(this.$.contactFormControl, this.onSuccessValidate, this.onErrorValidate);
-        
-    },
-    onSuccessValidate: function(results){
-        console.log(results);
-        alert("Sending...");
-    },
-    onErrorValidate: function(results){
-        alert("Please fill up the fields with valid input to proceed");
-        for (var i = 0; i < results.errors.length; i++) {
-            results.errors[i].controller.setValue("");
-            results.errors[i].controller.setAttribute("placeholder", "");
-            results.errors[i].controller.setAttribute("placeholder", results.errors[i].message);        
-        };
-    }   
+        this.validUtil.validate(this.$.contactFormControl, onSuccessValidate, onErrorValidate);
 
-});
+        function onSuccessValidate(results){
+            var payLoad = { 
+                name : self.$.txtName.getValue(),
+                phone : self.$.txtPhone.getValue(),
+                email : self.$.txtEmail.getValue(),
+                message : self.$.txtMessage.getValue()
+            };
+            self.bubble("onContactSubmitReady",payLoad);  
+        }
+
+        function onErrorValidate(results){
+            alert("Please fill up the fields with valid input to proceed");
+            for (var i = 0; i < results.errors.length; i++) {
+                results.errors[i].controller.setValue("");
+                results.errors[i].controller.setAttribute("placeholder", "");
+                results.errors[i].controller.setAttribute("placeholder", results.errors[i].message);        
+            };
+        }
+    },
+ });

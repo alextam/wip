@@ -104,7 +104,8 @@ enyo.kind({
                                         {
                                             classes:"goContactForm",
                                             label:"<h5>Ingenious Lab Sdn Bhd (1023342-X)</h5><small>No. 1, Jalan PJU 5/13, Dataran Sunway, Kota Damansara,<BR>47810 Petaling Jaya, Selangor D.E, Malaysia.</small>",
-                                            kind:"go.ContactForm"
+                                            kind:"go.ContactForm",
+                                            onContactSubmitReady:"handleFormSubmit"
                                         }                                        
                                     ]
                                     
@@ -126,5 +127,8 @@ enyo.kind({
         	
         	
         }
-    ]
+    ],
+    handleFormSubmit:function(inSender,inEvent){
+        console.log(inEvent);
+    }
 });
