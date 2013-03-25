@@ -140,16 +140,23 @@ h1.coffee {
 
 .goContactForm input, textarea {
 	border:none !important;
-	background: black;
-	color:#eee8dc;
+	background-color: #000000;
+ 	color:#eee8dc;
 	font-family: 'Helvetica Neue', 'Nimbus Sans L', Arial, sans-serif;
 	font-weight: 600;
 }
 
 .goContactForm textarea {
+	
 	height:100px;
+	border:none !important;
 	font-size:0.9em;
+ }
+
+.goContactForm textarea:invalid {
+ 	 box-shadow: none !important;
 }
+
 
 .goContactForm button {
 	background:#3ba2c5 !important;

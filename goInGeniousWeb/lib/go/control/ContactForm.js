@@ -41,12 +41,12 @@ enyo.kind({
         			
         		},
         		{
-        			kind:"onyx.TextArea",
+        			kind:"TextArea",
         			style:"padding:10px;",
         			classes:"setWidth90 floatRight marginTop-0px marginBottom-10px",
-        			placeholder:"Message",
+         			placeholder:"Message",
         			name:"txtMessage",
-        			attributes: { 
+                    attributes: { 
                         required:"required" 
                     }
         		},
@@ -55,10 +55,8 @@ enyo.kind({
         			content:"Send >",
         			onclick:"handleBtnSend",
         			classes:"setWidth20 floatRight resetCorner",
-        			name:"btnSend",
-                    attributes: { 
-                        required:"required" 
-                    }
+        			name:"btnSend" 
+                    
         		}
             ]
         },

@@ -122,7 +122,10 @@ enyo.kind({
         			classes:"footer",
         			style:"height:70px;"
 
-        		}
+        		},
+                {
+                    kind:"TextArea"
+                }
         	]
         	
         	
