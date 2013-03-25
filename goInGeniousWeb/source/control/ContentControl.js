@@ -60,11 +60,54 @@ enyo.kind({
                                     tag:"div",
                                     classes:"contact",
                                     allowHtml:true,
-                                    content:"<p>We are based in Malaysia but we work for people all around the world.</p><p>If you want to share a new project with us, or simply just want to find out how we can help you with mobile development, please send us your info and we will get in in touch with you.</p><p>If you hate forms for some reason, you can either call us or drop us an email.</p>"
+                                    components:[
+                                        {
+                                            tag:"div",
+                                            style:"width:420px;padding:15px",
+                                            components:[
+                                                {
+                                                    tag:"p",
+                                                    content:"We are based in Malaysia but we work for people all around the world."         
+                                                },
+                                                {
+                                                    tag:"p",
+                                                    content:"If you want to share a new project with us, or simply just want to find out how we can help you with mobile development, please send us your info and we will get in in touch with you."         
+                                                },
+                                                {
+                                                    tag:"p",
+                                                    content:"If you hate forms for some reason, you can either call us or drop us an email."
+                                                },
+                                                {
+                                                    tag:"div",
+                                                    style:"height:45px",
+                                                    classes:"marginBottom-15px"
+                                                },
+                                                {
+                                                    tag:"p",
+                                                    classes:"smallText",
+                                                    content:"Phone : (+60) 7490 2183"
+                                                },
+                                                {
+                                                    tag:"p",
+                                                    classes:"smallText",
+                                                    content:"Email : contact@goingenious.com"
+                                                }
+                                            ]
+                                        }
+                                        
+                                    ]
                                 },
                                 {
                                     tag:"div",
-                                    classes:"contact camo"
+                                    classes:"contact",
+                                    components:[
+                                        {
+                                            classes:"goContactForm",
+                                            label:"<h5>Ingenious Lab Sdn Bhd (1023342-X)</h5><small>No. 1, Jalan PJU 5/13, Dataran Sunway, Kota Damansara,<BR>47810 Petaling Jaya, Selangor D.E, Malaysia.</small>",
+                                            kind:"go.ContactForm"
+                                        }                                        
+                                    ]
+                                    
                                 } 
                             ]
                         }
