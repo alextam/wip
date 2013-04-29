@@ -1,0 +1,71 @@
+@charset 'UTF-8';
+
+body {
+	font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;
+}
+
+.appBg {
+	background: #bbb !important;
+}
+
+.selectorMenu {
+	background: #fff;
+	height:20px;
+	padding:15px;
+}
+
+.smaller {
+	font-size:0.96em !important;
+}
+
+.groupHeaderBar{
+	margin-top:5px !important;
+	padding:15px !important;
+}
+
+.menuButton {
+	height:60px;
+	background: #d2d2d2 !important;
+	color:#777 !important;
+	font-weight: bold;
+	text-align: left !important;
+	-moz-border-radius:0em !important;
+	-webkit-border-radius:0em !important;
+	border-radius:0em !important;
+	font-size:1.1em;
+	border:1px solid #ccc;
+}
+
+.menuButton.active {
+	background: #777 !important;
+	color:#fff !important;
+}
+
+.panelSlider > * {
+	width: 320px;
+	background-color: #EAEAEA;
+}
+
+.pickerButton {
+	height:25px;
+	background:#fff;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	text-align: center;
+	border:1px solid #ccc;
+}
+
+.formLabels {
+	height:25px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.formPicker {
+	background:#fff;
+	padding:10px;
+	font-size:1.0em;
+	font-weight:600;
+}

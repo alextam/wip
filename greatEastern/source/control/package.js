@@ -1,0 +1,10 @@
+enyo.depends(
+	"side",
+	"form",
+	"ui",
+	"MortgagePlanMenu.js",
+	"TermAssurancePlanMenu.js",
+	"EndowmentPlanMenu.js",
+	"WholeLifePlanMenu.js",
+	"HeaderControl.js" 
+);
