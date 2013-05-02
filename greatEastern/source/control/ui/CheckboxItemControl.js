@@ -1,8 +1,8 @@
 enyo.kind({
-    name: "PickerItemControl",
+    name: "CheckboxItemControl",
     kind: "Control",
     title:"",
-    items:[],
+    checked:false,
     components: [
         {
 			tag:"div",
@@ -17,10 +17,11 @@ enyo.kind({
 							content:"Set Title"
 						},
 						{
-							name:"standardPicker",
-                            kind:"StandardPicker",
-                            classes:"pickerMenuItem",
-							fit:true
+							tag:"div",
+                            fit:true,
+                            components:[
+                                {name:"chkboxControl", kind:"onyx.Checkbox",style:"margin-top:5px;"} 
+							]
 							
 						}
 					]
@@ -32,17 +33,15 @@ enyo.kind({
         var i;
     	this.inherited(arguments);
     	this.setTitle(this.title);
-    	if ( this.items.length ){
-            this.setupItem(this.items);
-    	}
+    	this.setChecked(this.checked);
+    	
     },
     setTitle:function(text){
     	this.title = text;
     	this.$.txtLabel.setContent(this.title);
     },
-    setupItem:function(items){
-    	var i;
-    	this.items = items;
-        this.$.standardPicker.setupItem(this.items);
-    }	
+    setChecked:function(value){
+        this.checked = value;
+        this.$.chkboxControl.checked = value;
+    }
 });

@@ -12,8 +12,8 @@ enyo.kind({
 					content: "Mortgage Plan"
 				},
 				{	
-					content: "Mortgage Decreasing Team Policy without Profit", 
-					classes: "selectorMenu roundedBottom smaller"
+					content: "Mortgage Decreasing Team Policy Without Profit", 
+					classes: "selectorMenu roundedBottom smaller truncate"
 				} 
 				
 			]

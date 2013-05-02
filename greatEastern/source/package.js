@@ -5,6 +5,6 @@ enyo.depends(
 	"$lib/taffy-min.js",
 	"component",
 	"control",
-	"MasterPanel.js",
+	"page",
 	"App.js"
 );

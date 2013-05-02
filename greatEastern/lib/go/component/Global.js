@@ -69,6 +69,13 @@ enyo.kind({
 			this.resetNavData();
 			this.resetGlobalStack();
 		},
+		toObject : function (arr) {
+		  var i;
+		  var rv = {};
+		  for (i = 0; i < arr.length; ++i)
+		    if (arr[i] !== undefined) rv[i] = arr[i];
+		  return rv;
+		},
 		mergeObject:function(object1,object2){
 			var c = {};
 			var key;

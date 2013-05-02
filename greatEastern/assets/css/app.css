@@ -23,6 +23,36 @@ body {
 	padding:15px !important;
 }
 
+.appInputForm {
+	background: #fff !important;
+	border:1px solid #ccc;
+}
+
+.appInputForm.error {
+	background: pink !important;
+	border:1px solid maroon !important;
+}
+
+.appInputForm.error input {
+	background: pink !important;
+	color:maroon;
+}
+
+.error input::-webkit-input-placeholder,.error textarea::-webkit-input-placeholder {
+  color: #990000;
+  font-size:1em;
+}
+
+.error input::-moz-placeholder, .error textarea::-moz-placeholder {
+  color: #990000;
+  font-size:1em;
+}
+
+.errorDecorator input::-ms-placeholder,.errorDecorator textarea::-ms-placeholder {
+  color: #990000;
+  font-size:1em;
+}
+
 .menuButton {
 	height:60px;
 	background: #d2d2d2 !important;
@@ -47,18 +77,20 @@ body {
 }
 
 .pickerButton {
-	height:25px;
-	background:#fff;
+	height:45px;
+	width:100%;
+	background:#fff !important;
 	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
+	padding-bottom:10px;
 	text-align: center;
-	border:1px solid #ccc;
+ 	border:1px solid #ccc;
 }
 
 .formLabels {
 	height:25px;
-	padding-top:10px;
+	padding-top:12px;
 	padding-left:10px;
 	padding-right:10px;
 }
@@ -68,4 +100,63 @@ body {
 	padding:10px;
 	font-size:1.0em;
 	font-weight:600;
+}
+
+.onyx-input-decorator {
+	border:1px solid #cccccc !important;
+}
+
+.onyx-input {
+	border:none;
+	font-size:1em !important;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-right:0px;
+	padding-left:8px;
+}
+
+.formDecoratorButton {
+	width:30px;
+	height:20px;
+	text-align:center !important;
+	padding-top:2px;
+	color:#777;
+}
+
+h1.formLabelHeader {
+	font-size:0.8em;
+	text-indent: 5px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color:#ddd;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+}
+
+.appIcon button {
+	background:url('../img/iconPack.png') no-repeat !important;
+	background-size: 42px 588px !important;
+	width:100% !important;
+	height:42px !important;
+	color:#888;
+	font-size:1em;
+	letter-spacing:-0.5px;
+	font-weight:bold;
+	text-align:left !important;
+}
+
+.right button {
+	background-position: 100% 0px !important;
+}
+
+.down button {
+	background-position: 100% -126px !important;
+}
+
+.up button {
+	background-position: 100% -84px !important;
+}
+
+.onyx-menu-item{
+	text-align: left !important;
 }

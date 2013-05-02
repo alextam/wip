@@ -1,4 +1,6 @@
 enyo.depends(
-	"PickerItemControl.js",
-	"StandardPicker.js"
+	"custom",
+	"CheckboxItemControl.js",
+	"InputItemControl.js",
+	"PickerItemControl.js" 
 );

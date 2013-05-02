@@ -1,6 +1,6 @@
 enyo.kind({
     name: "ControlName",
-    kind: "go.Focussable",
+    kind: "Control",
     components: [
         {
         	tag:"div",
