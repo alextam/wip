@@ -1,5 +1,5 @@
 enyo.kind({
-    name: "WholeLifePlanMenu",
+    name: "InvestmentLinkedPlanMenu",
     kind: "Control",
     naviMatrix: NavigationMatrix,
     classes:"inflatePadding",
@@ -10,24 +10,24 @@ enyo.kind({
 				{
 					classes:"groupHeaderBar roundedTop",
 					kind: "onyx.GroupboxHeader", 
-					content: "Whole Life Plan"
+					content: "Investment Linked Insurance Plan"
 				},
 				{	
-					content: "Great Life Care", 
+					content: "Link # 1", 
 					classes: "selectorMenu",
-					plan:"greatlifecare",
+					plan:"link1",
 					onclick:"handleSelectPlan" 
 				},
 				{	
-					content: "Great MaxiProtector", 
+					content: "Link # 2", 
 					classes: "selectorMenu",
-					plan:"greatmaxiprotector.clientdetailsform",
+					plan:"link2",
 					onclick:"handleSelectPlan" 
 				},
 				{	
-					content: "Great Ideal Living",
+					content: "Link # 3",
 					onclick:"handleSelectPlan",
-					plan:"greatidealliving", 
+					plan:"link3", 
 					classes: "selectorMenu roundedBottom" 
 				}
 				

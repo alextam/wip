@@ -5,13 +5,31 @@ body {
 }
 
 .appBg {
-	background: #bbb !important;
+	background: #ebebeb !important;
 }
 
 .selectorMenu {
 	background: #fff;
 	height:20px;
 	padding:15px;
+}
+
+.padding10px {
+	padding:10px;
+}
+
+.padding15px {
+	padding:15px;
+}
+
+.padding20px {
+	padding:20px;
+}
+
+.versionHeader {
+	margin:0px;
+	font-size:0.8em;
+	text-align: right;
 }
 
 .smaller {
@@ -23,9 +41,23 @@ body {
 	padding:15px !important;
 }
 
+.groupHeaderBarBlue {
+	background: #034693;
+	margin-top:5px !important;
+	padding:15px !important;
+	color:#ffffff;
+	font-weight: bold;
+}
+
 .appInputForm {
-	background: #fff !important;
-	border:1px solid #ccc;
+	-moz-box-shadow:    inset 0 0 15px #ccc;
+    -webkit-box-shadow: inset 0 0 15px #ccc;
+    box-shadow:         inset 0 0 15px #ccc;
+	border:1px solid #b3b3b3;
+}
+
+.appInputForm input {
+	background:  none !important
 }
 
 .appInputForm.error {
@@ -56,19 +88,110 @@ body {
 .menuButton {
 	height:60px;
 	background: #d2d2d2 !important;
-	color:#777 !important;
+	color:#434c59;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
 	font-weight: bold;
 	text-align: left !important;
 	-moz-border-radius:0em !important;
 	-webkit-border-radius:0em !important;
 	border-radius:0em !important;
 	font-size:1.1em;
-	border:1px solid #ccc;
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #f6f6f7), color-stop(0.1, #d6d8dc), color-stop(1, #aaaeb7)) !important;
+ 	background-image: -webkit-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important; 
+	background-image:    -moz-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important; 
+	background-image:     -ms-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important;  
+	background-image:      -o-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important; 
+	background-image:         linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important;
+
+	border:1px solid #b3b3b3;
 }
 
 .menuButton.active {
-	background: #777 !important;
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #828587), color-stop(0.1, #7e8389), color-stop(1, #666d74)) !important;
+ 	background-image: -webkit-linear-gradient( #828587 , #7e8389, #666d74 )  !important; 
+	background-image:    -moz-linear-gradient( #828587 , #7e8389, #666d74 )  !important; 
+	background-image:     -ms-linear-gradient( #828587 , #7e8389, #666d74 )  !important;  
+	background-image:      -o-linear-gradient( #828587 , #7e8389, #666d74 )  !important; 
+	background-image:         linear-gradient( #828587 , #7e8389, #666d74 )  !important;
+	color:#fff !important;	
+	text-shadow: none !important;
+}
+
+.geButton {
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #7C7C7C), color-stop(0.1, #4C4C4C), color-stop(1, #000000)) !important;
+ 	background-image: -webkit-linear-gradient( #7C7C7C , #4C4C4C, #000000 )  !important; 
+	background-image:    -moz-linear-gradient( #7C7C7C , #4C4C4C, #000000 )  !important; 
+	background-image:     -ms-linear-gradient( #7C7C7C , #4C4C4C, #000000 )  !important;  
+	background-image:      -o-linear-gradient( #7C7C7C , #4C4C4C, #000000 )  !important; 
+	background-image:         linear-gradient( #7C7C7C , #4C4C4C, #000000 )  !important;
+	border:2px solid #777 !important;
 	color:#fff !important;
+	font-weight: bold;
+	text-shadow:none !important;
+	-moz-border-radius:0.5em !important;
+	-webkit-border-radius:0.5em !important;
+	border-radius:0.5em !important;
+}
+
+.geButton:active:hover:not([disabled]) {
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #000000), color-stop(0.1, #4C4C4C), color-stop(1, #000000)) !important;
+ 	background-image: -webkit-linear-gradient( #000000 , #4C4C4C, #7C7C7C )  !important; 
+	background-image:    -moz-linear-gradient( #000000 , #4C4C4C, #7C7C7C )  !important; 
+	background-image:     -ms-linear-gradient( #000000 , #4C4C4C, #7C7C7C )  !important;  
+	background-image:      -o-linear-gradient( #000000 , #4C4C4C, #7C7C7C )  !important; 
+	background-image:         linear-gradient( #000000 , #4C4C4C, #7C7C7C )  !important;
+	border:2px solid #777 !important;
+	color:#fff !important;
+	font-weight: bold;
+	text-shadow:none !important;
+}
+
+.geLionButton {
+	background:url('../img/iconPack.png') no-repeat !important;
+	background-position: center -164px !important;
+	background-size: 40px 560px !important;
+	background-color:#ffffff !important;
+	border:2px solid #777 !important;
+	color:#fff !important;
+	font-weight: bold;
+ 	text-shadow:none !important;
+ 	-moz-border-radius:0.5em !important;
+	-webkit-border-radius:0.5em !important;
+	border-radius:0.5em !important;
+}
+
+.geLionButton:active:hover:not([disabled]) {
+	background-color:#eeeeee !important;
+	border:2px solid #777 !important;
+	color:#fff !important;
+	font-weight: bold;
+	text-shadow:none !important;
+}
+
+.geButtonRed {
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #fe7a71), color-stop(0.1, #f3373f), color-stop(1, #ed2028)) !important;
+ 	background-image: -webkit-linear-gradient( #fe7a71 , #f3373f, #ed2028 )  !important; 
+	background-image:    -moz-linear-gradient( #fe7a71 , #f3373f, #ed2028 )  !important; 
+	background-image:     -ms-linear-gradient( #fe7a71 , #f3373f, #ed2028 )  !important;  
+	background-image:      -o-linear-gradient( #fe7a71 , #f3373f, #ed2028 )  !important; 
+	background-image:         linear-gradient( #fe7a71 , #f3373f, #ed2028 )  !important;
+	border:2px solid #ec1c24 !important;
+	color:#fff !important;
+	font-weight: bold;
+	text-shadow:none !important;
+}
+
+.geButtonRed:active:hover:not([disabled]) {
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #ed2028), color-stop(0.6, #f3373f), color-stop(1, #fe7a71)) !important;
+ 	background-image: -webkit-linear-gradient( #ed2028 , #f3373f, #fe7a71 )  !important; 
+	background-image:    -moz-linear-gradient( #ed2028 , #f3373f, #fe7a71 )  !important; 
+	background-image:     -ms-linear-gradient( #ed2028 , #f3373f, #fe7a71 )  !important;  
+	background-image:      -o-linear-gradient( #ed2028 , #f3373f, #fe7a71 )  !important; 
+	background-image:         linear-gradient( #ed2028 , #f3373f, #fe7a71 )  !important;
+	border:2px solid #ec1c24 !important;
+	color:#222 !important;
+	font-weight: bold;
+	text-shadow:none !important;
 }
 
 .panelSlider > * {
@@ -76,34 +199,39 @@ body {
 	background-color: #EAEAEA;
 }
 
+.insetShadow {
+	-moz-box-shadow:    inset 0 0 15px #ccc;
+    -webkit-box-shadow: inset 0 0 15px #ccc;
+    box-shadow:         inset 0 0 15px #ccc;
+}
+
 .pickerButton {
 	height:45px;
 	width:100%;
-	background:#fff !important;
-	padding-top:10px;
 	padding-left:10px;
 	padding-right:10px;
 	padding-bottom:10px;
 	text-align: center;
- 	border:1px solid #ccc;
+ 	border:1px solid #b3b3b3;
 }
 
 .formLabels {
-	height:25px;
-	padding-top:12px;
-	padding-left:10px;
+	height:15px;
+	padding-top:3px;
+	padding-left:1px;
 	padding-right:10px;
+	padding-bottom:8px;
 }
 
 .formPicker {
 	background:#fff;
-	padding:10px;
+	padding:5px;
 	font-size:1.0em;
 	font-weight:600;
 }
 
 .onyx-input-decorator {
-	border:1px solid #cccccc !important;
+	border:1px solid #b3b3b3 !important;
 }
 
 .onyx-input {
@@ -120,15 +248,14 @@ body {
 	height:20px;
 	text-align:center !important;
 	padding-top:2px;
-	color:#777;
+	color:#bbb;
 }
 
 h1.formLabelHeader {
-	font-size:0.8em;
+	font-size:1em;
 	text-indent: 5px;
 	font-weight: 600;
-	text-transform: uppercase;
-	color:#ddd;
+	color:#666;
 	margin-top:5px !important;
 	margin-bottom:5px !important;
 }
@@ -160,3 +287,153 @@ h1.formLabelHeader {
 .onyx-menu-item{
 	text-align: left !important;
 }
+
+.onyx-toolbar{
+	background-image: -webkit-gradient(linear, left ,bottom, color-stop(0, #ffffff), color-stop(0.49, #e6e7eb), color-stop(0.5, #bec1cb), color-stop(1, #a8acb9)) !important;
+ 	background-image: -webkit-linear-gradient( #ffffff , #e6e7eb , #bec1cb, #a8acb9 )  !important; 
+	background-image:    -moz-linear-gradient( #ffffff , #e6e7eb , #bec1cb, #a8acb9 )  !important; 
+	background-image:     -ms-linear-gradient( #ffffff , #e6e7eb , #bec1cb, #a8acb9 )  !important; 
+	background-image:      -o-linear-gradient( #ffffff , #e6e7eb , #bec1cb, #a8acb9 )  !important; 
+	background-image:         linear-gradient( #ffffff , #e6e7eb , #bec1cb, #a8acb9 )  !important;
+	border-bottom:1px solid #797f90 !important;
+	background: #a8acb9;
+	padding:5px !important;
+	height:50px;
+}
+
+.onyx-toolbar div h5{
+	color:#717880;
+	margin-top:10px;
+	margin-bottom:5px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+}
+
+.onyx-toolbar .onyx-button {
+	width:65px !important;
+	padding-top:5px !important;
+	padding-left:10px !important;
+ 	text-align: center !important;
+}
+
+.greatEasternRed {
+	text-align:center;
+	margin:0px;
+	padding:3px;
+	font-style:italic;
+	color:red;
+}
+
+.greatEasternWhite {
+	background: #ffffff;
+	color:#5c5c5c;
+}
+
+
+
+@media screen and (min-width : 300px) {
+	.formLabelsAutoWidth {
+ 		font-size:1em;
+ 		max-width:150px;
+	}
+}
+
+@media screen and (min-width : 300px) {
+	.taglineHeader {
+		text-align: right !important;
+		font-size:1.1em;
+		font-weight: bold;
+		color:#646466;
+		margin-top:5px;
+		margin-bottom:5px;
+		margin-right:auto;
+		margin-left:auto;
+		width: 280px;
+ 	}
+}
+
+@media screen and (min-width: 300px){
+	.greatEasternLogo {
+		background:url('../img/greatEastern.png') no-repeat !important;
+		background-size:280px 105px !important;
+		width:280px !important;
+		height:105px !important;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width : 450px) {
+	.greatEasternLogo {
+		background:url('../img/greatEastern.png') no-repeat !important;
+		background-size:448px 168px !important;
+		width:448px !important;
+		height:168px !important;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width : 450px) {
+	.taglineHeader {
+		text-align: right !important;
+		font-size:1.3em;
+		font-weight: bold;
+		color:#646466;
+		margin-top:5px;
+		margin-bottom:5px;
+		margin-right:auto;
+		margin-left:auto;
+		width: 448px;	 
+	}
+}
+
+@media screen and (min-width : 450px) {
+	.formLabelsAutoWidth {
+		width:20%;
+ 		font-size:1em !important;
+		max-width:200px;
+	}
+}
+
+@media screen and (min-width : 560px) {
+	.greatEasternLogo {
+		background:url('../img/greatEastern.png') no-repeat !important;
+		background-size:560px 210px !important;
+		width:560px !important;
+		height:210px !important;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width : 560px) {
+	.taglineHeader {
+		text-align: right !important;
+		font-size:1.5em;
+		font-weight: bold;
+		color:#646466;
+		margin-top:5px;
+		margin-bottom:5px;
+		margin-right:auto;
+		margin-left:auto;
+		width: 560px;	
+	}
+}
+
+.formContainerFixed {
+	margin-top:10px;
+	padding:10px; 
+	background:#fff;
+	margin-right:auto;
+	margin-left: auto;
+	max-width: 520px;
+	border:2px solid #bbb;
+}
+
+.formContainer {
+	margin-top:10px;
+	padding:10px; 
+	background:#fff;
+	margin-right:auto;
+	margin-left: auto;
+ 	border:2px solid #bbb;
+}
+
+

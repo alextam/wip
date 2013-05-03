@@ -1,5 +1,5 @@
 enyo.kind({
-    name: "PickerItemControl",
+    name: "PickerItemShortControl",
     kind: "Control",
     title:"",
     items:[],
@@ -9,23 +9,19 @@ enyo.kind({
 			classes:"formPicker",
 			components:[
 				{
-					components:[
+					layoutKind: "FittableColumnsLayout",
+                    components:[
 						{
 							name:"txtLabel",
 							classes:"formLabelsAutoWidth formLabels truncate",
+                            style:"padding-top:13px !important;",
 							content:"Set Title"
 						},
                         {
-                            layoutKind: "FittableColumnsLayout",
-                            components:[
-        						{
-        							name:"standardPicker",
-                                    kind:"StandardPicker",
-                                    classes:"pickerMenuItem",
-        							fit:true
-        							
-        						}
-                            ]
+                            name:"standardPicker",
+                            kind:"StandardPicker",
+                            fit:true,
+                            classes:"pickerMenuItem" 
                         }
 					]
 				}

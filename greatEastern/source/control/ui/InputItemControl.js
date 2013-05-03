@@ -12,38 +12,44 @@ enyo.kind({
 			classes:"formPicker",
 			components:[
 				{
-					layoutKind: "FittableColumnsLayout",
 					components:[
 						{
 							name:"txtLabel",
-							classes:"setWidth25 formLabels truncate",
+							classes:"formLabels truncate",
+                            fit:true,
 							content:"Title"
+
 						},
 						{
-							kind: "onyx.InputDecorator",
-							classes:"appInputForm",
-							fit:true,
-							components: [
-								{
-									layoutKind: "FittableColumnsLayout",
-									classes:"setWidthFull",
-									style:"margin-top:5px;",
-									components:[
-										{
-											kind: "onyx.Input",
-											name: "txtInput",
- 											value: "Input Area",
-											fit:true,
-											onchange:"inputChanged"
-										},
-										{
-											ontap:"handleRemoveInput",
-											classes: "formDecoratorButton icon icon-remove"
-										}
-									]
-							   }
-							]
-						}
+							layoutKind: "FittableColumnsLayout",
+                            components:[
+                            {
+                                kind: "onyx.InputDecorator",
+    							classes:"appInputForm",
+                                fit:true,
+    							components: [
+    								{
+    									layoutKind: "FittableColumnsLayout",
+    									classes:"setWidthFull",
+    									style:"margin-top:5px;",
+    									components:[
+    										{
+    											kind: "onyx.Input",
+    											name: "txtInput",
+     											value: "Input Area",
+    											fit:true,
+    											onchange:"inputChanged"
+    										},
+    										{
+    											ontap:"handleRemoveInput",
+    											classes: "formDecoratorButton icon icon-remove"
+    										}
+    									]
+    							   }
+    							]
+    						  }
+                            ]
+                        }
 					]
 				}
 			]

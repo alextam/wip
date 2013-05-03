@@ -7,14 +7,16 @@ enyo.kind({
 	components: [
 		{
 			kind: "HeaderControl",
+			name: "headerControl",
 			onMainButtonTapped: "handleBtnMainTapped",
+			onLogoutButtonTapped: "handleBtnLogoutTapped",
 			onSideButtonTapped: "handleBtnSideTapped"
 		},
 		{
 			name:"panelControl",
 			kind: "Panels", 
 			classes: "panelSlider", 
-			arrangerKind: "CollapsingArranger",
+ 			arrangerKind: "CollapsingArranger",
 			onTransitionStart:"handlePanelChanged", 
 			fit: true, 
 			wrap: false,
@@ -35,13 +37,13 @@ enyo.kind({
 					thumb:true
 				}
 			]
-		}	
+		}
 	],
 	create: function(inSender,inEvent){
 		this.inherited(arguments);
 		this.$.panelControl.setIndex(0);
 		this.navMatrix.setContentIndex(0);
-		this.setupContent( this.navMatrix.getContentPage(0) );
+		this.setupContent( this.navMatrix.getContentPage("home0") );
 		enyo.Signals.send("onMainPage");
  	},
 	rendered : function(inSender,inEvent){
@@ -53,6 +55,7 @@ enyo.kind({
  		var i;
  		this.$.masterViewScrollerContent.destroyClientControls();
  		this.$.detailViewScrollerControl.destroyClientControls();
+ 		this.$.headerControl.setTitle(matrix.title);
  		this.$.masterViewScrollerContent.createComponent(matrix.left);
  		this.$.masterViewScrollerContent.render();
  		for(i = 0; i < matrix.right.length; i++){
@@ -88,11 +91,14 @@ enyo.kind({
 
  	handleLeftButtonTapped : function(inSender,inEvent) {
  		this.handleSlidePanel();
- 		this.setupContent( this.navMatrix.getContentPage(inEvent.originator.selected) );
+ 		this.setupContent( this.navMatrix.getContentPage(inEvent.menu) );
  	},
  	handleBtnSideTapped:function(inSender,inEvent){
  		enyo.Signals.send("onMainPage");
    		this.setupContent(this.navMatrix.goHome());
+ 	},
+ 	handleBtnLogoutTapped:function(inSender,inEvent) {
+ 		new App().renderInto(document.body);
  	},
  	handleOnSelectMenu: function(inSender,inEvent) {
  		console.log(inEvent);

@@ -1,18 +1,23 @@
 enyo.kind({
-	name: "GreatMaxiProtectorForm",
-	kind: "FittableRows", 
+    name: "ClientDetailsForm",
+    kind: "FittableRows", 
 	classes: "enyo-fit enyo-unselectable",
-	components:[
+    components:[
 		{   
-			classes:"setWidthFull",
+			classes:"setWidthFull inflatePadding marginTop-5px",
 			components:[
 				{
-					classes:"inflatePadding",
+					tag:"h1",
+					content:"Client Details",
+					classes:"formLabelHeader"
+				},
+				{
+					classes:"roundedCorner formContainer",
+					style:"padding:8px; background:#fff;border:1px solid #bbb",
 					components:[
 						{
 							kind:"PickerItemControl",
 							title:"Title",
-							classes:"roundedTop",
 							items:[
 								{content: "Dr."},
 								{content: "Mr."},
@@ -35,6 +40,11 @@ enyo.kind({
 							validation:"xor",
 							maxlength: 10,
 							value:""
+						},
+						{
+							tag:"h4",
+							content:"or",
+							classes:"greatEasternRed"
 						},
 						{
 							kind:"InputItemControl",
@@ -76,7 +86,6 @@ enyo.kind({
 						{
 							kind:"PickerItemControl",
 							title:"Occupation Class",
-							classes:"roundedBottom",
  							items:[
 								{content: "Creative, Art & Performance"},
 								{content: "Vetianiary, Doctor & Medical"},
@@ -84,14 +93,18 @@ enyo.kind({
 								{content: "Sales and Marketing"},
 								{content: "Executive and Management"}
 							]
+						},
+						{
+							style:"height:5px"
 						}
 					]
 				},
+				
 				{
 					classes:"setWidthFull txtAlignCenter",
 					components:[
 						{
-							classes:"inflatePadding",
+							classes:"inflatePadding geButton marginTop-30px roundedCorner",
 							style:"height:45px",
 							kind:"onyx.Button",
 							content:"Submit"
@@ -99,19 +112,10 @@ enyo.kind({
 					]
 				},
 				{
-					style:"height:50px"
+					style:"height:30px;"
 				}
 			]
 		} 
 
-	],
-	create: function(inSender,inEvent){
-		this.inherited(arguments);
-		//Do stuff onCreate
-	},
-	rendered : function(inSender,inEvent){
-		this.inherited(arguments);
-		//Do stuff afterRendered
-	}
-
+	]
 });

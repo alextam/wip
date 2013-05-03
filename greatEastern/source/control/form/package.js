@@ -1,3 +1,4 @@
 enyo.depends(
-	"GreatMaxiProtectorForm.js"
+	"LoginForm.js",
+	"ClientDetailsForm.js"
 );

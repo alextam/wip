@@ -6,17 +6,17 @@ enyo.kind({
 		{
 			kind: "onyx.PickerDecorator",
 			onSelect: "pickerHandler",
-            classes:"appIcon down",
+            classes:"appIcon down insetShadow",
 			components: [
 				{
 					kind: "onyx.PickerButton", 
 					onChange: "pickerDisplayChange",
  					classes: "pickerButton",
- 					components:[
+                    components:[
  						{
- 							content:"Select...",
+ 							content:"Select One...",
  							name:"labelPickerButtonControl",
- 							classes:"setWidth90 truncate" 
+ 							classes:"setWidth90 truncate"
  						}
  					]
 				},

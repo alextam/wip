@@ -8,6 +8,7 @@ enyo.kind({
             classes:"setWidthFull menuButton",
         	content:"Traditional Plan",
             index:0,
+            menu:"home0",
             ontap:"handleActivateDetailPage"
         },
         {
@@ -15,6 +16,7 @@ enyo.kind({
             classes:"setWidthFull menuButton",
         	content:"Investment-Linked Insurance",
             index:1,
+            menu:"home1",
             ontap:"handleActivateDetailPage"
         }
     ],  
@@ -23,11 +25,11 @@ enyo.kind({
        this.selected = inSender.index;
        switch(inSender.index) {
             case 0:
-                this.bubble("onUpdatePanel");
+                this.bubble("onUpdatePanel",inSender);
             break; 
 
             case 1:
-                this.bubble("onUpdatePanel");
+                this.bubble("onUpdatePanel",inSender);
             break;
        }
        return true;

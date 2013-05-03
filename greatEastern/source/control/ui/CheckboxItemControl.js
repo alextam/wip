@@ -13,7 +13,8 @@ enyo.kind({
 					components:[
 						{
 							name:"txtLabel",
-							classes:"setWidth25 formLabels truncate",
+							classes:"formLabelsAutoWidth formLabels truncate",
+                            style:"padding-top:13px !important;",
 							content:"Set Title"
 						},
 						{

@@ -1,26 +1,30 @@
 enyo.kind({
     name: "GreatMaxiProtectorMenu",
     kind: "SideMenu",
+    selected:0,
     components: [
         {
         	kind:"go.StateButton",
+            index:0,
             classes:"setWidthFull menuButton",
         	content:"Client Details",
-            index:0,
+            menu:"greatmaxiprotector.clientdetailsform",
             ontap:"handleActivateDetailPage"
         },
         {
         	kind:"go.StateButton",
+            index:1,
             classes:"setWidthFull menuButton",
         	content:"Product Entry",
-            index:1,
+            menu:"greatmaxiprotector.productentryform",
             ontap:"handleActivateDetailPage"
         },
         {
         	kind:"go.StateButton",
+            index:2,
             classes:"setWidthFull menuButton",
         	content:"Compute Premium",
-            index:2,
+            menu:"greatmaxiprotector.computepremiumform",
             ontap:"handleActivateDetailPage"
         }
     ],  
@@ -29,11 +33,14 @@ enyo.kind({
        switch(inSender.index) {
             case 0:
                 this.bubble("onUpdatePanel");
-
             break; 
 
             case 1:
-            	
+                this.bubble("onUpdatePanel");            	
+            break;
+
+            case 2:
+                this.bubble("onUpdatePanel");
             break;
        }
        return true;
