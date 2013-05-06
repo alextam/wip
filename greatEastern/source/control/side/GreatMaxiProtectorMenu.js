@@ -29,18 +29,20 @@ enyo.kind({
         }
     ],  
     handleActivateDetailPage:function(inSender,inEvent) {
+       //console.log("menu");
+       //console.log(inSender.menuonUpdatePanel); 
        this.setSelectedIndex(inSender.index); 
        switch(inSender.index) {
             case 0:
-                this.bubble("onUpdatePanel");
+                this.bubble("onUpdatePanel",inSender);
             break; 
 
             case 1:
-                this.bubble("onUpdatePanel");            	
+                this.bubble("onUpdatePanel",inSender);            	
             break;
 
             case 2:
-                this.bubble("onUpdatePanel");
+                this.bubble("onUpdatePanel",inSender);
             break;
        }
        return true;

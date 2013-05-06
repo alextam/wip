@@ -52,7 +52,7 @@ enyo.kind({
  	
  	setupContent : function(matrix){
  		//This is how navigation works it replaces the controls of the small and the large panels
- 		var i;
+  		var i;
  		this.$.masterViewScrollerContent.destroyClientControls();
  		this.$.detailViewScrollerControl.destroyClientControls();
  		this.$.headerControl.setTitle(matrix.title);
@@ -84,7 +84,6 @@ enyo.kind({
  		var matrix = this.navMatrix.gotoPlan(inEvent.plan);
  		if (matrix != null){
  			enyo.Signals.send("onInnerPage");
-
  			this.setupContent(matrix);
  		}	
  	},

@@ -27,9 +27,7 @@ enyo.kind({
 		]} 
 
     ],
-    events: {
-		onchange: ''
-	},
+     
     create:function(){
     	this.inherited(arguments);
     	if(this.items.length){
@@ -37,8 +35,10 @@ enyo.kind({
     	}
     },
     pickerDisplayChange:function(inSender,inEvent) {
-    	this.doChange(this.$.pickerMenuControl.selected);
     	this.$.labelPickerButtonControl.setContent(this.$.pickerMenuControl.selected.content);
+    },
+    pickerHandler:function(inSender,inEvent) {
+        this.bubble('onChangeItem',this.$.pickerMenuControl.selected);
     },
     setupItem:function(items){
      	var i;
@@ -47,7 +47,7 @@ enyo.kind({
     	for(i = 0; i < items.length;i++){
     		this.$.pickerMenuControl.createComponent( items[i] );	
     	}
-
     	this.$.pickerMenuControl.render();
     }
+    
 });

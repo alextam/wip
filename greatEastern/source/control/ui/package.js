@@ -4,5 +4,6 @@ enyo.depends(
 	"HeaderControl.js",
 	"InputItemControl.js",
 	"PickerItemShortControl.js", 
+	"PickerItemLabelEndControl.js",
 	"PickerItemControl.js" 
 );

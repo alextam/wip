@@ -33,7 +33,7 @@ enyo.kind({
 				plan:"greatmaxiprotector.clientdetailsform",
 				left:{kind:"GreatMaxiProtectorMenu", selected:0},
 				right:[
-					{kind:"GreatMaxiProtector"},
+					{kind:"GreatMaxiProtector.ClientDetailsForm"},
 					{tag:"br"}
 				]
 			},
@@ -43,7 +43,7 @@ enyo.kind({
 				plan:"greatmaxiprotector.productentryform",
 				left:{kind:"GreatMaxiProtectorMenu", selected:1},
 				right:[
-					{kind:"GreatMaxiProtector"},
+					{kind:"GreatMaxiProtector.ProductEntryForm"},
 					{tag:"br"}
 				]
 			},
@@ -53,7 +53,7 @@ enyo.kind({
 				plan:"greatmaxiprotector.computepremiumform",
 				left:{kind:"GreatMaxiProtectorMenu", selected:2},
 				right:[
-					{kind:"GreatMaxiProtector"},
+					{kind:"GreatMaxiProtector.ComputePremiumForm"},
 					{tag:"br"}
 				]
 			}

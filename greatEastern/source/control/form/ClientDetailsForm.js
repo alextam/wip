@@ -13,8 +13,7 @@ enyo.kind({
 				},
 				{
 					classes:"roundedCorner formContainer",
-					style:"padding:8px; background:#fff;border:1px solid #bbb",
-					components:[
+ 					components:[
 						{
 							kind:"PickerItemControl",
 							title:"Title",

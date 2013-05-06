@@ -1,5 +1,7 @@
 enyo.depends(
-	"GreatMaxiProtector.js",
+	"GreatMaxiProtector.ComputePremiumForm.js",
+	"GreatMaxiProtector.ProductEntryForm.js",
+	"GreatMaxiProtector.ClientDetailsForm.js",
 	"Preloader.js",
 	"MasterPanel.js" 
 );
