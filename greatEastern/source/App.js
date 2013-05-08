@@ -11,7 +11,7 @@ enyo.kind({
 			thumb:true,
 			strategyKind:"TransitionScrollStrategy",
 			components:[
-				{kind:"LoginForm"}
+				{ kind:"LoginForm" }
 			]
 		}
 		 		

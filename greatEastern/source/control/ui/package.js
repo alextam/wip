@@ -1,6 +1,7 @@
 enyo.depends(
 	"custom",
 	"CheckboxItemControl.js",
+	"SearchIndexViewControl.js",
 	"HeaderControl.js",
 	"InputItemControl.js",
 	"PickerItemShortControl.js", 

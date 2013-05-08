@@ -102,8 +102,7 @@ body {
 	background-image:     -ms-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important;  
 	background-image:      -o-linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important; 
 	background-image:         linear-gradient( #f6f6f7 , #d6d8dc, #aaaeb7 )  !important;
-
-	border:1px solid #b3b3b3;
+ 	border:1px solid #b3b3b3;
 }
 
 .menuButton.active {
@@ -127,11 +126,12 @@ body {
 	border:2px solid #777 !important;
 	color:#fff !important;
 	font-weight: bold;
+	padding-left:15px !important;
 	text-shadow:none !important;
 	-moz-border-radius:0.5em !important;
 	-webkit-border-radius:0.5em !important;
 	border-radius:0.5em !important;
-}
+ }
 
 .geButton:active:hover:not([disabled]) {
 	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #000000), color-stop(0.1, #4C4C4C), color-stop(1, #000000)) !important;
@@ -460,4 +460,51 @@ h1.formLabelHeader {
     font-size:0.85em;
     padding-left:7px;
     padding-top:15px;
+}
+
+.listSelector {
+	height:50px;
+	border-bottom:1px solid #ccc;
+}
+
+.listSelector.active {
+	background: #0587f4;
+ }
+
+ .listSelector.active h1 {
+ 	color:#ffffff;
+ }
+
+.dividerHeader {
+	margin:0px !important;
+	height:20px;
+	padding-top:6px;
+	padding-left:10px;
+	padding-bottom:5px;
+	border-top:1px solid #a5b1ba !important;
+	border-bottom:1px solid #777 !important;
+	background-image: -webkit-gradient(linear, top, bottom, color-stop(0, #a5b1ba), color-stop(0.1, #a4b0b9), color-stop(1, #b8c1c8)) !important;
+ 	background-image: -webkit-linear-gradient( #a5b1ba , #a4b0b9, #b8c1c8 )  !important; 
+	background-image:    -moz-linear-gradient( #a5b1ba , #a4b0b9, #b8c1c8 )  !important; 
+	background-image:     -ms-linear-gradient( #a5b1ba , #a4b0b9, #b8c1c8 )  !important;  
+	background-image:      -o-linear-gradient( #a5b1ba , #a4b0b9, #b8c1c8 )  !important; 
+	background-image:         linear-gradient( #a5b1ba , #a4b0b9, #b8c1c8 )  !important;
+}
+
+.dividerHeader h1 {
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:1em;
+	color:#fff;
+	text-transform: uppercase;
+}
+
+.listSelector h1 {
+	margin-top:0px;
+	padding-top:15px !important;
+	padding-bottom:10px;
+	padding-left:10px;
+	font-weight:bold;
+	font-size:1em;
+	color:#666;
 }

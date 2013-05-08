@@ -2,7 +2,7 @@ enyo.kind({
 	name: "go.StateButton",
 	kind: "onyx.Button", 
 	isBusy : false,
-	style:"margin:0px !important;",
+	style:"margin:0px !important;padding:5px !important",
  	components: [
 		{
 			tag:"div",
