@@ -1,5 +1,5 @@
 enyo.kind({
-    name: "MainMenu",
+    name: "MainMenuView",
     classes:"setWidthFull",
     components: [
       {

@@ -1,4 +1,5 @@
 enyo.depends(
 	"DashboardView.js",
-	"MainMenu.js"
+	"LocationSelectorView.js",
+	"MainMenuView.js"
  );

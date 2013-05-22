@@ -10,7 +10,7 @@ enyo.kind({
             vertical:"hidden",
             components:[
               { 
-              	 kind:"MainMenu"
+              	 kind:"MainMenuView"
               }
             ]
          }

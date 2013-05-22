@@ -8,6 +8,6 @@ enyo.kind({
 	},
 	rendered:function(){
 		this.inherited(arguments);
-		new DashboardPage().renderInto(document.body);
+		new LocationSelectorPage().renderInto(document.body);
 	}
 });

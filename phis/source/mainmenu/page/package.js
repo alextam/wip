@@ -1,3 +1,4 @@
 enyo.depends(
- 	"DashboardPage.js"
+ 	"DashboardPage.js",
+ 	"LocationSelectorPage.js"
 );
