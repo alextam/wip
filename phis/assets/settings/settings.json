@@ -1,0 +1,12 @@
+{
+	"postMan": {
+		"protocol":"http://",
+		"host":"192.168.0.77",
+		"port":8080,
+		"baseUri":"eios",
+		"timeout": 7000
+	},
+	"imageRoot": "http://106.187.90.56/phd-images/",
+	"version":"1.0.0 b",
+	"loggingLevel": 20
+}

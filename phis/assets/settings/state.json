@@ -1,0 +1,16 @@
+{"states":[
+		{"stateCode":"JH","stateID":"12","stateName":"JOHOR"},
+		{"stateCode":"KD","stateID":"11","stateName":"KEDAH"},
+		{"stateCode":"KE","stateID":"13","stateName":"KELANTAN"},
+		{"stateCode":"ME","stateID":"10","stateName":"MELAKA"},
+		{"stateCode":"NS","stateID":"9","stateName":"N SEMBILAN"},
+		{"stateCode":"PH","stateID":"7","stateName":"PAHANG"},
+		{"stateCode":"PN","stateID":"1","stateName":"PENANG"},
+		{"stateCode":"PK","stateID":"4","stateName":"PERAK"},
+		{"stateCode":"PL","stateID":"14","stateName":"PERLIS"},
+		{"stateCode":"SB","stateID":"2","stateName":"SABAH"},
+		{"stateCode":"SR","stateID":"15","stateName":"SARAWAK"},
+		{"stateCode":"SL","stateID":"3","stateName":"SELANGOR"},
+		{"stateCode":"TG","stateID":"5","stateName":"TERENGGANU"},
+		{"stateCode":"WP","stateID":"8","stateName":"WILAYAH", "active":true}
+]}

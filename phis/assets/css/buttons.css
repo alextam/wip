@@ -1,0 +1,58 @@
+.onyx-button {
+	-moz-border-radius-topleft: 0.7em !important;
+	-webkit-border-top-left-radius: 0.7em !important;
+	border-top-left-radius: 0.7em !important;
+	-moz-border-radius-topright: 0.7em !important;
+	-webkit-border-top-right-radius: 0.7em !important;
+	border-top-right-radius: 0.7em !important;
+
+	-moz-border-radius-bottomleft: 0.7em !important;
+	-webkit-border-bottom-left-radius: 0.7em !important;
+	border-bottom-left-radius: 0.7em !important;
+	-moz-border-radius-bottomright: 0.7em !important;
+	-webkit-border-bottom-right-radius: 0.7em !important;
+	border-bottom-right-radius: 0.7em !important;
+	height:50px !important;
+	background: none !important;
+} 	
+
+.cyanButton {
+	border: 2px solid #63a9a7 !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	font-size:1.2em !important;
+	
+	text-shadow: 0 1px -1px #63a9a7 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
+	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;
+}
+
+.onyx-button.cyanButton:active:hover:not([disabled]) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #56BBB7 )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #56BBB7 ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #22a09a , #56BBB7 ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #22a09a , #56BBB7 ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #22a09a , #56BBB7 ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #22a09a , #56BBB7 ) !important;
+	border: 2px solid #4DB5AE !important;
+	color: #1C6664 !important;
+}
+
+.whiteConfigurationButton {
+	height:50px !important;
+	width:50px !important;
+	text-align:center !important;
+	padding-left:5px !important;
+	padding-right:5px !important;
+	background: #fff !important;
+	color:#666 !important;
+}
+
+.onyx-button.whiteConfigurationButton:active:hover:not([disabled]) {
+	background: #eee !important;
+	color:#333 !important;
+}

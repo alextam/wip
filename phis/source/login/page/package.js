@@ -1,0 +1,3 @@
+enyo.depends(
+ 	"LoginPage.js"
+);
