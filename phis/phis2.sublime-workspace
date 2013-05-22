@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"a",
+				"attachContent"
+			],
+			[
+				"set",
+				"setType"
+			],
+			[
 				"con",
 				"contentControl"
 			],
@@ -78,10 +86,6 @@
 			[
 				"selected",
 				"selectedItem"
-			],
-			[
-				"set",
-				"setPrevSelection"
 			],
 			[
 				"re",
@@ -218,10 +222,6 @@
 			[
 				"smal",
 				"smallerButton"
-			],
-			[
-				"a",
-				"allowHtml"
 			],
 			[
 				"margin",
@@ -519,6 +519,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "source/login/view/LoginView.js",
+			"settings":
+			{
+				"buffer_size": 589,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/mainmenu/page/package.js",
+			"settings":
+			{
+				"buffer_size": 37,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/mainmenu/page/DashboardPage.js",
+			"settings":
+			{
+				"buffer_size": 621,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 874,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/css/app.css",
+			"settings":
+			{
+				"buffer_size": 15864,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "source/App.js",
+			"settings":
+			{
+				"buffer_size": 243,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -604,11 +652,28 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/Template.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/page/LoginPage.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/form/LoginForm.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/view/DisclaimerView.js",
+		"/C/Users/Alex/Documents/GitHub/phd-app/lib/go/control/HNumPicker.js",
+		"/C/Users/Alex/Documents/GitHub/mobilephis/www/templates/login.html",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/index.html",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/assets/css/app.css",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/view/package.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/App.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/assets/css/buttons.css",
+		"/C/Users/Alex/Documents/GitHub/phd-app/assets/css/phdButtons.css",
+		"/C/Users/Alex/Documents/GitHub/phd-app/source/About.js",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/lib/onyx/css/Input.less",
+		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/ui/InputItemControl.js",
+		"/C/Users/Alex/Documents/GitHub/phd-app/source/CheckAddress.js",
+		"/C/Users/Alex/Documents/GitHub/phd-app/index.html",
+		"/C/Users/Alex/Documents/GitHub/phd-app/source/SearchResult.js",
+		"/C/Users/Alex/Documents/GitHub/phd-app/source/Login.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/ToppingConfigurator.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/assets/css/app.css",
 		"/C/Users/Alex/Documents/GitHub/phd-app/lib/go/control/HDialPicker.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/lib/go/control/HNumPicker.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/SearchResult.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/SuperDrawer.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/module/store/PizzaConfiguration.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/PizzaDrawer.js",
@@ -620,32 +685,26 @@
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/FooterControl.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/FooterTabControl.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/Belt.js",
-		"/C/Users/Alex/Documents/GitHub/wip/phis/source/App.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/package.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/Page.js",
-		"/C/Users/Alex/Documents/GitHub/wip/phis/assets/css/app.css",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/view/Login.js",
-		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/page/LoginPage.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/package.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/TemplateFull.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/TemplateNormal.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/DeliveryType.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/page/package.js",
-		"/C/Users/Alex/Documents/GitHub/wip/phis/source/login/view/package.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/PageLayout.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/page/Layout.js",
 		"/C/Users/Alex/Documents/GitHub/wip/greatEastern/source/component/NavigationMatrix.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/footer/Footer.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/header/Header.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/package.js",
-		"/C/Users/Alex/Documents/GitHub/wip/phis/index.html",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/package.js",
 		"/C/Users/Alex/Documents/GitHub/wip/greatEastern/source/control/ui/HeaderControl.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/footer/package.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/HeaderControl.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/header/package.js",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/source/common/ui/package.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/index.html",
 		"/C/Users/Alex/Documents/GitHub/wip/phis/package.js",
 		"//192.168.0.77/eios/phd-app/index.html",
 		"/C/Users/Alex/Documents/Projects/nodejs Lab/Connect/goweb.js",
@@ -670,11 +729,8 @@
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/AddAddress.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/lib/go/component/Validator.js",
 		"/C/Users/Alex/Documents/GitHub/enyoUtilityBelt/lib/util/Validator.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/assets/css/phdButtons.css",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/Login.js",
 		"/C/Users/Alex/Desktop/new.css",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/PHDUpperMenu.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/CheckAddress.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/Profile.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/assets/settings/settings.json",
 		"//192.168.0.77/eios/phd-app/source/Login.js",
@@ -704,7 +760,6 @@
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/SearchResultInner.js",
 		"//192.168.0.77/phd-app/settings.json",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/GuestLogin.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/About.js",
 		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/sublime-jslint/sublime-jslint.sublime-settings",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/PickUp.js",
 		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/CustomDrawer.js",
@@ -724,14 +779,7 @@
 		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/sublime-jslint/README.md",
 		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/User/sublime-jslint.sublime-settings",
 		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/User/JSLint.sublime-settings",
-		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/JSLint/package.json",
-		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/JSLint/README.md",
-		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/JSLint/JSLint.py",
-		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/JSLint/JSLint.sublime-commands",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/control/StoreLocater.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/package.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/source/FeedBack.js",
-		"/C/Users/Alex/Documents/GitHub/phd-app/state.json"
+		"/C/Users/Alex/AppData/Roaming/Sublime Text 2/Packages/JSLint/package.json"
 	],
 	"find":
 	{
@@ -739,7 +787,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 120.0,
 		"where_history":
 		[
 			""
@@ -750,6 +798,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"not",
+			"onyx-input",
+			"type",
+			"inputChanged",
+			"appInputForm",
 			"beltControl",
 			"());",
 			"viewKind",
@@ -872,12 +925,7 @@
 			"labelDivider",
 			"this.filtered",
 			"filtered",
-			"refreshList",
-			"addressNameControl",
-			"header",
-			"label",
-			"formLabel",
-			"formLabelsAutoWidth"
+			"refreshList"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -898,8 +946,172 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "source/login/view/LoginView.js",
+					"settings":
+					{
+						"buffer_size": 589,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								472,
+								472
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/mainmenu/page/package.js",
+					"settings":
+					{
+						"buffer_size": 37,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/mainmenu/page/DashboardPage.js",
+					"settings":
+					{
+						"buffer_size": 621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								617,
+								617
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								114,
+								114
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "assets/css/app.css",
+					"settings":
+					{
+						"buffer_size": 15864,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/App.js",
+					"settings":
+					{
+						"buffer_size": 243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

@@ -8,6 +8,6 @@ enyo.kind({
 	},
 	rendered:function(){
 		this.inherited(arguments);
-		new LoginPage().renderInto(document.body);
+		new DashboardPage().renderInto(document.body);
 	}
 });

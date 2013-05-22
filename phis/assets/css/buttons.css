@@ -56,3 +56,68 @@
 	background: #eee !important;
 	color:#333 !important;
 }
+
+/****************************** Media Related *******************************/
+.phisMenu {
+	width:143px !important;
+	height:143px !important;
+	border:none !important;
+	box-shadow: none !important;
+	background:url('../img/allMenuIcons.png') no-repeat !important;	
+	background-size:858px 286px !important;	
+}
+
+.phisMenuButton {
+	margin-left:40px !important;
+	margin-right:40px !important;
+}
+
+
+.phisMenu.outpatient {
+	background-position: 0px 0px !important;	
+}
+
+.phisMenu.outpatient:active:hover:not([disabled]) {
+	background-position: 0px -143px !important;	
+}
+
+.phisMenu.inpatient {
+	background-position: -143px 0px !important;	
+}
+
+.phisMenu.inpatient:active:hover:not([disabled]) {
+	background-position: -143px -143px !important;	
+}
+
+
+.phisMenu.recently {
+	background-position: -286px 0px !important;	
+}
+
+.phisMenu.recently:active:hover:not([disabled]) {
+	background-position: -286px -143px !important;	
+}
+
+.phisMenu.daycare {
+	background-position: -572px 0px !important;	
+}
+
+.phisMenu.daycare:active:hover:not([disabled]) {
+	background-position: -572px -143px !important;	
+}
+
+.phisMenu.tasklist {
+	background-position: -715px 0px !important;	
+}
+
+.phisMenu.tasklist:active:hover:not([disabled]) {
+	background-position: -715px -143px !important;	
+}
+
+.phisMenu.emergency {
+	background-position: -429px 0px !important;	
+}
+
+.phisMenu.emergency:active:hover:not([disabled]) {
+	background-position: -429px -143px !important;	
+}

@@ -7,5 +7,6 @@ enyo.depends(
 	"$lib/taffy-min.js",
 	"common",
 	"login",
+	"mainmenu",
 	"App.js"
 );

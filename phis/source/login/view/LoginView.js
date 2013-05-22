@@ -1,10 +1,8 @@
 enyo.kind({
       name: "LoginView",
-      global: go.Global,
-      layoutKind: "FittableRowsLayout", 
       components: [
          {     
-            kind: "Scroller",
+            kind: "go.Scroller",
             fit:true,
             touch:true, 
             thumb:true,
