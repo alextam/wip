@@ -1,9 +1,9 @@
 enyo.kind({
-    name: "MainMenuView",
-    classes:"setWidthFull",
+    name: "DashboardSelectorMenu",
+    kind: "Control",
     components: [
-      {
-            classes:"inflatePadding",
+    	{
+        	classes:"inflatePadding",
             components:[
               {
                   tag:"div",
@@ -70,6 +70,6 @@ enyo.kind({
                   ]
               } 
             ]
-      }    
+        }
     ]
 });

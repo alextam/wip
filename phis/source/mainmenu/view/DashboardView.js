@@ -1,16 +1,13 @@
 enyo.kind({
     name: "DashboardView",
+    classes:"setWidthFull",
+    layoutKind: "FittableRowsLayout",
     components: [
          {     
-            kind: "go.Scroller",
-            fit:true,
-            touch:true, 
-            thumb:true,
-            horizontal:"hidden",
-            vertical:"hidden",
+            kind: "PageScrollView",
             components:[
               { 
-              	 kind:"MainMenuView"
+              	 kind:"DashboardSelectorMenu"
               }
             ]
          }

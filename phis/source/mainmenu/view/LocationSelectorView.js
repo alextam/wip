@@ -1,47 +1,23 @@
 enyo.kind({
     name: "LocationSelectorView",
     classes:"setWidthFull",
+    layoutKind: "FittableRowsLayout",
     components: [
         {
-        	layoutKind: "FittableRowsLayout",
-        	classes:"inflatePadding",
+        	kind:"PageScrollView",
+        	vertical:"true",
         	components:[
         		{
-        			classes:"centerDiv floatingMenuDiv",
-					components:[
-	        			{
-	        				style:"height:25px"
-	        			},
-	        			{
-				        	tag:"h1",
-				        	name:"labelSelectTitleControl",
-				        	content:"Select one..."
-				        },
-				        {
-				        	components:[
-				        	   {
-									classes:"floatingMenu",
- 									components:[
-										{
-											tag:"h1",
-											content:"ahahaha"		
-										}
-									]
-				        	   }
-				        	]
-				        }
-	        		]
-        		}
-
+        			name:"locationSelectorMenu",
+        			kind:"LocationSelectorMenu",
+        			onActivate:"handleSelect",
+        			title:"Select One..."
+	        	}
         	]
-        		
         }
     ],
     create:function(){
     	this.inherited(arguments);
-    },
-    setTitle:function(title){
-    	console.log(title);
-    }
+    } 
 
 });

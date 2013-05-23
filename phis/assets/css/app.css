@@ -288,7 +288,15 @@ a[href^=tel]:active{
 }
 
 .menuItemList {
-	height:80px;
+	height:30px;
+ }
+
+ .menuItemList h1{
+ 	margin:0px !important;
+ 	padding-top:3px !important;
+ 	line-height: 25px !important;
+ 	font-size:1.2em !important;
+ 	color:#777;
  }
 
 .menuItemListFav {
@@ -621,12 +629,26 @@ body:before {
 	}
 }
 
-@media all and (min-width:1000px) {
+@media all and (min-width:200px) {
 	.floatingMenuDiv {
-		width:600px;
+		width:300px;
 	}
 
-	.floatingMenuDiv > h1 {
+	.headerFloatingMenuText {
+		color:#777;
+		text-shadow: 0px -1px 1px rgba(255,255,255,.3) !important;
+		margin:10px !important;
+		font-size:1.2em !important;
+	}
+}
+
+
+@media all and (min-width:1000px) {
+	.floatingMenuDiv {
+		width:650px;
+	}
+
+	.headerFloatingMenuText {
 		color:#777;
 		text-shadow: 0px -1px 1px rgba(255,255,255,.3) !important;
 		margin:10px !important;

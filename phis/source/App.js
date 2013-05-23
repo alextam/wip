@@ -4,7 +4,6 @@ enyo.kind({
 	create: function(){
 		this.inherited(arguments);
 		console.log("App Launching...");
-		
 	},
 	rendered:function(){
 		this.inherited(arguments);
