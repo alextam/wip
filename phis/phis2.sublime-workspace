@@ -523,7 +523,7 @@
 			"file": "source/login/view/LoginView.js",
 			"settings":
 			{
-				"buffer_size": 589,
+				"buffer_size": 526,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "source/mainmenu/page/package.js",
 			"settings":
 			{
-				"buffer_size": 37,
+				"buffer_size": 66,
 				"line_ending": "Windows"
 			}
 		},
@@ -552,10 +552,26 @@
 			}
 		},
 		{
+			"file": "/C/Users/Alex/Documents/GitHub/phis2/assets/settings/settings.going.json",
+			"settings":
+			{
+				"buffer_size": 160,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Alex/Documents/GitHub/phis2/assets/settings/settings.json",
+			"settings":
+			{
+				"buffer_size": 160,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "assets/css/app.css",
 			"settings":
 			{
-				"buffer_size": 15864,
+				"buffer_size": 15578,
 				"line_ending": "Windows"
 			}
 		},
@@ -563,7 +579,7 @@
 			"file": "source/App.js",
 			"settings":
 			{
-				"buffer_size": 243,
+				"buffer_size": 247,
 				"line_ending": "Windows"
 			}
 		}
@@ -787,7 +803,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 120.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -946,7 +962,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -954,15 +970,15 @@
 					"file": "source/login/view/LoginView.js",
 					"settings":
 					{
-						"buffer_size": 589,
+						"buffer_size": 526,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								472,
-								472
+								0,
+								0
 							]
 						],
 						"settings":
@@ -982,15 +998,15 @@
 					"file": "source/mainmenu/page/package.js",
 					"settings":
 					{
-						"buffer_size": 37,
+						"buffer_size": 66,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								17,
-								30
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1043,8 +1059,8 @@
 						"selection":
 						[
 							[
-								114,
-								114
+								874,
+								874
 							]
 						],
 						"settings":
@@ -1060,18 +1076,70 @@
 				},
 				{
 					"buffer": 4,
-					"file": "assets/css/app.css",
+					"file": "/C/Users/Alex/Documents/GitHub/phis2/assets/settings/settings.going.json",
 					"settings":
 					{
-						"buffer_size": 15864,
+						"buffer_size": 160,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								270,
-								281
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/Users/Alex/Documents/GitHub/phis2/assets/settings/settings.json",
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								160,
+								160
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/css/app.css",
+					"settings":
+					{
+						"buffer_size": 15578,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1086,19 +1154,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "source/App.js",
 					"settings":
 					{
-						"buffer_size": 243,
+						"buffer_size": 247,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								207,
-								194
+								0,
+								0
 							]
 						],
 						"settings":
