@@ -248,8 +248,7 @@ body {
 
 .contactFormSection {
     width:100%;
-    height:310px;
-    margin-bottom:20px;
+    height:360px;
 }
 
 .padding {
@@ -303,24 +302,32 @@ body {
     background-color:#fff; 
     background:url('../img/seperator.png');
     width:100%;
+    position:relative;
     background-position:center;
     height:42px;
     text-align: center;
+    margin:0px;
 }
 
 .seperator h1 {
+    position: absolute;
     width:430px;
     font-weight:500;
-    font-size:30px;
+    font-size:32px;
     font-family:"Georgia";
     color:#3299da;
-    text-align: center;
+    height:42px;
+    left:265px;
     font-style:italic;
-    margin-top:0px;
-    margin-bottom:0px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:0px;
     background-color: #fff; 
+}
+
+.seperator div.divider {
+    width:265px;
+    height:42px;
+    display:block;
+    float:left;
 }
 
 .standardContent {
@@ -395,6 +402,7 @@ p.spaceless {
 }
 
 .gridLeftPane p {
+    font-size: 13px;
     text-align:justify;
 }
 
@@ -546,7 +554,7 @@ button.special3 a {
 }
 
 .extendedContactUs {
-    height:390px;
+    height:410px;
 }
 
 .contactUsCaption {
@@ -569,8 +577,55 @@ button.special3 a {
     border:1px solid #ccc;
 }
 
+.contactForm .container {
+    clear:both;
+    min-height:35px;
+    position:relative;
+}
+
+.extendedTextarea {
+    height:75px;
+}
+
+.extendedTextarea textarea {
+    height:60px;
+}
+
+input,textarea {
+    font-size:0.9em;
+}
+
+.contactForm h5 {
+    width:80px;
+    position:absolute;
+    top:6px;
+    left:0;
+    margin: 0px;
+    line-height:20px;
+}
+
+.contactForm input {
+    width:250px;
+    left:80px;
+    position:absolute;
+    padding:6px;
+}
+
+.contactForm textarea {
+    width:250px;
+    left:80px;
+    position:absolute;
+    padding:5px;
+}
+
+.paddingRight {
+    padding-top:10px;
+    padding-right:12px;
+}
+
 .contactForm h1{
-    margin:0px;
+    margin-top:0px;
+    margin-bottom:10px;
     font-size:24px;
     color:#2f97da;
 }
@@ -582,14 +637,12 @@ button.special3 a {
 
 .contactFormLeft {
     width:356px;
-    background:yellow;
     float:left;
     min-height:100px;
 }
 
 .contactFormRight {
     width:356px;
-    background: pink;
     float:left;
     min-height:100px;
 }
@@ -599,8 +652,12 @@ button.special3 a {
 }
 
 table {
-    border:2px solid #fff !important;
+    border-collapse:collapse;
+}
+
+table,th, td {
     font-size:13px;
+    border: 1px solid white;
 }
 
 th {
