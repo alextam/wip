@@ -248,7 +248,7 @@ body {
 
 .contactFormSection {
     width:100%;
-    height:360px;
+    height:540px;
 }
 
 .padding {
@@ -287,6 +287,11 @@ body {
 .sectionHolder {
     width:100%;
     min-height:330px;
+    display:block;
+}
+
+.sectionHolder.extended{
+    min-height:630px;
     display:block;
 }
 
@@ -564,15 +569,15 @@ button.special3 a {
 }
 
 .contactUsCaptionContainer {
-    width:180px;
+    width:527px;
     font-size:13px;
     color:#777;
     font-weight: 600;
 }
 
 .contactForm {
-    width:750px;
-    height:308px;
+    width:432px;
+    height:513px;
     float:right;
     border:1px solid #ccc;
 }
@@ -596,7 +601,7 @@ input,textarea {
 }
 
 .contactForm h5 {
-    width:80px;
+    width:150px;
     position:absolute;
     top:6px;
     left:0;
@@ -606,21 +611,21 @@ input,textarea {
 
 .contactForm input {
     width:250px;
-    left:80px;
+    left:100px;
     position:absolute;
     padding:6px;
 }
 
 .contactForm textarea {
     width:250px;
-    left:80px;
+    left:100px;
     position:absolute;
     padding:5px;
 }
 
 .paddingRight {
     padding-top:10px;
-    padding-right:12px;
+    padding-right:65px;
 }
 
 .contactForm h1{
@@ -638,11 +643,11 @@ input,textarea {
 .contactFormLeft {
     width:356px;
     float:left;
-    min-height:100px;
+    min-height:280px;
 }
 
 .contactFormRight {
-    width:356px;
+    width:256px;
     float:left;
     min-height:100px;
 }

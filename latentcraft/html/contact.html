@@ -73,12 +73,12 @@
                     </div>
                     <div class="contactFormSection">
                         <div class="contactUsCaption">
-                            <div class="contactUsCaptionContainer">
+                            <!--<div class="contactUsCaptionContainer">
                                 <p>What's your problem?<BR>What do you need?<BR>Do you have a solution?<BR></p>
                                 <p>WELL, LET'S TALK....</p>
                                 <p>We are at your disposal</p>
-                            </div> 
-                            
+                            </div>--> 
+                            <img src="img/contactUsLeft.png">
                         </div>
                         <div class="contactForm">
                             <!--<form name="contactUsForm" method="POST">-->
@@ -105,9 +105,21 @@
                                             <h5>Email *</h5>
                                             <input type="text" name="Email" id="txtEmail" />
                                         </div>
-                                    </ul>
+                                        <div class="container" style="height:48px">
+                                            <h5>Address</h5>
+                                            <textarea type="text" name="Address" id="txtAddress" style="width:254px"></textarea>
+                                        </div>
+                                        <div class="container">
+                                            <h5>Message *</h5>
+                                            <textarea type="text" name="Message" id="txtMessage" style="width:254px"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="buttonContainer right paddingRight">
+                                        <button class="special3" onclick="resetForm()">Reset</button>
+                                        <button class="special2" onclick="validateForm()">Submit</button>
+                                    </div>  
                                 </div>
-                                <div class="contactFormRight">
+                                <!--<div class="contactFormRight">
                                     <div class="container extendedTextarea">
                                         <h5>Address</h5>
                                         <textarea type="text" name="Address" id="txtAddress" ></textarea>
@@ -120,7 +132,7 @@
                                         <button class="special3" onclick="resetForm()">Reset</button>
                                         <button class="special2" onclick="validateForm()">Submit</button>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                             <!--</form>-->
                         </div>
