@@ -290,12 +290,6 @@ body {
     display:block;
 }
 
-.sectionHolder.services {
-    width:100%;
-    min-height:450px;
-    display:block;
-}
-
 .sectionHolder.extended{
     min-height:630px;
     display:block;
@@ -565,7 +559,7 @@ button.special3 a {
 }
 
 .extendedContactUs {
-    height:400px;
+    height:410px;
 }
 
 .contactUsCaption {

@@ -122,7 +122,8 @@ body {
 .whiteBg {
     background: #fff;
     width:100%;
-    height:100%;
+    /*height:100%;*/
+    height:2000px !important;
 }
 
 .master960 {
@@ -248,7 +249,7 @@ body {
 
 .contactFormSection {
     width:100%;
-    height:540px;
+    height:360px;
 }
 
 .padding {
@@ -286,18 +287,7 @@ body {
 
 .sectionHolder {
     width:100%;
-    min-height:330px;
-    display:block;
-}
-
-.sectionHolder.services {
-    width:100%;
-    min-height:450px;
-    display:block;
-}
-
-.sectionHolder.extended{
-    min-height:630px;
+    min-height:430px;
     display:block;
 }
 
@@ -439,6 +429,13 @@ h1.special3
     font-weight:500;
     margin-bottom:0px;
 }
+h1.special4 
+{
+    font-size:36px;
+    font-family:"sans-serif"; 
+    font-weight:500;
+    margin-bottom:0px;
+}
 
 h1.special1 span {
     background:#076cab;
@@ -565,7 +562,7 @@ button.special3 a {
 }
 
 .extendedContactUs {
-    height:400px;
+    height:410px;
 }
 
 .contactUsCaption {
@@ -575,15 +572,15 @@ button.special3 a {
 }
 
 .contactUsCaptionContainer {
-    width:527px;
+    width:180px;
     font-size:13px;
     color:#777;
     font-weight: 600;
 }
 
 .contactForm {
-    width:432px;
-    height:513px;
+    width:750px;
+    height:308px;
     float:right;
     border:1px solid #ccc;
 }
@@ -607,7 +604,7 @@ input,textarea {
 }
 
 .contactForm h5 {
-    width:150px;
+    width:80px;
     position:absolute;
     top:6px;
     left:0;
@@ -617,21 +614,21 @@ input,textarea {
 
 .contactForm input {
     width:250px;
-    left:100px;
+    left:80px;
     position:absolute;
     padding:6px;
 }
 
 .contactForm textarea {
     width:250px;
-    left:100px;
+    left:80px;
     position:absolute;
     padding:5px;
 }
 
 .paddingRight {
     padding-top:10px;
-    padding-right:65px;
+    padding-right:12px;
 }
 
 .contactForm h1{
@@ -649,11 +646,11 @@ input,textarea {
 .contactFormLeft {
     width:356px;
     float:left;
-    min-height:280px;
+    min-height:100px;
 }
 
 .contactFormRight {
-    width:256px;
+    width:356px;
     float:left;
     min-height:100px;
 }
