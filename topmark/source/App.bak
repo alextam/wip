@@ -1,0 +1,161 @@
+enyo.kind({
+	name: "App",
+	kind: "FittableRows",
+	handlers: {
+		onChangePage: 'changePage',
+		onGoBack: 'goBack',
+		onRelease: "release",
+		onBusy: "busy",
+		pageChanged: 'renderPageFromRoute',
+		onShowPopupSpinner: "showPopupSpinner",
+		onHidePopupSpinner: "hidePopupSpinner",
+		onShow: "handlePopupShow",
+		onHide: "handlePopupHide"
+	},
+	signals: {
+		onHospitalChanged: "handleHospitalChanged",
+		onLogout: 'logout',
+		onRelease: "release",
+		onBusy: "busy",
+		onFormLock: "formLock",
+		onFormRelease: "formRelease",
+		onShowPopupSpinner: "showPopupSpinner",
+		onHidePopupSpinner: "hidePopupSpinner",
+		onLogoutWitness: "logoutwitness"
+	},
+	keepAlive: {},
+	navigator: null,
+	appContainer: null,
+	webService: null,
+	create: function(){
+		this.inherited(arguments);
+		this.addControl(this.navigator);
+		this.renderInto(this.appContainer);
+
+		this.initiatePopupSpinner();
+
+		var configurationService = new phis.ConfigurationService();
+		var hospital = configurationService.getSelectedHospital();
+		if (hospital) {
+			this.setHospital(hospital);
+		}
+
+		this.addSignalHandler();
+
+		enyo.log("App Launching...");
+	},
+	initiatePopupSpinner: function() {
+		this.popupSpinner = this.createComponent({kind:"PopupSpinner"});
+	},
+	showPopupSpinner: function() {
+		this.popupSpinner.show();
+	},
+	hidePopupSpinner: function() {
+		this.popupSpinner.hide();
+	},
+	renderPageFromRoute: function(inSender, inEvent) {
+		var route = inEvent.data;
+		if (this.keepAlive[route.name]) {
+			if (this.keepAlive[route.name] === true) {
+				var routeName = route.name;
+				route = this.instantiateRoute(route);
+				this.keepAlive[routeName] = route;
+			} else {
+				enyo.log('Route revived');
+				route = this.keepAlive[route.name];
+			}
+		} else {
+			route = this.instantiateRoute(route);
+		}
+		
+		this.Route = route;
+		this.renderPage(this.Route);
+		//this.Route.reflow();
+	},
+	instantiateRoute: function(route) {
+		return new window[route.name](route.params);
+	},
+	renderPage: function(page){
+		if (typeof page == "object") {
+			var pagename = page.kindName;
+		} else {
+			var pagename = page;
+			page = new window[page]();
+		}
+
+		this.destroyComponents();
+		this.destroyClientControls();
+		this.controls = [];
+		this.children = [];
+		if (window[pagename].prototype.template) {
+			var template = new window[pagename].prototype.template({
+				contentPage: page
+			});
+
+			page = template;
+		}
+		this.addControl(page);
+		page.setParent(this);
+
+		this.initiatePopupSpinner();
+		this.addSignalHandler();
+
+		this.waterfall('onShowPage');
+
+		this.render();
+	},
+	changePage: function(inSender, inEvent) {
+		console.log(inEvent);
+		this.navigator.gotoPage(inEvent.page, inEvent.params);
+		//this.renderPage(inEvent.page)
+	},
+	goBack: function(inSender, inEvent) {
+		this.navigator.goBack(inEvent.params, inEvent.options);
+	},
+	addSignalHandler: function() {
+		var signals = enyo.mixin({kind: "enyo.Signals"}, this.signals);
+		this.createComponent(signals);
+	},
+	handleHospitalChanged: function(inSender, inEvent) {
+		this.setHospital(inEvent.hospital);
+	},
+	setHospital: function(hospital) {
+		if (this.webService) {
+			var postMan = this.webService.getPostMan();
+			postMan.changeHost(hospital.ip, hospital.port);
+		}
+	},
+	logoutwitness: function() {
+		var params = phis.Session.get('user');
+		params.witness = null;
+		this.navigator.gotoPage('MARWardSelectorPage');
+	},
+	logout: function() {
+		this.webService.setAuthToken(null);
+		this.navigator.gotoPage('LoginPage');
+	},
+	release: function() {
+		this.waterfall("onAppEnableInteraction");
+	},
+	busy: function() {
+		this.waterfall("onAppDisableInteraction");
+	},
+	formLock: function() {
+		this.waterfall("onAppDisableInteraction");
+	},
+	formRelease: function() {
+		this.waterfall("onAppEnableInteraction");
+	},
+	handlePopupShow: function(inSender, inEvent) {
+		if (inEvent.originator instanceof enyo.Popup) {
+			console.log("Popup appeared. Disable form interactions");
+			this.waterfall("onAppDisableInteraction");
+		}
+	},
+	handlePopupHide: function(inSender, inEvent) {
+		if (inEvent.originator instanceof enyo.Popup) {
+			console.log("Popup disappeared. Enable form interactions");
+			this.waterfall("onAppEnableInteraction");
+		}
+	}
+});

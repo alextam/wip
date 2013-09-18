@@ -1,0 +1,19 @@
+enyo.depends(
+	"$lib/layout",
+	"$lib/onyx",
+	"$lib/go",
+	"$lib/moment.js",
+	"$lib/taffy-min.js",
+	"Navigator.js",
+	"footer",
+	"header",
+	"form",
+	"panel",
+	"common",
+	"Master.js",
+	"Step4.js",
+	"Step3.js",
+	"Step2.js",
+	"Step1.js",
+	"App.js"
+);

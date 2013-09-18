@@ -1,0 +1,11 @@
+enyo.depends(
+	"InputDateTimeControl.js",
+	"InputTextAreaControl.js",
+	"InputDisplayControl.js",
+	"InputItemControl.js",
+	"PageScrollView.js",
+	"MenuButton.js",
+	"SearchInput.js",
+	"StickyLoader.js",
+	"StandardPicker.js"
+);
