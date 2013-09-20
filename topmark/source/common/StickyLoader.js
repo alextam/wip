@@ -16,6 +16,9 @@ enyo.kind({
 			layoutKind:"FittableColumnsLayout",
 			components:[
 				{
+                    style:"width:15px"
+                },
+                {
 					tag:"i",
 					name:"spinnerControl",
 					classes:"icon-spinner icon-spin" 

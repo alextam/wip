@@ -13,19 +13,18 @@ body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;b
 .panelSlider > * {width: 300px;}
 .panelSliderButton { width:86%;font-size:1.5em;color:#c82c30}
 .drugType { font-size:0.7em !important;}
-.headerTextTitle { line-height:35px;font-size:1em !important;}
+.headerTextTitle { line-height:32px;font-size:1em !important;}
 .customPanelSlider > * {width: 305px;min-width:60px !important;}
-.onyx-toolbar{background-color:#000 !important;color:#fff !important;background-image:-webkit-gradient(linear, left top, left bottom, from(#444444), to(#000000)) !important;background-image:-webkit-linear-gradient(#444444, #000000) !important;background-image:-moz-linear-gradient(#444444, #000000) !important;background-image:-ms-linear-gradient(#444444, #000000) !important;background-image:-o-linear-gradient(#444444, #000000) !important;background-image:linear-gradient(#444444, #000000) !important;border:none !important;}
+.onyx-toolbar{background-color:#000 !important;color:#fff !important;background-image:-webkit-gradient(linear, left top, left bottom, from(#444444), to(#000000)) !important;background-image:-webkit-linear-gradient(#444444, #000000) !important;background-image:-moz-linear-gradient(#444444, #000000) !important;background-image:-ms-linear-gradient(#444444, #000000) !important;background-image:-o-linear-gradient(#444444, #000000) !important;background-image:linear-gradient(#444444, #000000) !important;border:none !important;margin:0px !important;}
 .pnCell {width:25% !important;max-width:25% !important; padding:5px;font-weight:bold;}
 h1.pnCell {font-size:1em !important;line-height:50px;}
 .pnCellOfFive{width:1002px;height:56px;margin-top:5px;margin-bottom:0px;}
 .grayStripe h1.pnCell {line-height: 24px !important;}
 h1.standardH1 { color:#333;font-size:1.4em;line-height:30px;margin-top:0px;margin-bottom:0px;}
-h2.standardH2 { color:#999;font-size:1em;line-height:20px;margin-top:0px;margin-bottom:0px;}
-h2.appForms { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-bottom:0px; padding:4px 15px 4px 15px;width:350px;border:1px solid #ccc; border-bottom:none;text-align: right }
-h2.appForms.last {border-bottom:1px solid #ccc;}
+h2.standardH2 { color:#333;font-size:1em;line-height:20px;margin-top:0px;margin-bottom:0px;}
+h2.appForms { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-bottom:0px; padding:4px 15px 4px 15px;width:250px;text-align: right;border-right:1px solid #ccc; }
 h2.appFormMid { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-bottom:0px; padding:4px 15px 4px 15px;width:160px;border:1px solid #ccc; border-bottom:none;border-left:none;text-align: right }
-.appFormDeco { border:1px solid #ccc; border-bottom:none;border-left:none; background:#ddd;}
+.appFormDeco { border:1px solid #ccc; border-bottom:none;border-left:none; background:#fff !important;}
 .appFormDeco.last { border-bottom:1px solid #ccc;}
 .formInputDateTime {height:50px;padding:0px;margin:0px;}
 .sgaFormGap{padding-top:2px;padding-bottom:2px;padding-left:15px;}
@@ -50,7 +49,7 @@ h1.PNLabel{padding-top:15px !important;font-size:1em !important;}
 .blueRibbon { background:#D7E7F6;padding:10px !important;}
 .blueRibbon h1 { color:#000; font-weight: normal;font-size:0.9em; }
 .blueRibbon h2 { color:#777; font-weight: bold;font-size:0.9em;text-indent:5px; }
-.smallNote { font-size:0.9em;margin-top:0px;margin-bottom:5px;color:#777; }
+.smallNote { font-size:0.9em;margin-top:0px;margin-bottom:5px;color:#888; }
 .secondaryBarTab button {
 	color: #84a5c4;
 	font-weight: bold;
@@ -79,6 +78,52 @@ h1.PNLabel{padding-top:15px !important;font-size:1em !important;}
 	color:#fff;
 	font-weight: bold;
 }
+
+.appFormDeco .appInputForm {
+	background: #fff !important;
+}
+
+.whiteForm button{
+	margin-top:0px !important;
+	color:#666 !important;
+	background: #fff !important;
+	border:1px solid #ccc !important;
+	border-left:none !important;
+	border-bottom:none !important;
+	line-height: 25px !important;
+}
+
+.whiteForm.last button {
+	border-bottom:1px solid #ccc !important;
+}
+
+
+.whiteForm.appInputForm{
+	background: #fff !important;
+	border:1px solid #ccc !important;
+}
+
+.whiteForm textarea {
+	height:90px;
+	background: #fff !important;
+}
+
+.whiteForm textarea::-webkit-input-placeholder {
+	color: #ccc !important;
+	font-weight: 600;
+	font-style:italic;
+}
+.whiteForm textarea::-moz-input-placeholder {
+	color: #ccc !important;
+	font-weight: 600;
+	font-style:italic;
+}
+
+.whiteForm textarea:-ms-input-placeholder {
+	color: #ccc !important;
+	font-style:italic;
+}
+
 
 .searchBox .errorDecorator input:-ms-input-placeholder,.errorDecorator textarea:-ms-input-placeholder {
   color: pink;
@@ -259,13 +304,11 @@ input[type=time]::-webkit-outer-spin-button {
 }
 
 .alertButtonOK {
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
-	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important;  
-	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important;  
-	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; 
-	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important;  
-	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;
-	border: 2px solid #63a9a7 !important;
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0em !important;
+	border-radius: 0em !important;
+	border: 2px solid #333 !important;
+	background: #333 !important;
 	font-weight: bold !important;
 	color:#fff !important;
 	text-shadow: 0px -2px 2px rgba(0,0,0,.3) !important;
@@ -300,13 +343,7 @@ input[type=time]::-webkit-outer-spin-button {
 }
 
 .alertButtonOK:active:hover:not([disabled]){
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #56BBB7 )) !important; 
-	background-image: -webkit-linear-gradient( #22a09a , #56BBB7 ) !important;  
-	background-image:    -moz-linear-gradient( #22a09a , #56BBB7 ) !important;  
-	background-image:     -ms-linear-gradient( #22a09a , #56BBB7 ) !important; 
-	background-image:      -o-linear-gradient( #22a09a , #56BBB7 ) !important;  
-	background-image:         linear-gradient( #22a09a , #56BBB7 ) !important;
-	color:#1C6664 !important;
+	color:#FFF !important;
 	text-shadow: none !important;
 
 }
@@ -1149,13 +1186,23 @@ textarea {
 	border:1px solid #c72c30 !important;
 }
 
+.appInputForm.onyx-disabled {
+ 	background: #eee !important;
+ 	color:#999 !important;
+}
+
+.appInputForm.onyx-disabled input {
+ 	color:#999 !important;
+}
+
+
 .onyx-input-decorator.appInputForm {
 	border:none !important;
 }
 
 .onyx-input-decorator.appInputFormDateTime {
 	border:none !important;	
-	height:46px !important;
+	height:50px !important;
 	padding:0px !important;
 
 }
@@ -1168,7 +1215,7 @@ textarea {
 }
 
 .appInputFormDateTime .appInputContainer {
-	height:46px !important;
+	height:50px !important;
 }
 
 .appSimpleInputForm {
@@ -1803,9 +1850,53 @@ small.disclaimer { font-weight: bold !important;color:#ffffff !important; margin
 	padding:8px 12px 8px 12px;
  }
 
+.menuItemList.selected {
+	background: #cc3333 !important;
+	color:#fff !important;
+}
+
+.menuItemList.selected h1 {
+	background: #cc3333 !important;
+	color:#fff !important;
+}
+
+
 .menuItemList:active:hover:not([disabled]) h1{
  	background:#cc3333 !important;
  	color:#ffffff !important;
+}
+
+.breadCrumb1 {
+	background:#000;
+	color:#fff;
+	line-height:35px;
+	padding:10px;
+	font-size:1.0em;
+	width:85px;
+	height:50px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.breadCrumb2 {
+	background: #a52025;
+	color:#fff;
+	line-height:35px;
+	padding:10px;
+	font-size:1.0em;
+	width:220px;
+	height:50px;
+	text-indent: 5px;
+	font-weight: bold;
+}
+
+.logoPadding {
+	margin:0px !important;
+	padding-left:15px;
+	padding-right:15px;
+	padding-top:15px;
+	padding-bottom:10px;
 }
 
 .menuItemList:active:hover:not([disabled]){
@@ -2024,10 +2115,6 @@ select option {
 	color:#ffffff;
 	font-weight: 600;
  }
-
-body:before {
- 	background:url('../img/trayBG.png') !important;
-}
 
 .smallCaption {
 	font-size:0.95em;

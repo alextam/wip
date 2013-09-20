@@ -259,14 +259,16 @@ button.normalButton:active:hover:not([disabled]){
 	min-width: 80px;
 	max-width:350px;
 	text-align:right !important;
-	padding-top:4px !important;
+	padding:0px !important;
+	margin:0px !important;
 }
 
 .headerLeftWing {
 	min-width: 80px;
 	max-width:350px;
 	text-align:left !important;
-	padding-top:4px !important;
+	padding:0px !important;
+	margin:0px !important;
 }
 
 .leftWing {
@@ -771,27 +773,70 @@ button.pickerButton.standardPopupCaller:disabled{
 	
 }
 
+.menuSearchDelButton {
+	background:#c92d31;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	color:#fff;
+	float:right;
+	width:45px;
+	margin:5px;
+	height:45px;
+	border:none !important;
+}
+
+.menuSearchDelButton:active:hover:not([disabled]){
+	background:red;
+}
+
+.menuSearchButton:active:hover:not([disabled]){
+	background:#eee;
+}
+
+.menuSearchButton {
+	background:#ddd;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	color:#333;
+	float:right;
+	width:45px;
+	margin:5px;
+	height:45px;
+	border:none !important;
+}
+
+.menuSearchItem:active:hover:not([disabled]){
+	background: #ffe5e5;	
+}
+
+.menuSearchItem {
+	height:50px;
+	padding:10px;
+	background: #fff;
+	color:#777;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+
 .headerButton {
 	padding:3px 7px 3px 7px !important;
-	-moz-border-radius: 0.5em !important;
-	-webkit-border-radius: 0.5em !important;
-	border-radius: 0.5em !important;
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0em !important;
+	border-radius: 0em !important;
 	min-width:70px;
-	border:2px solid #fb0e0e;
+	border:none;
 	text-shadow: 0 1px -1px #63a9a7 !important;
-	background: #a52025 !important;
+	background: #cc3333 !important;
 	color: #fff !important;
 	font-weight: bold !important;
-	height:36px !important;
+	height:45px !important;
 	line-height:15px !important;
-	font-size: 0.65em !important;
-	margin-top:5px !important;
-	margin-left:5px !important;
-	margin-right:5px !important;
+	font-size: 0.7em !important;
+	
 }
 
 .headerButton:active:hover:not([disabled]){
-	background: #660000 !important;
+	background: #a52025 !important;
 	color: #eee !important;
 }
 
@@ -1140,4 +1185,20 @@ button.patientListShadowButton:disabled {
 	background:#000 !important;
 	text-transform: uppercase;
 	font-size:0.9em !important;
+}
+
+button.yellowButton {
+	border-radius:0em !important;
+	color:#fff !important;
+	background:#ffa200 !important;
+	font-weight: bold;
+	padding:15px !important;
+	text-transform: uppercase;
+	font-size:0.9em !important;	
+	text-shadow: 0 -1px 2px #bbb !important;
+}
+
+button.yellowButton:active:hover:not([disabled]){
+	background:#000 !important;
+	
 }

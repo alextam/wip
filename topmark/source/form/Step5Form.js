@@ -2,57 +2,43 @@ enyo.kind({
 	name: "Step5Form",
 	kind: "FittableRows",
 	components:[
-		{ style:"height:15px" },
 		{
-			tag:"h2",
-			classes:"standardH2",
-			content:"Step 5"	
-		},
-		{
-			tag:"h1",
-			classes:"standardH1",
-			content:"Check List - Interior, Accessories"
-		},
-		
-		{
-			tag:"h5",
-			classes:"smallNote",
-			content:"Note: To add note to the diagram, tap Add Tag and tap the vehicle diagram surface. To edit a tag, just tap on any tag available on the screen."
-		},
-		{
-			name:"txtRemark",
-			style:"border:1px solid #ccc !important",
-			classes:"appTextAreaFormDeco",
-			placeholder:"Enter Tag Remarks Here...",
-			kind:"InputTextAreaControl",
-			maxlength:255
-		},
-		{ style:"height:5px" },
-		{
-			classes:"txtAlignCenter",
-			components:[
-				{
-					classes:"txtAlignCenter",
-					layoutKind: "FittableColumnsLayout",										
-					components:[
-						{
-							kind:"onyx.Button",
-							content:"Back",
-							ontap:"handleBack"
-						},
-						{
-							style:"width:5px"
-						},
-						{
-							kind:"onyx.Button",
-							content:"Next",
-							ontap:"handleNext"
-						}
-					]
-				}
-			]
-		},
-		{ style:"height:20px" }
+            kind:"Header",
+            title:"Other Info",
+            buttons:[
+            	{
+			    	name:"btnBack",
+			    	visible:true,
+			    	content:"Back",
+			    	page:"Step4Form",
+			    	event:"onBtnBack"
+		    	}
+            ],
+            onBtnBack:"handleBack"
+        },
+        { kind:"BannerHeader" },	
+        {
+        	layoutKind: "FittableColumnsLayout",
+        	style:"margin:1px",
+        	components:[
+        		{
+        			tag:"div",
+        			classes:"breadCrumb1",
+        			content:"Step N"
+        		},
+        		{
+        			tag:"div",
+        			classes:"breadCrumb2",
+        			content:"In Progress"
+        		},
+        		{ fit:true }
+        	]
+        },
+        {
+        	tag:"h1",
+        	classes:"standardH1 txtAlignCenter",
+        	content:"Coming Soon..."
+        }
 	],
 	handleNext:function(inSender,inEvent) {
 		this.bubble("onChangePage");

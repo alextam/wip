@@ -4,8 +4,13 @@ enyo.depends(
 	"InputDisplayControl.js",
 	"InputItemControl.js",
 	"PageScrollView.js",
+	"BannerHeader.js",
 	"MenuButton.js",
+	"FeedBackUser.js",
+	"SearchItem.js",
 	"SearchInput.js",
+	"ActionButton.js",
+	"SearchResult.js",
 	"StickyLoader.js",
 	"StandardPicker.js"
 );

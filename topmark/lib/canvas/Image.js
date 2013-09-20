@@ -7,13 +7,15 @@ enyo.kind({
 	kind: enyo.canvas.Control,
 	published: {
 		//* Source URL for the image
-		src: ""
+		src: "",
+		attributes:null
 	},
 	//* @protected
 	create: function() {
 		this.image = new Image();
 		this.inherited(arguments);
 		this.srcChanged();
+		
 	},
 	srcChanged: function() {
 		if (this.src) {
@@ -21,6 +23,6 @@ enyo.kind({
 		}
 	},
 	renderSelf: function(ctx) {
-		ctx.drawImage(this.image, this.bounds.l, this.bounds.t);
+		ctx.drawImage(this.image, this.bounds.l, this.bounds.t, this.attributes.width, this.attributes.height);
 	}
 });

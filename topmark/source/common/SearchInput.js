@@ -175,7 +175,7 @@ enyo.kind({
         return true;
     },
     dismissResetter:function(inSender,inEvent) {
-        this.$.btnInputResetter.addClass("opaque");
+        //this.$.btnInputResetter.addClass("opaque");
     },
     inputChanged:function(inSender,inEvent) {
         this.bubble("onInput",inSender);

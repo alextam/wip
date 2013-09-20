@@ -5,11 +5,11 @@ enyo.kind({
     components: [
         {
         	tag:"div",
-            style:"width:60px;",
+            style:"width:52px;",
             components:[
                 {
                     name:"iconItem",
-                    style:"margin-left:8px;line-height:30px;font-size:1.4em",
+                    style:"margin-left:8px;line-height:30px;font-size:1.4em;text-align:center !important",
                     classes:"icon"
                 }
             ]
@@ -22,6 +22,9 @@ enyo.kind({
         	content: "Set Title..."
         }
     ],
+    setSelected: function(inSelected) {
+        this.addRemoveClass("selected",inSelected);
+    },
     setTitle:function(value){
         this.$.txtMenuItem.setContent(value);
     },
