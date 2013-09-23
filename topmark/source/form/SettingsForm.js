@@ -44,6 +44,7 @@ enyo.kind({
 	handleBtnReset: function(inSender,inEvent) {
 		go.PhoneGapSuit.alert("Resetting Data...");
 		this.global.resetLocal("TOPMARK.TOYOTA");
+		this.global.resetLocal("TOPMARK.TOYOTA.TAGS");
 		this.service = new Service().initData();
 	}
 });

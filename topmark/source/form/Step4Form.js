@@ -81,64 +81,88 @@ enyo.kind({
         	]
         }
 	],
-	tagKind:{
-		kind:"Button",
-		style:"width:30px;height:30px"
-	},
 	published:{
 	    tagMode:null,
-	    plotNewData:null		
+        currentTag:null
 	},
 	create:function() {
 		this.inherited(arguments);
 		this.$.txtAreaNote.hide();
 		this.tagModeChanged();
-		
+        this.loadData();
 	},
-
-    plotTag:function(id,aY,aX) {
-    	this.$.drawBoard.createComponent({
+    loadData:function() {
+        var _this = this;
+        this.$.drawBoard.destroyClientControls();
+        console.log("Loading Existing Data...");
+        this.service = new Service().getTags()
+        .done(function(result){
+            console.log(result);
+            for(var i = 0;i < result.length;i++){
+                _this.plotExistingTag(result[i].uniqueId,result[i].top,result[i].left,result[i].note);
+            }
+        });
+    },
+    plotExistingTag:function(id,aY,aX,note){
+        console.log("Plot Tag:"+id);
+        console.log("aX:"+aX);
+        console.log("aY:"+aY);
+        this.$.drawBoard.createComponent({
+            kind:"AnchorTag",
+            uniqueId:id,
+            left:aX,
+            top:aY
+        });
+        this.$.drawBoard.render();
+    },
+	plotNewTag:function(id,aY,aX) {
+    	this.currentTag = this.$.drawBoard.createComponent({
     		kind:"AnchorTag",
-    		top:aY,
-    		id:id,
-    		left:(aX-60)
+            uniqueId:id,
+    		left:(aX-60),
+    		top:aY
     	});
-    	this.$.drawBoard.render();
     	this.setTagMode("save");
-    	this.$.txtAreaNote.show();
+    	this.$.drawBoard.render();
 
+    	console.log("ay:"+aY+",ax:"+(aX-60));
     },
     handlePlotTag:function(inSender,inEvent) {
     	if(this.getTagMode() == "add"){
     		//alert("PLOT");
     		var actualX = 0;
     		var actualY = 0;
-    		console.log(inEvent);
     		if (String(inEvent.srcEvent.type).indexOf("mouse") == -1){
     			// Touch!
-    			actualX = inEvent.pageX + inEvent.srcEvent.layerX;
-    			actualY = inEvent.pageY + inEvent.srcEvent.layerY;
+    			actualX = inEvent.screenX + inEvent.srcEvent.layerX;
+    			actualY = inEvent.screenY + inEvent.srcEvent.layerY;
     		} else {
     			// Mouse
     			actualX = inEvent.srcEvent.layerX;
     			actualY = inEvent.srcEvent.layerY;
     		}
-    		this.plotTag(new Date().getTime(), actualY, actualX);
-    	} 
+    		console.log("Actual X :" +actualX+", Actual Y :"+actualY);
+    		this.plotNewTag(new Date().getTime(), actualY, actualX);
+    	} else {
+    		return true;
+    	}
     },
     tagModeChanged:function() {
     	if(this.tagMode == null){
     		this.$.btnAddNote.setDisabled(false);
+            this.$.txtAreaNote.setValue("");
+            this.$.txtAreaNote.hide();
     		this.$.btnAddNote.setContent("Add Note Tag");
     	} else if (this.tagMode == "add") {
     		this.$.btnAddNote.setContent("Place Note Tag");
     		this.$.btnAddNote.setDisabled(true);
-		} else if (this.tagMode == "save") {
-    		this.$.btnAddNote.setContent("Save Note and Tag");
-    		this.$.btnAddNote.setDisabled(false);
-    	} else {	
-    		alert("Edit Mode...");
-    	}
+    	} else if (this.tagMode == "save"){	
+            this.$.txtAreaNote.show();
+    		this.$.btnAddNote.setContent("Save Note Tag");
+            this.$.btnAddNote.setDisabled(false);
+    	} else {
+            alert("Edit Mode...");
+        }
     },
 	handleNext:function(inSender,inEvent) {
 		this.bubble("onChangePage");
@@ -151,19 +175,21 @@ enyo.kind({
 	},
 	handleAddNote: function(inSender,inEvent) {
 		//alert("Adding Note - Work in Progress");
-		//this.setTagMode("add");
-		if (this.getTagMode() == "save") {
-			console.log("what:"+this.$.txtAreaNote.getValue());
-    		//this.plotNewData.setNote(this.$.txtAreaNote.getValue());
-    		//this.$.btnAddNote.setDisabled(false);
-    		this.setTagMode(null);
-    		//console.log( this.plotNewData.getData() );
-    		go.PhoneGapSuit.alert("Note Tag Saved...");
-			this.$.txtAreaNote.setValue("");
-    		this.$.txtAreaNote.hide();
-    	} else if (this.getTagMode() == null) {
-    		this.setTagMode("add");
-    	}
+        if(this.getTagMode() == null) {
+            this.setTagMode("add");
+        } else {
+            this.currentTag.setNote(this.$.txtAreaNote.getValue());  
+            console.log( this.currentTag.getData() );
+            this.service = new Service().saveTagRecord(this.currentTag.getData())
+            .done(function(result){
+                //console.log(result);
+                go.PhoneGapSuit.alert("Note Tag Saved.");
+                this.loadData();      
+            });
+            this.setTagMode(null);
+            
+
+        }
 		
 	}
 });

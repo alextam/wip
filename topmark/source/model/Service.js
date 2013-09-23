@@ -12,6 +12,10 @@ enyo.kind({
         console.log(taffyData().get());
         return this.resolveDfd(taffyData(query).get());
 	},
+    getTags:function() {
+        var localTagData = this.global.getLocal("TOPMARK.TOYOTA.TAGS");
+        return this.resolveDfd(localTagData);
+    },
     loadPriceGuide:function() {
         console.log("Installing Price Data...");
         var priceGuide = [
@@ -41,14 +45,7 @@ enyo.kind({
     initData:function() {
         console.log("Installing Sample Data...");
         var fullData = [
-            //"vechicleno":"KDU 9665",
-            //"chassis":"CH00100",
-            //"engineno":"EN99911",
-            //"registrationdate":"09-09-2009",
-            //"type":"Private",
-            //"model":"PROTON WIRA",
-            //"descripton":"Fully furnished, full accessories, new car stereo",
-            //"year":"2009
+           
             {
                 vehicleno:"WWW 1234",
                 chassis:"SGDT001SW121227",
@@ -82,10 +79,38 @@ enyo.kind({
         ];
         var localData = this.global.getLocal("TOPMARK.TOYOTA");
         if (localData != null){
-            return;
+            //return;
         } else {
             this.global.storeLocal("TOPMARK.TOYOTA",fullData);
         }
+
+        var localTagData = this.global.getLocal("TOPMARK.TOYOTA.TAGS");
+        var tags = [
+            {
+                uniqueId:"10000000",
+                note:"Dented...Previous accident...",
+                top:42,
+                left:137
+            },
+            {
+                uniqueId:"20000000",
+                note:"Windscreen Replaced 2011",
+                top:164,
+                left:199
+            },
+            {
+                uniqueId:"30000000",
+                note:"Alignment Problem...",
+                top:275,
+                left:139
+            }
+        ];
+        if (localTagData != null){
+            //return;
+        } else {
+            this.global.storeLocal("TOPMARK.TOYOTA.TAGS",tags);
+        }
+        
     },
     getLocalData: function() {
         var localData = this.global.getLocal("TOPMARK.TOYOTA");
@@ -100,6 +125,14 @@ enyo.kind({
         taffyDB.insert(payLoad);
         
         this.global.storeLocal("TOPMARK.TOYOTA",taffyDB().get());
+        return this.resolveDfd({error:0});
+    },
+    saveTagRecord: function(payLoad) {
+        var localData = this.global.getLocal("TOPMARK.TOYOTA.TAGS");
+        var taffyDB = TAFFY(localData);
+        taffyDB.insert(payLoad);
+        
+        this.global.storeLocal("TOPMARK.TOYOTA.TAGS",taffyDB().get());
         return this.resolveDfd({error:0});
     }
 });

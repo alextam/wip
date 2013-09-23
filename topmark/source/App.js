@@ -95,7 +95,7 @@ enyo.kind({
         menu:[
             {content:"Search Vehicle",icon:"icon-search", kind:"MasterForm"},
             {content:"Price Guide",icon:"icon-list-ul", kind:"MasterForm"},
-            {content:"Settings",icon:"icon-cog", kind:"Step4Form"}
+            {content:"Settings",icon:"icon-cog", kind:"SettingsForm"}
         ],
         submenu:[
             {content:"Step 1: Appraisal",icon:"icon-pencil", kind:"Step1Form"},
@@ -134,7 +134,7 @@ enyo.kind({
             this.$.detailViewScrollerControl.createComponent({kind:this.menu[ this.getActiveIndex() ].kind});
             this.$.detailViewScrollerControl.render();
         } else {
-            this.$.pricingGuide.show();
+            
         }
     },
     loadPage:function(kindName,params){
@@ -153,6 +153,9 @@ enyo.kind({
     },
     listItemTapped:function(inSender,inEvent) {
         this.setActiveIndex(inEvent.index);
+        if (this.getActiveIndex() == 1) {
+            this.$.pricingGuide.show();
+        }
     },
 	menuChanged:function() {
         this.$.menuList.setCount(this.menu.length);
