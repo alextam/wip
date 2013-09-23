@@ -95,7 +95,7 @@ enyo.kind({
         menu:[
             {content:"Search Vehicle",icon:"icon-search", kind:"MasterForm"},
             {content:"Price Guide",icon:"icon-list-ul", kind:"MasterForm"},
-            {content:"Settings",icon:"icon-cog", kind:"SettingsForm"}
+            {content:"Settings",icon:"icon-cog", kind:"Step4Form"}
         ],
         submenu:[
             {content:"Step 1: Appraisal",icon:"icon-pencil", kind:"Step1Form"},

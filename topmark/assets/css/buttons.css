@@ -1192,3 +1192,7 @@ button.yellowButton:active:hover:not([disabled]){
 	background:#000 !important;
 	
 }
+
+button.yellowButton:disabled{
+	background:#666 !important;
+}

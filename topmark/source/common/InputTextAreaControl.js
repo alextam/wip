@@ -13,10 +13,10 @@ enyo.kind({
         	style:"min-height:58px"
         }
     ],
+    value:"",
     published:{
     	placeholder:"Insert value...",
 		validation:"",
-		value:"",
 		maxlength: 100,
 		decoratorClass:"",
         readOnly:false,
@@ -28,15 +28,19 @@ enyo.kind({
         this.reset = this.placeholder;
         this.placeholderChanged();
         this.maxlengthChanged();
-        this.valueChanged();
         this.readOnlyChanged();
         this.disabledChanged();
         this.validationChanged();
         this.$.txtInput.setAttribute("autocapitalize","off");
         this.$.txtInput.setAttribute("autocorrect","off");
     },
-    valueChanged:function(){
-    	this.$.txtInput.setValue(this.value);
+    setValue:function(value){
+        this.value = value;
+    	this.$.txtInput.setValue(value);
+    },
+
+    getValue:function(){
+        return this.$.txtInput.getValue();
     },
     readOnlyChanged:function(){
         if (this.readOnly){

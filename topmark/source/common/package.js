@@ -1,4 +1,5 @@
 enyo.depends(
+	"AnchorTag.js",
 	"InputDateTimeControl.js",
 	"InputTextAreaControl.js",
 	"InputDisplayControl.js",

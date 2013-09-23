@@ -69,41 +69,77 @@ enyo.kind({
         		},
         		{
         			style:"width:65%;background:#f2f2f2;text-align:center !important",
-        			/*
         			components:[
         				{
-							kind:"Image",
-							src:"assets/img/toyotaExterior.png",
-							style:"width:576px;"
-						}
-        			]
-        			*/
-        			components:[
-        				{
-        					name:"canvasControl",
-        					kind:"Canvas",
-        					style:"width:576px;height:334px;",
-            				//ontap:"handleTap",
-            				attributes: {width: 576, height: 334},
-            				components:[
-            					{ kind: "enyo.canvas.Image", ontap:"handleTap", bounds:{t:0, l:0, h:334, w:576}, src:"assets/img/toyotaExterior.png", attributes: {width: 576, height: 334} }
-            				]
-
+        					name:"drawBoard",
+        					style:"width:576px;height:334px;position:relative;overflow:hidden",
+        					classes:"whiteboardBg",
+        					ontap:"handlePlotTag"
         				}
         			]
         		}
         	]
         }
 	],
+	tagKind:{
+		kind:"Button",
+		style:"width:30px;height:30px"
+	},
+	published:{
+	    tagMode:null,
+	    plotNewData:null		
+	},
 	create:function() {
 		this.inherited(arguments);
 		this.$.txtAreaNote.hide();
-		var img = new Image();
-		img.src = this.$.image.src;
-		img.onload = enyo.bind(this, function() {
-			this.$.canvasControl.update();
-		});
+		this.tagModeChanged();
+		
 	},
+
+    plotTag:function(id,aY,aX) {
+    	this.$.drawBoard.createComponent({
+    		kind:"AnchorTag",
+    		top:aY,
+    		id:id,
+    		left:(aX-60)
+    	});
+    	this.$.drawBoard.render();
+    	this.setTagMode("save");
+    	this.$.txtAreaNote.show();
+
+    },
+    handlePlotTag:function(inSender,inEvent) {
+    	if(this.getTagMode() == "add"){
+    		//alert("PLOT");
+    		var actualX = 0;
+    		var actualY = 0;
+    		console.log(inEvent);
+    		if (String(inEvent.srcEvent.type).indexOf("mouse") == -1){
+    			// Touch!
+    			actualX = inEvent.pageX + inEvent.srcEvent.layerX;
+    			actualY = inEvent.pageY + inEvent.srcEvent.layerY;
+    		} else {
+    			// Mouse
+    			actualX = inEvent.srcEvent.layerX;
+    			actualY = inEvent.srcEvent.layerY;
+    		}
+    		this.plotTag(new Date().getTime(), actualY, actualX);
+    	} 
+    },
+    tagModeChanged:function() {
+    	if(this.tagMode == null){
+    		this.$.btnAddNote.setDisabled(false);
+    		this.$.btnAddNote.setContent("Add Note Tag");
+    	} else if (this.tagMode == "add") {
+    		this.$.btnAddNote.setContent("Place Note Tag");
+    		this.$.btnAddNote.setDisabled(true);
+		} else if (this.tagMode == "save") {
+    		this.$.btnAddNote.setContent("Save Note and Tag");
+    		this.$.btnAddNote.setDisabled(false);
+    	} else {	
+    		alert("Edit Mode...");
+    	}
+    },
 	handleNext:function(inSender,inEvent) {
 		this.bubble("onChangePage");
 	},
@@ -111,9 +147,23 @@ enyo.kind({
 		this.bubble("onBackPage");
 	},
 	handleTap: function(inSender,inEvent) {
-		alert("?");
+		console.log(inEvent);
 	},
 	handleAddNote: function(inSender,inEvent) {
-		alert("Adding Note - Work in Progress");
+		//alert("Adding Note - Work in Progress");
+		//this.setTagMode("add");
+		if (this.getTagMode() == "save") {
+			console.log("what:"+this.$.txtAreaNote.getValue());
+    		//this.plotNewData.setNote(this.$.txtAreaNote.getValue());
+    		//this.$.btnAddNote.setDisabled(false);
+    		this.setTagMode(null);
+    		//console.log( this.plotNewData.getData() );
+    		go.PhoneGapSuit.alert("Note Tag Saved...");
+			this.$.txtAreaNote.setValue("");
+    		this.$.txtAreaNote.hide();
+    	} else if (this.getTagMode() == null) {
+    		this.setTagMode("add");
+    	}
+		
 	}
 });
