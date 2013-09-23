@@ -17,6 +17,7 @@ enyo.kind({
 		this.srcChanged();
 		
 	},
+	
 	srcChanged: function() {
 		if (this.src) {
 			this.image.src = this.src;

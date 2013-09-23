@@ -25,6 +25,9 @@ enyo.kind({
 		*/
 		onRender: ""
 	},
+	handlers:{
+		ontap: "tap"
+	},
 	//* @protected
 	constructor: function() {
 		this.bounds = {l: enyo.irand(400), t: enyo.irand(400), w: enyo.irand(100), h: enyo.irand(100)};

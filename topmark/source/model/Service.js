@@ -12,6 +12,32 @@ enyo.kind({
         console.log(taffyData().get());
         return this.resolveDfd(taffyData(query).get());
 	},
+    loadPriceGuide:function() {
+        console.log("Installing Price Data...");
+        var priceGuide = [
+            {
+                model:"TOYOTA",
+                year:"2000",
+                price:"RM 12,000 - RM 13,000"
+            },
+            {
+                model:"PROTON SAGA",
+                year:"2001",
+                price:"RM 10,000 - RM 12,000"
+            },
+            {
+                model:"HONDA",
+                year:"2005",
+                price:"RM 23,500 - RM 24,500"
+            },
+            {
+                model:"DAIHATSU EX",
+                year:"2005",
+                price:"RM 20,000 - RM 22,000"
+            }
+        ];
+        return this.resolveDfd(priceGuide);
+    },
     initData:function() {
         console.log("Installing Sample Data...");
         var fullData = [

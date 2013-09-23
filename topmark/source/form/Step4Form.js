@@ -82,11 +82,11 @@ enyo.kind({
         				{
         					name:"canvasControl",
         					kind:"Canvas",
-            				style:"width:576px;height:334px;",
+        					style:"width:576px;height:334px;",
             				//ontap:"handleTap",
             				attributes: {width: 576, height: 334},
             				components:[
-            					{ kind: "enyo.canvas.Image", bounds:{t:0, l:0, h:334, w:576}, src:"assets/img/toyotaExterior.png", attributes: {width: 576, height: 334} }
+            					{ kind: "enyo.canvas.Image", ontap:"handleTap", bounds:{t:0, l:0, h:334, w:576}, src:"assets/img/toyotaExterior.png", attributes: {width: 576, height: 334} }
             				]
 
         				}
@@ -111,7 +111,7 @@ enyo.kind({
 		this.bubble("onBackPage");
 	},
 	handleTap: function(inSender,inEvent) {
-		console.log(inEvent);
+		alert("?");
 	},
 	handleAddNote: function(inSender,inEvent) {
 		alert("Adding Note - Work in Progress");

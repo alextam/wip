@@ -78,7 +78,16 @@ enyo.kind({
             	}
             ]	
 		},
-		{ kind:"Footer" }
+		{ kind:"Footer" },
+        { 
+            name:"pricingGuide",
+            kind:"GenericPopup",
+            title:"Pricing Guide",
+            btnLeft:"",
+            btnRight:"Done",
+            onControlButtonTapped:"handlePopupButtonTapped",
+            contentPage:"PriceGuideForm"
+        }
 	],
 	published:{
         activeIndex:0,
@@ -86,7 +95,7 @@ enyo.kind({
         menu:[
             {content:"Search Vehicle",icon:"icon-search", kind:"MasterForm"},
             {content:"Price Guide",icon:"icon-list-ul", kind:"MasterForm"},
-            {content:"Settings",icon:"icon-cog", kind:"Step4Form"}
+            {content:"Settings",icon:"icon-cog", kind:"SettingsForm"}
         ],
         submenu:[
             {content:"Step 1: Appraisal",icon:"icon-pencil", kind:"Step1Form"},
@@ -115,6 +124,9 @@ enyo.kind({
         this.$.menuList.select(this.getActiveIndex());
         this.$.menuListSubMenu.select(this.getSubActiveIndex());
 	},
+    handlePopupButtonTapped:function(inSender,inEvent) {
+        inSender.hide();
+    },
     activeIndexChanged:function() {
         console.log("Change page...");
         if (this.getActiveIndex() != 1) {
@@ -122,7 +134,7 @@ enyo.kind({
             this.$.detailViewScrollerControl.createComponent({kind:this.menu[ this.getActiveIndex() ].kind});
             this.$.detailViewScrollerControl.render();
         } else {
-            alert("popup!");
+            this.$.pricingGuide.show();
         }
     },
     loadPage:function(kindName,params){

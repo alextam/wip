@@ -576,30 +576,20 @@ button.pickerButton.standardPopupCaller:disabled{
 .contextPopupHeader button {
 	min-width:60px !important;
 	height:35px !important;
-	-moz-border-radius: 0.6em !important;
-	-webkit-border-radius: 0.6em !important;
-	border-radius: 0.6em !important;
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0em !important;
 	border:1px solid #000;
 	color:#ffffff;
 	font-size:0.8em !important;
 	font-weight:600; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #76CDCB ), to( #22a09a )) !important; 
-	background-image: -webkit-linear-gradient( #76CDCB , #22a09a ) !important; /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #76CDCB , #22a09a ) !important; /* FF3.6 */
-	background-image:     -ms-linear-gradient( #76CDCB , #22a09a ) !important; /* IE10 */
-	background-image:      -o-linear-gradient( #76CDCB , #22a09a ) !important; /* Opera 11.10+ */
-	background-image:         linear-gradient( #76CDCB , #22a09a ) !important;
+	background: #cc3333 !important;
 }
 
 .contextPopupHeader button:active:hover:not([disabled]){
 	color:#333;
 	font-weight:600; 
-	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #76CDCB )) !important; 
-	background-image: -webkit-linear-gradient( #22a09a , #76CDCB ) !important; /* Chrome 10+, Saf5.1+ */
-	background-image:    -moz-linear-gradient( #22a09a , #76CDCB ) !important; /* FF3.6 */
-	background-image:     -ms-linear-gradient( #22a09a , #76CDCB ) !important; /* IE10 */
-	background-image:      -o-linear-gradient( #22a09a , #76CDCB ) !important; /* Opera 11.10+ */
-	background-image:         linear-gradient( #22a09a , #76CDCB ) !important;
+	background:red !important;
 }
 
 .blueActionButton {

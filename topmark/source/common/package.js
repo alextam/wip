@@ -10,6 +10,7 @@ enyo.depends(
 	"SearchItem.js",
 	"SearchInput.js",
 	"ActionButton.js",
+	"GenericPopup.js",
 	"SearchResult.js",
 	"StickyLoader.js",
 	"StandardPicker.js"
