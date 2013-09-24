@@ -34,6 +34,8 @@ h2.appFormMid { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-
 .btnCheckBox {background: none !important;border:none !important;}
 .pn1stCell {width:166px !important;}
 .pn2ndCell {width:236px !important;}
+.iconControl {font-size:3em !important;color:#cc3333;text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3) !important;}
+.tagNoteSelected{font-size:3em !important;color:#666666 !important;}
 .tagNote {width:50px;height:50px;position:absolute};
 .pnOtherCell {width:200px !important;}
 .grayStripe h1.PNLabel {padding-top:0px !important;font-size:1em !important;}

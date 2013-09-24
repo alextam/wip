@@ -2,7 +2,7 @@ enyo.kind({
 	name: "Step4Form",
 	kind: "FittableRows",
 	components:[
-		{
+        {
             kind:"Header",
             title:"Exterior",
             buttons:[
@@ -85,6 +85,9 @@ enyo.kind({
 	    tagMode:null,
         currentTag:null
 	},
+    handlers:{
+        onSelectTag:"handleTagSelect"
+    },
 	create:function() {
 		this.inherited(arguments);
 		this.$.txtAreaNote.hide();
@@ -110,6 +113,7 @@ enyo.kind({
         this.$.drawBoard.createComponent({
             kind:"AnchorTag",
             uniqueId:id,
+            note:note,
             left:aX,
             top:aY
         });
@@ -161,9 +165,18 @@ enyo.kind({
     		this.$.btnAddNote.setContent("Save Note Tag");
             this.$.btnAddNote.setDisabled(false);
     	} else {
-            alert("Edit Mode...");
+            this.$.txtAreaNote.show();
+            this.$.btnAddNote.setContent("Update Note Tag");
+            this.$.btnAddNote.setDisabled(false);
         }
     },
+    handleTagSelect:function(inSender,inEvent) {
+        this.setTagMode("edit");
+        //console.log();
+        this.currentTag = inEvent.selected;
+        console.log(this.currentTag);
+        this.$.txtAreaNote.setValue(this.currentTag.getNote());
+    }, 
 	handleNext:function(inSender,inEvent) {
 		this.bubble("onChangePage");
 	},
@@ -175,16 +188,25 @@ enyo.kind({
 	},
 	handleAddNote: function(inSender,inEvent) {
 		//alert("Adding Note - Work in Progress");
+        var _this = this;
         if(this.getTagMode() == null) {
             this.setTagMode("add");
+            this.$.drawBoard.destroyClientControls();
+        } else if(this.getTagMode() == "edit") {
+            this.currentTag.setNote(this.$.txtAreaNote.getValue());
+            console.log( this.currentTag.getData() );
+            this.currentTag.deSelect();
+            this.currentTag = null;
+            this.setTagMode(null);
         } else {
+            alert("?SAVE");
             this.currentTag.setNote(this.$.txtAreaNote.getValue());  
             console.log( this.currentTag.getData() );
             this.service = new Service().saveTagRecord(this.currentTag.getData())
             .done(function(result){
                 //console.log(result);
                 go.PhoneGapSuit.alert("Note Tag Saved.");
-                this.loadData();      
+                _this.loadData();      
             });
             this.setTagMode(null);
             

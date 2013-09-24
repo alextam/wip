@@ -3,32 +3,48 @@ enyo.kind({
     kind: "Control",
     classes:"tagNote",
     components: [
+        {kind: "Signals", onSelected: "handleSelected"},
         {
         
-    		classes:"icon icon-tag",
-    		style:"font-size:3em;color:#cc3333 !important;text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3) !important;"
+    		name:"iconControl",
+            classes:"icon icon-tag iconControl"
         }
     ],
     handlers:{
-		ondrag:"handleDrag"
+        ondrag:"handleDrag",
+        ontap:"handleTap"
     },
     top:0,
     left:0,
     
     published:{
         uniqueId:null,
-        note:null        
-    },		
+        note:null,
+        disabled:false        
+    },
     create:function(){
     	this.inherited(arguments);
      	this.setCoordinate();
     },
+    handleSelected:function(inSender,inEvent) {
+        //console.log("Reset");
+        this.$.iconControl.removeClass("tagNoteSelected");
+    },
+    handleTap: function(inSender,inEvent) {
+        if (!this.disabled) {
+            enyo.Signals.send("onSelected");
+            this.bubble("onSelectTag",{selected:this});
+            this.$.iconControl.addClass("tagNoteSelected");
+            this.$.iconControl.render();
+        }
+    },
     handleDrag:function(inSender,inEvent) {
-    	//alert("!");
-    	//console.log(inEvent);
     	this.left += inEvent.ddx;
     	this.top += inEvent.ddy;
     	this.setCoordinate();
+    },
+    deSelect:function() {
+        this.$.iconControl.removeClass("tagNoteSelected");
     },
     setCoordinate:function() {
     	if(this.top <= 0){
