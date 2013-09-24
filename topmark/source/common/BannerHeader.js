@@ -3,12 +3,13 @@ enyo.kind({
 	kind: "Control",
 	layoutKind: "FittableColumnsLayout",
 	classes:"drawerLine whiteBg",
+	style:"height:133px",
 	global:go.Global,
 	components:[
 		{
 			kind:"Image",
 			src:"./assets/img/showCase01.png",
-			style:"width:200px;margin-right:5px"
+			style:"width:200px;margin-right:5px;height:133px"
 		},
 		{
 			fit:true,
