@@ -44,6 +44,6 @@ enyo.kind({
 		this.bubble("onChangePage");
 	},
 	handleBack: function(inSender,inEvent) {
-		this.bubble("onBackPage");
+		this.bubble("onBackPage",{page:"Step4Form"});
 	}
 });

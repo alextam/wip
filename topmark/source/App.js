@@ -198,6 +198,6 @@ enyo.kind({
         alert("!!!");
     },
     handleBackPage:function(inSender,inEvent) {
-        this.loadPage(inEvent.page);  
+        this.loadPage(inEvent.page); 
     }
 });
