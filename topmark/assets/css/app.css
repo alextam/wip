@@ -1196,7 +1196,7 @@ textarea {
 }
 
 .appInputForm.onyx-disabled input {
- 	color:#999 !important;
+ 	color:#666 !important;
 }
 
 
@@ -1245,6 +1245,7 @@ textarea {
 
 .appInputForm[disabled] {
 	opacity: 1 !important;
+	color:#222;
 	background: #eee !important;
 }
 
