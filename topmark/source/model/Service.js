@@ -7,7 +7,7 @@ enyo.kind({
 	       	
         var taffyData = TAFFY(this.getLocalData());
         var query = {};
-        query[field] = {is:param};
+        query[field] = {is:param.toUpperCase()};
         console.log(query);
         console.log(taffyData().get());
         return this.resolveDfd(taffyData(query).get());

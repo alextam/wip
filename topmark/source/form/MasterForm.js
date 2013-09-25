@@ -53,7 +53,7 @@ enyo.kind({
 						} 
 					]
 				},
-				{ style:"height:15px" },
+				{ style:"height:25px" },
 				{
 					classes:"txtAlignCenter",							
 					components:[
@@ -67,7 +67,7 @@ enyo.kind({
 						}
 					]
 				},
-				{ style:"height:15px" },
+				{ style:"height:55px" },
 				{
 					classes:"setWidth70 centerDiv",
 					style:"height:200px;",

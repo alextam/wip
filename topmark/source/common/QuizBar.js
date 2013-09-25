@@ -13,14 +13,14 @@ enyo.kind({
         	content: "Set Title..."
         },
         {
-        	style:"width:225px;",
+        	style:"width:235px;",
         	components:[
         		{
 	        		kind:"Group",
                     name:"chkYesNo",
 	        		components:[
-	        			{kind:"ButtonCheckBox",content:"OK", style:"width:104px !important"},
-						{kind:"ButtonCheckBox",content:"Not OK", style:"width:110px !important"}	        					
+	        			{kind:"ButtonCheckBox",content:"OK", style:"width:100px !important"},
+						{kind:"ButtonCheckBox",content:"Not OK", style:"width:135px !important"}	        					
 	        		]
         		}
        		]
