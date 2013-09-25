@@ -225,9 +225,9 @@ enyo.kind({
 		this.inherited(arguments);
 	},
 	handleNext:function(inSender,inEvent) {
-		this.bubble("onChangePage");
+		this.bubble("onChangePage",{page:"Step4Form"});
 	},
 	handleBack: function(inSender,inEvent) {
-		this.bubble("onBackPage");
+		this.bubble("onBackPage",{page:"Step2Form"});
 	}
 });

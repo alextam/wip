@@ -93,6 +93,7 @@ enyo.kind({
 		this.$.txtAreaNote.hide();
 		this.tagModeChanged();
         this.loadData();
+        this.bubble("onSubPageShow",{subActiveIndex:3});
 	},
     loadData:function() {
         var _this = this;
@@ -115,7 +116,8 @@ enyo.kind({
             uniqueId:id,
             note:note,
             left:aX,
-            top:aY
+            top:aY,
+            addMode:false
         });
         this.$.drawBoard.render();
     },
@@ -124,7 +126,8 @@ enyo.kind({
     		kind:"AnchorTag",
             uniqueId:id,
     		left:(aX-60),
-    		top:aY
+    		top:aY,
+            addMode:true
     	});
     	this.setTagMode("save");
     	this.$.drawBoard.render();
@@ -178,10 +181,10 @@ enyo.kind({
         this.$.txtAreaNote.setValue(this.currentTag.getNote());
     }, 
 	handleNext:function(inSender,inEvent) {
-		this.bubble("onChangePage");
+		this.bubble("onChangePage",{page:"Step5Form"});
 	},
 	handleBack: function(inSender,inEvent) {
-		this.bubble("onBackPage");
+		this.bubble("onBackPage",{page:"Step3Form"});
 	},
 	handleTap: function(inSender,inEvent) {
 		console.log(inEvent);
@@ -199,7 +202,6 @@ enyo.kind({
             this.currentTag = null;
             this.setTagMode(null);
         } else {
-            alert("?SAVE");
             this.currentTag.setNote(this.$.txtAreaNote.getValue());  
             console.log( this.currentTag.getData() );
             this.service = new Service().saveTagRecord(this.currentTag.getData())

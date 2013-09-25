@@ -20,18 +20,19 @@ enyo.kind({
     published:{
         uniqueId:null,
         note:null,
-        disabled:false        
+        addMode:false
     },
     create:function(){
     	this.inherited(arguments);
      	this.setCoordinate();
     },
+   
     handleSelected:function(inSender,inEvent) {
         //console.log("Reset");
         this.$.iconControl.removeClass("tagNoteSelected");
     },
     handleTap: function(inSender,inEvent) {
-        if (!this.disabled) {
+        if (!this.addMode) {
             enyo.Signals.send("onSelected");
             this.bubble("onSelectTag",{selected:this});
             this.$.iconControl.addClass("tagNoteSelected");

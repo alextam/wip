@@ -136,6 +136,6 @@ enyo.kind({
 	},
 	handleBtnNext:function(inSender,inEvent) {
 		console.log("Submitting form...");
-		this.bubble("onChangePage");
+		this.bubble("onChangePage",{page:"Step2Form"});
 	}
 });
