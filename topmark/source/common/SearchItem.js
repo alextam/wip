@@ -71,5 +71,6 @@ enyo.kind({
         this.global.storeLocal("TOYOTA.SESSION",this.data);
         //console.log(this.global.getLocal("TOYOTA.SESSION"));
         this.bubble("onChangePage",{page:"Step1Form"});
+        inEvent.preventDefault();
     }
 });
