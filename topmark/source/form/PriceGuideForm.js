@@ -21,15 +21,15 @@ enyo.kind({
 						{
 							tag:"h2",
 							classes:"standardH2",
-							name: "txtModel",  
-							style:"width:420px",
+							name: "txtModel",
+                            style:"line-height:30px;width:420px",
 							content:"Set Model"
 						},
 						{
 							tag:"h2",
 							classes:"standardH2",
 							name:"txtYear",
-							style:"width:100px",
+							style:"line-height:30px;width:100px",
 							content:"Year"
 						},
 						{
@@ -37,6 +37,7 @@ enyo.kind({
 							fit:true,
 							classes:"standardH2 txtAlignRight",
 							name:"txtPrice",
+                            style:"line-height:30px;",
 							content:"Price"
 						}
     				]

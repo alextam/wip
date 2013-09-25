@@ -1,5 +1,6 @@
 enyo.depends(
 	"AnchorTag.js",
+	"ButtonCheckBox.js",
 	"InputDateTimeControl.js",
 	"InputTextAreaControl.js",
 	"InputDisplayControl.js",
@@ -13,6 +14,7 @@ enyo.depends(
 	"ActionButton.js",
 	"GenericPopup.js",
 	"SearchResult.js",
+	"QuizBar.js",
 	"StickyLoader.js",
 	"StandardPicker.js"
 );

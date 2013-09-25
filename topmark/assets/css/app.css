@@ -20,7 +20,7 @@ body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;b
 h1.pnCell {font-size:1em !important;line-height:50px;}
 .pnCellOfFive{width:1002px;height:56px;margin-top:5px;margin-bottom:0px;}
 .grayStripe h1.pnCell {line-height: 24px !important;}
-h1.standardH1 { color:#333;font-size:1.4em;line-height:30px;margin-top:0px;margin-bottom:0px;}
+h1.standardH1 { color:#333;font-size:1.2em;line-height:30px;margin-top:0px;margin-bottom:0px;}
 h2.standardH2 { color:#333;font-size:1em;line-height:20px;margin-top:0px;margin-bottom:0px;}
 h2.appForms { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-bottom:0px; padding:4px 15px 4px 15px;width:250px;text-align: right;border-right:1px solid #ccc; }
 h2.appFormMid { color:#999;font-size:1em;line-height:42px;margin-top:0px;margin-bottom:0px; padding:4px 15px 4px 15px;width:160px;border:1px solid #ccc; border-bottom:none;border-left:none;text-align: right }
@@ -1889,7 +1889,7 @@ small.disclaimer { font-weight: bold !important;color:#ffffff !important; margin
 	line-height:35px;
 	padding:10px;
 	font-size:1.0em;
-	width:220px;
+	width:285px;
 	height:50px;
 	text-indent: 5px;
 	font-weight: bold;
