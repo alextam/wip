@@ -20,7 +20,7 @@ enyo.kind({
         console.log("Installing Price Data...");
         var priceGuide = [
             {
-                model:"TOYOTA",
+                model:"NISSAN",
                 year:"2000",
                 price:"RM 12,000 - RM 13,000"
             },

@@ -60,6 +60,8 @@ enyo.kind({
 		},
 		{
 			classes:"logoPadding",
+			style:"width:133px;"
+			/*
 			components:[
 				{
 					kind:"Image",
@@ -67,6 +69,7 @@ enyo.kind({
 					style:"width:133px;"
 				}
 			]
+			*/
 		}
 	],
 	published:{

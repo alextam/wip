@@ -13,6 +13,9 @@ enyo.kind({
 				{ fit:true },
 				{
 					classes:"logoPadding",
+					style:"width:133px;"
+					/*
+					,
 					components:[
 						{
 							kind:"Image",
@@ -20,6 +23,7 @@ enyo.kind({
 							style:"width:133px;"
 						}
 					]
+					*/
 				}
 			]
 		},				
