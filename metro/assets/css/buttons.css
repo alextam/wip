@@ -1,0 +1,1214 @@
+.onyx-button {
+	-moz-border-radius-topleft: 0.6em !important;
+	-webkit-border-top-left-radius: 0.6em !important;
+	border-top-left-radius: 0.6em !important;
+	-moz-border-radius-topright: 0.6em !important;
+	-webkit-border-top-right-radius: 0.6em !important;
+	border-top-right-radius: 0.6em !important;
+
+	-moz-border-radius-bottomleft: 0.6em !important;
+	-webkit-border-bottom-left-radius: 0.6em !important;
+	border-bottom-left-radius: 0.6em !important;
+	-moz-border-radius-bottomright: 0.6em !important;
+	-webkit-border-bottom-right-radius: 0.6em !important;
+	border-bottom-right-radius: 0.6em !important;
+	height:50px !important;
+	background: none !important;
+}
+
+button.logoButton {
+	background: url("../img/logo.png") no-repeat !important;
+	background-size: 228px 30px !important;
+	background-position:top center !important;
+	width: 228px !important;
+	height: 30px !important;
+}
+
+button.signUpButton {
+	background: url("../img/signUp.png") no-repeat !important;
+	background-size: 136px 30px !important;
+	background-position:top center !important;
+	width: 136px !important;
+	height: 30px !important;
+}
+
+.timerPicker button{
+	background:#f2f2f2 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f2f2f2 ) , to( #ddd )) !important;
+	background-image: -webkit-linear-gradient( #f2f2f2 , #ddd) !important;
+	background-image: -moz-linear-gradient( #f2f2f2 , #ddd ) !important;
+	background-image: -ms-linear-gradient( #f2f2f2 , #ddd ) !important;
+	background-image: -o-linear-gradient( #f2f2f2 , #ddd ) !important;
+	background-image: linear-gradient( #f2f2f2 , #ddd ) !important;
+}
+
+.groupButtons {
+	border:none;
+	background: #fff;
+	font-weight: bold;
+	color:#666;
+	width:158px;
+	font-size:0.9em;
+	height:40px !important;
+}
+
+.groupButtons.active{
+	background: #9cb4c2 !important;
+	color:#fff !important;
+	text-shadow: 0 1px 2px #aaa !important;
+	-moz-box-shadow:    inset 0 0 10px #516c7b !important;
+    -webkit-box-shadow: inset 0 0 10px #516c7b !important;
+    box-shadow:         inset 0 0 10px #516c7b !important;
+}
+
+.patientHeaderSmallButtonContainer{
+	float: left !important;
+	padding:0px !important;
+	width:100px !important;
+	height:33px !important;
+}
+.preloaderArea {
+	margin:0px !important;
+}
+
+.btnLoadMoreCDR {
+	width:100%;
+	height:32px;
+	font-size:0.8em;
+	font-weight: bold;
+	padding:0px;
+	margin:0px;
+	border:none !important;
+}
+
+button.btnLoadMoreCDR:active:hover:not([disabled]){
+	background:#408080 !important;
+	color:#ddd;
+}
+
+.patientHeaderSmallButtonContainer .smallControlButton {
+	height:33px !important;
+	width:33px !important;
+	-moz-border-radius: 0.5em !important;
+	-webkit-border-radius: 0.5em !important;
+	border-radius: 0.5em !important;
+	border:none !important;
+	padding:0px !important;
+	margin-top:0px !important;
+	color:#fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #3d78b9 ), to( #15569d )) !important; 
+	background-image: -webkit-linear-gradient( #3d78b9 , #15569d ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #3d78b9 , #15569d ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #3d78b9 , #15569d ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #3d78b9 , #15569d ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #3d78b9 , #15569d ) !important;
+}
+
+.patientHeaderSmallButtonContainer .smallControlButton .icon {
+	margin-top:-3px !important;
+} 
+
+button.smallControlButton:active:hover:not([disabled]){
+	background: #2850A2 !important;
+}
+
+.CDRSelectedSection{background:#ffe9d1 !important;border:none !important;text-align: left;}
+.CDRSelectedSection:active:hover:not([disabled]) h1 {color:#000;}
+.CDRSelectedSection:active:hover:not([disabled]) h2 {color:#ccc;}
+.CDRSelectedSection:active:hover:not([disabled]){background:#fff !important;}
+
+.CDRSelectedSection.active {
+	color:#fff;
+	background:#73CCCA !important;
+	-webkit-box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.5) !important;
+	-moz-box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.5) !important;
+	box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.5) !important;
+	-moz-box-shadow:    none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow:         none !important;
+}
+
+.CDRSelectedSection.active h1 {color:#fff;}
+.CDRSelectedSection.active h2 {color:#777;}
+
+.MARPatientListCell {
+	height:120px;
+	-moz-border-radius-topleft: 0.6em !important;
+	-webkit-border-top-left-radius: 0.6em !important;
+	border-top-left-radius: 0.6em !important;
+	-moz-border-radius-topright: 0.6em !important;
+	-webkit-border-top-right-radius: 0.6em !important;
+	border-top-right-radius: 0.6em !important;
+
+	-moz-border-radius-bottomleft: 0.6em !important;
+	-webkit-border-bottom-left-radius: 0.6em !important;
+	border-bottom-left-radius: 0.6em !important;
+	-moz-border-radius-bottomright: 0.6em !important;
+	-webkit-border-bottom-right-radius: 0.6em !important;
+	border-bottom-right-radius: 0.6em !important;
+	border:2px solid #aaa;
+	background: #fff; 
+	padding:10px;
+	width:440px;
+	margin:5px;
+	float:left;
+}
+
+.MARPatientListCell:active:hover:not([disabled]){
+	background:#9ddbd9 !important;
+}
+
+.standardRepeaterItem { padding:10px; background:#fff}
+.standardRepeaterItem:active:hover:not([disabled]) {background:#73CCCA !important;}
+.standardRepeaterItem:active:hover:not([disabled]) h1{color:#fff;background:#73CCCA !important;	}
+.standardRepeaterItem:active:hover:not([disabled]) h2{color:#777;background:#73CCCA !important;	}
+.standardTinyButton {
+	height:57px !important;
+	width:90px;margin-left:5px;
+	text-align:center !important;
+	border:1px solid #ccc !important;
+	background: #fff !important;
+	color:#336699;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #eee )) !important;
+	background-image: -webkit-linear-gradient( #fff , #eee ) !important;
+	background-image: -moz-linear-gradient( #fff , #eee ) !important;
+	background-image: -ms-linear-gradient( #fff , #eee ) !important;
+	background-image: -o-linear-gradient( #fff , #eee ) !important;
+	background-image: linear-gradient( #fff , #eee ) !important;
+}
+
+.standardTinyButton:active:hover:not([disabled]){background: #eee !important;	}
+button.normalButton {
+	background:#fff !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #eee )) !important; 
+	background-image: -webkit-linear-gradient( #fff , #eee ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff , #eee ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff , #eee ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #fff , #eee ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff , #eee ) !important;
+	width:155px;
+	font-weight: bold;
+	font-size:0.95em !important;
+	border:1px solid #ccc;
+	height:54px !important;
+	margin-left:3px !important;
+}
+
+button.normalButton:active:hover:not([disabled]){
+	background:#ccc !important;
+	color:#fff;
+}
+
+.orderButtonControl button.authorizeWarnButton {
+	padding:5px !important;
+	height:30px !important;
+	color:#fff !important;
+	background:#990000 !important;
+	font-weight:bold !important;
+	margin-top:10px !important;
+	margin-right:5px !important;
+}
+
+.appFormMadeButton h1 {
+	color:#777;
+	line-height:25px;
+	margin:0px !important;
+	font-size:1.1em;
+	font-weight: bold !important;
+}
+
+.appFormMadeButton i {
+	color:#777;
+}
+
+.appFormMadeButton:active:hover:not([disabled]){color:#fff !important;background:#9ddbd9 !important;	 	}
+.appFormMadeButton:active:hover:not([disabled]) h1,
+.appFormMadeButton:active:hover:not([disabled]) i { color:#fff !important;}
+
+.btnPN:active:hover:not([disabled]){
+	background: #9cb4c2 !important;
+	color:#ffffff !important;
+	-moz-box-shadow:    inset 0 0 8px #86A4B5 !important;
+    -webkit-box-shadow: inset 0 0 8px #86A4B5 !important;
+    box-shadow:         inset 0 0 8px #86A4B5 !important;	
+}
+
+.goAlert {
+	color:#777 !important;
+}
+
+.goAlert .popupAlert i{
+	margin-left: 10px;
+	margin-right:10px;
+	margin-top:10px !important;
+	margin-bottom:10px !important;
+}
+
+.goAlert .popupAlert h1{
+	padding-top:10px;
+	padding-bottom:10px;
+	font-size:1em !important;
+	margin:0px;
+}
+
+.autoCompletePlaceholder {
+	border:none !important;
+	width:100%;
+}
+.item .infoButton.redButton {
+	background:#CC0000 !important;
+}
+
+.item .infoButton.redButton:active:hover:not([disabled]){
+	background:red !important;
+}
+
+.onyx-input {
+	font-weight:600 !important;
+}
+
+.onyx-button[disabled]{
+	opacity: 1 !important;
+}
+
+.headerRightWing {
+	min-width: 80px;
+	max-width:350px;
+	text-align:right !important;
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.headerLeftWing {
+	min-width: 80px;
+	max-width:350px;
+	text-align:left !important;
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.leftWing {
+	text-align:left !important;
+	padding-top:10px !important;
+}
+
+.leftWing45 {
+	width:45%;
+	padding-left:10px !important;
+	text-align:left !important;
+	padding-top:10px !important;
+}
+
+.rightWing45 {
+	width:45%;
+	padding-right:10px !important;
+	text-align:right !important;
+	padding-top:10px !important;	
+}
+
+.headerPickerDecorator {
+ 	height:36px !important;
+	margin-left:5px !important;
+	margin-right:5px !important;
+}
+
+.headerPickerButton {
+	-moz-border-radius: 0.4em !important;
+	-webkit-border-radius: 0.4em !important;
+	border-radius: 0.4em !important;
+	background-color:#ffffff !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
+	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important; 
+	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important; 
+	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; 
+	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important; 
+	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;
+	border: none !important;
+	color: #fff !important;
+	padding-left:5px;
+	padding-right: 5px;
+	height:35px !important;
+	font-weight: bold !important;
+	font-size: 0.65em !important;
+	text-shadow: 0 1px -1px #63a9a7 !important;
+	height:36px !important;
+	border:1px solid #000 !important;
+ 	line-height:15px !important;
+}
+
+.headerPickerButton span{
+	margin-top:-5px !important;
+	width:190px !important;
+
+	text-align: center !important;
+	overflow:hidden !important;
+	text-overflow:ellipsis !important;
+	white-space:nowrap !important;
+	
+}
+
+.headerPickerButton:active:hover:not([disabled]){
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #56BBB7 )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #56BBB7 ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #22a09a , #56BBB7 ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #22a09a , #56BBB7 ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #22a09a , #56BBB7 ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #22a09a , #56BBB7 ) !important;
+	color: #1C6664 !important;
+}
+
+.headerPickerButton[disabled]{
+	text-shadow: 0 -1px 2px #bbb !important;
+	background: #d9d9d9 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #eeeeee ), to( #bbbbbb )) !important; 
+	background-image: -webkit-linear-gradient( #eeeeee , #bbbbbb ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #eeeeee , #bbbbbb ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #eeeeee , #bbbbbb ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #eeeeee , #bbbbbb ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #eeeeee , #bbbbbb ) !important;
+ 	color:#fff !important;
+}
+
+.headerPickerButtonMenu .onyx-menu-item.selected {
+	color:#fff !important;
+	background: #22a09a !important;	
+	text-align: left !important;
+}
+
+.headerPickerButtonMenu .onyx-menu-item{
+	text-align: left !important;
+	font-weight: bold;
+	color:#777 !important;
+	line-height:32px !important;
+	height:30px !important;
+	padding-left:10px !important;
+	padding-right:10px !important;
+	padding-top:5px !important;
+	padding-bottom:5px !important;
+
+}
+
+.headerPickerButtonMenu .onyx-menu-item:active:hover:not([disabled]){
+	text-align: left !important;
+	color:#eee !important;
+	background: #9ddbd9 !important;
+}
+
+.headerPickerDecorator .shortPickerButton {
+	width:110px !important;
+	margin-left:5px !important;
+	margin-right:5px !important;
+}
+
+.shortPickerButton {
+	height:36px !important;	
+}
+
+.shortPickerButton .headerPickerButton span {
+	width:110px !important;	
+}
+
+.btn40px {
+	box-shadow:none !important;
+	width:40px !important;
+ 	height:40px !important;
+	padding:0px !important;
+	border: none !important;
+ 	margin:0px !important;
+}
+
+.badgeInButton {
+	color:#fff;
+	font-weight:bold;
+	background:#555 !important;
+	position:absolute !important;
+	font-size:1em;
+	text-align: center !important;
+	line-height:20px !important;
+	padding:0px !important;
+	width:25px !important;
+	height:18px !important;
+}
+
+.footerIconHolder {
+	margin:5px 10px 3px 10px !important;
+	line-height:20px !important;
+	color:#5E90BB !important;
+}
+
+.footerPopup {
+	background: #d2d2d2;
+	color:#777;
+}
+
+.pickerButton {
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0em !important;
+	border-radius: 0em !important;
+	/*
+	-moz-box-shadow:    inset 0 0 10px #ccc !important;
+    -webkit-box-shadow: inset 0 0 10px #ccc !important;
+    box-shadow:         inset 0 0 10px #ccc !important;
+    */
+    margin-top:-5px !important;
+	color:#777 !important;
+	text-align: left !important;
+	font-weight:600;	
+}
+
+button.iconicButton {
+	-moz-border-radius: 0.6em !important;
+	-webkit-border-radius: 0.6em !important;
+	border-radius: 0.6em !important;
+	background:#fff !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #eee )) !important; 
+	background-image: -webkit-linear-gradient( #fff , #eee ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff , #eee ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff , #eee ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #fff , #eee ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff , #eee ) !important;
+	font-size:1.1em;
+	color:#777;
+	line-height: 32px !important;
+	font-weight: bold;
+	width:120px;
+	margin:0px;
+	padding:0px;
+	border:1px solid #ccc;
+	height:40px !important;
+}
+
+button.iconicButton:hover:active {
+	background: #ddd !important;
+	color:#fff;
+	border:1px solid #ccc;
+}
+
+.iconicButton h1 {
+	padding:5px !important;
+	font-size:1em;
+	margin:0px !important;
+}
+
+i.blueIcon {
+	line-height: 30px !important;
+	margin-left:8px !important;
+	padding:5px !important;
+	color:#4180b8 !important;
+}
+
+button.pickerButton.standardPopupCaller {
+	-moz-border-radius: 1em !important;
+	-webkit-border-radius: 1em !important;
+	border-radius: 1em !important;
+	background:#fff !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #eee )) !important; 
+	background-image: -webkit-linear-gradient( #fff , #eee ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #fff , #eee ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #fff , #eee ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #fff , #eee ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #fff , #eee ) !important;	
+}
+
+button.pickerButton.standardPopupCaller:active:hover:not([disabled]){
+	-moz-border-radius: 1em !important;
+	-webkit-border-radius: 1em !important;
+	border-radius: 1em !important;
+	color:#fff !important;
+	background: #ccc !important;
+}
+
+button.pickerButton.standardPopupCaller:disabled{
+	-moz-border-radius: 1em !important;
+	-webkit-border-radius: 1em !important;
+	border-radius: 1em !important;
+	background:#eee !important;
+	color:#ccc !important;
+}
+
+.toggleButton .onyx-toggle-button.disabled {
+	opacity: 0.7 !important;
+}
+
+.toggleButton .onyx-toggle-button-knob {
+	height:45px !important;
+	width:55px !important;
+}
+
+.toggleButton .onyx-toggle-content.on {
+	padding-top:7px !important;
+	height:45px !important;
+	margin-left: 5px !important;
+}
+
+.toggleButton .onyx-toggle-content.off {
+	padding-top:7px !important;
+	height:45px !important;
+	margin-right: 5px !important;
+}
+
+.toggleButton .onyx-toggle-button.off {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #888 ), to( #ccc )) !important; 
+	background-image: -webkit-linear-gradient( #888 , #ccc ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #888 , #ccc ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #888 , #ccc ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #888 , #ccc ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #888 , #ccc ) !important;	
+}
+
+.smallToggle.onyx-toggle-button.off {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #888 ), to( #ccc )) !important; 
+	background-image: -webkit-linear-gradient( #888 , #ccc ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #888 , #ccc ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #888 , #ccc ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #888 , #ccc ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #888 , #ccc ) !important;	
+}
+
+.toggleButton .onyx-toggle-button {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #76CDCB )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #76CDCB ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #22a09a , #76CDCB ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #22a09a , #76CDCB ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #22a09a , #76CDCB ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #22a09a , #76CDCB ) !important;	
+}
+
+.smallToggle.onyx-toggle-button{
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #76CDCB )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #76CDCB ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #22a09a , #76CDCB ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #22a09a , #76CDCB ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #22a09a , #76CDCB ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #22a09a , #76CDCB ) !important;	
+}
+
+.toggleButton {
+	width:110px;
+	height:45px !important;
+	margin-top:5px !important;
+}
+
+.contextPopupHeader button {
+	min-width:60px !important;
+	height:35px !important;
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0 !important;
+	border-radius: 0em !important;
+	border:1px solid #000;
+	color:#ffffff;
+	font-size:0.8em !important;
+	font-weight:600; 
+	background: #cc3333 !important;
+}
+
+.contextPopupHeader button:active:hover:not([disabled]){
+	color:#333;
+	font-weight:600; 
+	background:red !important;
+}
+
+.blueActionButton {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #3366CC ), to( #2850A2 )) !important; 
+	background-image: -webkit-linear-gradient( #3366CC , #2850A2 ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #3366CC , #2850A2 ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #3366CC , #2850A2 ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #3366CC , #2850A2 ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #3366CC , #2850A2 ) !important;
+	color:#fff !important;
+	font-weight:bold !important;
+	border:none !important;
+	margin-top:18px;
+	font-size:0.85em;
+	height:35px;
+	-moz-border-radius-topleft: 0.6em !important;
+	-webkit-border-top-left-radius: 0.6em !important;
+	border-top-left-radius: 0.6em !important;
+	-moz-border-radius-topright: 0.6em !important;
+	-webkit-border-top-right-radius: 0.6em !important;
+	border-top-right-radius: 0.6em !important;
+
+	-moz-border-radius-bottomleft: 0.6em !important;
+	-webkit-border-bottom-left-radius: 0.6em !important;
+	border-bottom-left-radius: 0.6em !important;
+	-moz-border-radius-bottomright: 0.6em !important;
+	-webkit-border-bottom-right-radius: 0.6em !important;
+	border-bottom-right-radius: 0.6em !important;
+}
+
+.smallMARType {
+	font-weight:bold;
+	text-align: center;
+	margin-top:40px;
+	color:#2c447d ;
+	background: transparent;
+	border:none;
+}
+
+.smallMARButton {
+	border:2px solid #ccc;
+	padding:2px;
+	margin-top:38px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #fff ), to( #ddd )) !important; 
+	background-image: -webkit-linear-gradient( #fff , #ddd ) !important;  
+	background-image:    -moz-linear-gradient( #fff , #ddd ) !important;  
+	background-image:     -ms-linear-gradient( #fff , #ddd ) !important; 
+	background-image:      -o-linear-gradient( #fff , #ddd ) !important;  
+	background-image:         linear-gradient( #fff , #ddd ) !important;
+	-moz-border-radius-topleft: 0.6em !important;
+	-webkit-border-top-left-radius: 0.6em !important;
+	border-top-left-radius: 0.6em !important;
+	-moz-border-radius-topright: 0.6em !important;
+	-webkit-border-top-right-radius: 0.6em !important;
+	border-top-right-radius: 0.6em !important;
+
+	-moz-border-radius-bottomleft: 0.6em !important;
+	-webkit-border-bottom-left-radius: 0.6em !important;
+	border-bottom-left-radius: 0.6em !important;
+	-moz-border-radius-bottomright: 0.6em !important;
+	-webkit-border-bottom-right-radius: 0.6em !important;
+	border-bottom-right-radius: 0.6em !important;
+}
+
+.smallMARButton:active:hover:not([disabled]){
+	color:#fff;
+	background:#ccc !important;
+}
+
+.blueActionButton:active:hover:not([disabled]){
+	background:#1B447C !important; 
+	color:#eee !important;
+}
+
+.blueActionButton:disabled{
+	background:#dedede !important; 
+	color:#adadad !important;
+	background-color:#dedede !important;
+	color:#777 !important
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff ), to( #dedede )) !important; 
+	background-image: -webkit-linear-gradient( #ffffff , #dedede ) !important; 
+	background-image:    -moz-linear-gradient( #ffffff , #dedede ) !important; 
+	background-image:     -ms-linear-gradient( #ffffff , #dedede ) !important; 
+	background-image:      -o-linear-gradient( #ffffff , #dedede ) !important; 
+	background-image:         linear-gradient( #ffffff , #dedede ) !important;
+	border:1px solid #adadad !important;
+}
+
+.blackButton {
+	-moz-border-radius-topleft: 0.6em !important;
+	-webkit-border-top-left-radius: 0.6em !important;
+	border-top-left-radius: 0.6em !important;
+	-moz-border-radius-topright: 0.6em !important;
+	-webkit-border-top-right-radius: 0.6em !important;
+	border-top-right-radius: 0.6em !important;
+
+	-moz-border-radius-bottomleft: 0.6em !important;
+	-webkit-border-bottom-left-radius: 0.6em !important;
+	border-bottom-left-radius: 0.6em !important;
+	-moz-border-radius-bottomright: 0.6em !important;
+	-webkit-border-bottom-right-radius: 0.6em !important;
+	border-bottom-right-radius: 0.6em !important;
+	background: #000;
+	font-weight: bold;
+	color:#fff !important;
+	border:none !important;
+	padding:3px !important;
+	height:45px !important;
+}
+
+.blackButton:active:hover:not([disabled]){
+	background:#888 !important;
+	color:#ccc !important; 
+}
+
+.cyanHeader {
+ 	color: #fff !important;
+	font-weight: bold !important;
+	font-size:0.95em !important;
+	padding-left:15px !important;
+	padding-right:15px !important;
+	padding-top:8px !important;
+	padding-bottom:8px !important;
+	text-shadow: 0 1px -1px #63a9a7 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
+	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;	
+}
+
+.cyanButton {
+	border: 2px solid #63a9a7 !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	font-size:1.2em !important;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
+	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;
+}
+
+.dateControlCyanButton{
+	border: 2px solid #63a9a7 !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	font-size:0.9em !important;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #9ddbd9 ), to( #22a09a )) !important; 
+	background-image: -webkit-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #9ddbd9 , #22a09a ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #9ddbd9 , #22a09a ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #9ddbd9 , #22a09a ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #9ddbd9 , #22a09a ) !important;	
+}
+
+.dateControlCyanButton:active:hover:not([disabled]){
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #9ddbd9 )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #9ddbd9 ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #22a09a , #9ddbd9 ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #22a09a , #9ddbd9 ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #22a09a , #9ddbd9 ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #22a09a , #9ddbd9 ) !important;	
+}
+
+.dateControlCyanButton:[disabled]{
+	
+}
+
+.menuSearchDelButton {
+	background:#c92d31;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	color:#fff;
+	float:right;
+	width:45px;
+	margin:5px;
+	height:45px;
+	border:none !important;
+}
+
+.menuSearchDelButton:active:hover:not([disabled]){
+	background:red;
+}
+
+.menuSearchButton:active:hover:not([disabled]){
+	background:#eee;
+}
+
+.menuSearchButton {
+	background:#ddd;
+	text-shadow: 0px -1px 2px rgba(0, 0, 0, 0.3) !important;
+	color:#333;
+	float:right;
+	width:45px;
+	margin:5px;
+	height:45px;
+	border:none !important;
+}
+
+.menuSearchItem:active:hover:not([disabled]){
+	background: #ffe5e5;	
+}
+
+.menuSearchItem {
+	height:50px;
+	padding:10px;
+	background: #fff;
+	color:#777;
+	border-bottom:1px solid #eee;
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+
+.headerButton {
+	padding:3px 7px 3px 7px !important;
+	-moz-border-radius: 0em !important;
+	-webkit-border-radius: 0em !important;
+	border-radius: 0em !important;
+	min-width:70px;
+	border:none;
+	text-shadow: 0 1px -1px #63a9a7 !important;
+	background: #cc3333 !important;
+	color: #fff !important;
+	font-weight: bold !important;
+	height:45px !important;
+	line-height:15px !important;
+	font-size: 0.7em !important;
+	
+}
+
+.headerButton:active:hover:not([disabled]){
+	background: #a52025 !important;
+	color: #eee !important;
+}
+
+.headerButton[disabled]{
+	text-shadow: 0 -1px 2px #bbb !important;
+	background: #d9d9d9 !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #eeeeee ), to( #bbbbbb )) !important; 
+	background-image: -webkit-linear-gradient( #eeeeee , #bbbbbb ) !important; /* Chrome 10+, Saf5.1+ */
+	background-image:    -moz-linear-gradient( #eeeeee , #bbbbbb ) !important; /* FF3.6 */
+	background-image:     -ms-linear-gradient( #eeeeee , #bbbbbb ) !important; /* IE10 */
+	background-image:      -o-linear-gradient( #eeeeee , #bbbbbb ) !important; /* Opera 11.10+ */
+	background-image:         linear-gradient( #eeeeee , #bbbbbb ) !important;
+ 	color:#fff !important;
+}
+
+.headerTextTitle {
+	padding-top:8px !important;
+	margin-top:5px !important;
+	margin-bottom:5px !important;
+	font-size: 1em !important;
+}
+
+.onyx-button.cyanButton:active:hover:not([disabled]) {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #56BBB7 )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #56BBB7 ) !important; 
+	background-image:    -moz-linear-gradient( #22a09a , #56BBB7 ) !important;  
+	background-image:     -ms-linear-gradient( #22a09a , #56BBB7 ) !important;  
+	background-image:      -o-linear-gradient( #22a09a , #56BBB7 ) !important;  
+	background-image:         linear-gradient( #22a09a , #56BBB7 ) !important;
+	border: 2px solid #4DB5AE !important;
+	color: #ddd !important;
+}
+
+.onyx-button.cyanButton[disabled] {
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #22a09a ), to( #56BBB7 )) !important; 
+	background-image: -webkit-linear-gradient( #22a09a , #56BBB7 ) !important; 
+	background-image:    -moz-linear-gradient( #22a09a , #56BBB7 ) !important;
+	background-image:     -ms-linear-gradient( #22a09a , #56BBB7 ) !important;
+	background-image:      -o-linear-gradient( #22a09a , #56BBB7 ) !important;
+	background-image:         linear-gradient( #22a09a , #56BBB7 ) !important;
+	border: 2px solid #4DB5AE !important;
+	color: #1C6664 !important;
+}
+
+.whiteConfigurationButton {
+	height:50px !important;
+	width:50px !important;
+	text-align:center !important;
+	padding-left:5px !important;
+	padding-right:5px !important;
+	background: #fff !important;
+	color:#666 !important;
+}
+
+.onyx-button.whiteConfigurationButton:active:hover:not([disabled]) {
+	background: #eee !important;
+	color:#333 !important;
+}
+
+.std45Button {
+	width:45px !important;
+	height:45px !important;
+	padding:3px !important;
+}
+
+.std50Button {
+	width:50px !important;
+	text-align: center !important;
+}
+
+.orderButtonControl {
+	text-align: right !important;
+	padding:5px !important;
+}
+
+.orderPagingHeader button {
+	background: #f5f5f5 !important;
+	border:none !important;
+	color:#777 !important;
+}
+
+.orderPagingHeader button.right {
+	margin:5px !important;
+	height:40px !important;
+	width:40px !important;
+	margin-bottom:5px !important;
+	border-left:1px solid #d2d2d2 !important;
+}
+.orderPagingHeader button.left {
+	margin:5px !important;
+	height:40px !important;
+	width:40px !important;
+	margin-bottom:5px !important;
+	border-right:1px solid #d2d2d2 !important;
+}
+
+.orderPagingHeader button:active:hover:not([disabled]){
+	background:#e9e9e9 !important;
+	color:#fff !important;
+}
+
+.orderPagingHeader button[disabled]{
+	color:#ccc !important;
+}
+
+.orderButtonControl .iconTextButtonLabel{
+	padding-top:2px !important;
+	font-size:0.7em !important;
+	text-align: center !important;
+}
+
+.orderButtonControl .iconTextButtonLabelPopup {
+	font-size:0.7em !important;
+	text-align: center !important;
+	padding-top:0px !important;
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+	margin-top:-2px !important;
+	height:15px !important;
+ 	border:none !important;
+ 	color:#777;
+ 	font-weight: bold;
+}
+
+
+.orderButtonControl .iconTextButtonClass {
+	background-color:#ffffff !important;
+	/*
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #ffffff ), to( #eeeeee )) !important; 
+	background-image: -webkit-linear-gradient( #ffffff , #eeeeee ) !important; 
+	background-image:    -moz-linear-gradient( #ffffff , #eeeeee ) !important; 
+	background-image:     -ms-linear-gradient( #ffffff , #eeeeee ) !important;
+	background-image:      -o-linear-gradient( #ffffff , #eeeeee ) !important; 
+	background-image:         linear-gradient( #ffffff , #eeeeee ) !important;
+	*/
+	border:1px solid #ccc !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	width:42px !important;
+	height:42px !important;
+	padding:4px !important;
+	color:#4180b8 !important;
+}
+
+.orderButtonControl .iconTextButtonClass:active:hover:not([disabled]) {
+	background-color:#eeeeee !important;
+	border:1px solid #ccc !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	width:42px !important;
+	height:42px !important;
+	padding:4px !important;
+	color:#4180b8 !important;
+}
+
+.orderButtonControl .iconTextButtonClass[disabled] {
+	opacity:1 !important;
+	background-color:#eeeeee !important;
+	border:1px solid #ccc !important;
+	width:42px !important;
+	height:42px !important;
+	color:#777 !important;
+}
+
+.tabButtons button {
+	background: #ffffff !important;
+	border:1px solid #ccc !important;
+	margin:0px !important;
+	padding:12px !important;
+	font-weight: bold;
+
+}
+
+.tabButtons button.active{
+	background: #9cb4c2 !important;
+	color:#ffffff !important;
+	-moz-box-shadow:    inset 0 0 8px #86A4B5 !important;
+    -webkit-box-shadow: inset 0 0 8px #86A4B5 !important;
+    box-shadow:         inset 0 0 8px #86A4B5 !important;
+}
+
+.tabButtons button:disabled{
+	background: #eee !important;
+	color:#ccc !important;
+}
+
+.tabButtons button.active:disabled{
+	background: #ccc !important;
+	color:#666 !important;
+	-moz-box-shadow:    inset 0 0 8px #ccc !important;
+    -webkit-box-shadow: inset 0 0 8px #ccc !important;
+    box-shadow:         inset 0 0 8px #ccc !important;
+}
+
+.tabButtons button.roundedRight {
+	-moz-border-radius-topright: 0.7em !important;
+	-webkit-border-top-right-radius: 0.7em !important;
+	border-top-right-radius: 0.7em !important;
+	-moz-border-radius-bottomright: 0.7em !important;
+	-webkit-border-bottom-right-radius: 0.7em !important;
+	border-bottom-right-radius: 0.7em !important;
+	border-left:1px solid #ccc !important;
+}
+
+.tabButtons button.roundedLeft {
+	-moz-border-radius-topleft: 0.7em !important;
+	-webkit-border-top-left-radius: 0.7em !important;
+	border-top-left-radius: 0.7em !important;
+	-moz-border-radius-bottomleft: 0.7em !important;
+	-webkit-border-bottom-left-radius: 0.7em !important;
+	border-bottom-left-radius: 0.7em !important;
+	border-right:1px solid #ccc !important;
+}
+
+
+
+button.patientListShadowButton {
+	background: #fff;
+	border:1px solid #bbb !important;
+	height:35px;
+	line-height:12px;
+	font-weight: bold;
+}
+
+button.patientListShadowButton:disabled {
+	background: #ddd;
+	color:#fff;
+}
+
+ button.patientListShadowButton.active{
+	background: #9cb4c2 !important;
+	color:#ffffff !important;
+	-moz-box-shadow:    inset 0 0 8px #86A4B5 !important;
+    -webkit-box-shadow: inset 0 0 8px #86A4B5 !important;
+    box-shadow:         inset 0 0 8px #86A4B5 !important;
+}
+
+.roundedRight {
+	-moz-border-radius-topright: 0.7em !important;
+	-webkit-border-top-right-radius: 0.7em !important;
+	border-top-right-radius: 0.7em !important;
+	-moz-border-radius-bottomright: 0.7em !important;
+	-webkit-border-bottom-right-radius: 0.7em !important;
+	border-bottom-right-radius: 0.7em !important;
+	
+}
+
+.roundedLeft {
+	-moz-border-radius-topleft: 0.7em !important;
+	-webkit-border-top-left-radius: 0.7em !important;
+	border-top-left-radius: 0.7em !important;
+	-moz-border-radius-bottomleft: 0.7em !important;
+	-webkit-border-bottom-left-radius: 0.7em !important;
+	border-bottom-left-radius: 0.7em !important;
+}
+
+
+/****************************** Media Related *******************************/
+.phisMenu {
+	width:143px !important;
+	height:143px !important;
+	border:none !important;
+	box-shadow: none !important;
+	background:url('../img/allMenuIcons.png') no-repeat !important;	
+	background-size:858px 286px !important;	
+}
+
+.phisMenuButton button {
+	margin-left:26px !important;
+	margin-right:26px !important;
+	background:transparent !important;
+	border:none !important; 
+	
+}
+
+
+.phisMenu.outpatient {
+	background-position: 0px 0px !important;
+	background-color:none !important;
+	border:none !important;
+}
+
+.phisMenu.outpatient:active:hover:not([disabled]) {
+	background-position: 0px -143px !important;	
+}
+
+.phisMenu.inpatient {
+	background-position: -143px 0px !important;	
+}
+
+.phisMenu.inpatient:active:hover:not([disabled]) {
+	background-position: -143px -143px !important;	
+}
+
+
+.phisMenu.recently {
+	background-position: -286px 0px !important;	
+}
+
+.phisMenu.recently:active:hover:not([disabled]) {
+	background-position: -286px -143px !important;	
+}
+
+.phisMenu.daycare {
+	background-position: -572px 0px !important;	
+}
+
+.phisMenu.daycare:active:hover:not([disabled]) {
+	background-position: -572px -143px !important;	
+}
+
+.phisMenu.tasklist {
+	background-position: -715px 0px !important;	
+}
+
+.phisMenu.tasklist:active:hover:not([disabled]) {
+	background-position: -715px -143px !important;	
+}
+
+.phisMenu.emergency {
+	background-position: -429px 0px !important;	
+}
+
+.phisMenu.emergency:active:hover:not([disabled]) {
+	background-position: -429px -143px !important;	
+}
+
+.selectItemButton {
+	width:60px !important;
+	height:30px !important;
+	margin-top:20px !important;
+	padding:5px !important;
+	font-weight: bold;
+	color:#fff !important;
+}
+
+.redDeleteButton {
+	background:#CC0000 !important;
+}
+
+.blackButton {
+	border-radius:0em !important;
+	padding-left:15px !important;
+	padding-right:15px !important;
+	background:#000 !important;
+	text-transform: uppercase;
+	font-size:0.9em !important;
+}
+
+button.yellowButton {
+	border-radius:0em !important;
+	color:#fff !important;
+	background:#ffa200 !important;
+	font-weight: bold;
+	padding:15px !important;
+	text-transform: uppercase;
+	font-size:0.9em !important;	
+	text-shadow: 0 -1px 2px #bbb !important;
+}
+
+button.yellowButton:active:hover:not([disabled]){
+	background:#000 !important;
+	
+}
+
+button.yellowButton:disabled{
+	background:#666 !important;
+}
