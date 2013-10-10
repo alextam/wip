@@ -15,8 +15,16 @@ enyo.kind({
         	content:"Set Title..."
         }
     ],
+    published:{
+        data:null		
+    },
     create: function() {
         this.inherited(arguments);
-        
+      	if (this.data != null) {
+      	    this.dataChanged();
+      	}  
+    },
+    dataChanged: function() {
+    	console.log("data is set!");
     }
 });

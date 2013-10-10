@@ -42,6 +42,46 @@
 	background: #28262a;
 }
 
+.btn1 .pictureFrame {
+	background: url("../img/photo01.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn2 .pictureFrame {
+	background: url("../img/photo02.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn3 .pictureFrame {
+	background: url("../img/photo03.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn4 .pictureFrame {
+	background: url("../img/photo04.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn5 .pictureFrame {
+	background: url("../img/photo05.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn6 .pictureFrame {
+	background: url("../img/photo06.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn7 .pictureFrame {
+	background: url("../img/photo07.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.btn8 .pictureFrame {
+	background: url("../img/photo08.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
 .photoButtonBase.btn1 {
 	top:-300px;
 	left:115px;
@@ -113,10 +153,6 @@
 	-ms-transform: rotate(5deg);
 	z-index:5;
 }
-
-
-
-
 
 button.logoButton {
 	background: url("../img/logo.png") no-repeat !important;

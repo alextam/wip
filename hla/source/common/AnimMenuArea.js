@@ -2,52 +2,53 @@ enyo.kind({
     name: "AnimMenuArea",
     kind: "Control",
     fit:true,
-    style:"position:relative;background:#7a7869;overflow:hidden",
+    classes:"mainBg",
+    style:"position:relative;overflow:hidden",
     components: [
         {
-        	name:"btnPhoto01",
+        	name:"btnPhoto05",
         	kind:"PhotoButton",
         	classes:"btn1",
-        	endY:200
+        	endY:196
         },
         {
-        	name:"btnPhoto02",
+        	name:"btnPhoto06",
         	kind:"PhotoButton",
         	classes:"btn2",
         	endY:185
         },
      	{
-        	name:"btnPhoto03",
+        	name:"btnPhoto07",
         	kind:"PhotoButton",
         	classes:"btn3",
         	endY:210
         },
         {
-        	name:"btnPhoto04",
+        	name:"btnPhoto08",
         	kind:"PhotoButton",
         	classes:"btn4",
         	endY:196
         },
         {
-        	name:"btnPhoto05",
+        	name:"btnPhoto01",
         	kind:"PhotoButton",
         	classes:"btn5",
         	endY:410
         },
         {
-        	name:"btnPhoto06",
+        	name:"btnPhoto02",
         	kind:"PhotoButton",
         	classes:"btn6",
         	endY:407
         },
         {
-        	name:"btnPhoto07",
+        	name:"btnPhoto03",
         	kind:"PhotoButton",
         	classes:"btn7",
         	endY:414
         },
         {
-        	name:"btnPhoto08",
+        	name:"btnPhoto04",
         	kind:"PhotoButton",
         	classes:"btn8",
         	endY:413
@@ -55,7 +56,7 @@ enyo.kind({
     ],
     published:{
     	maxPhotos:8,
-    	photoIndex:1		
+    	photoIndex:1
     },
     create: function() {
         this.inherited(arguments);
@@ -70,7 +71,7 @@ enyo.kind({
     startDrop:function(photoIndex) {
     	console.log("Dropping Card "+photoIndex);
     	var anim = new enyo.Animator({
-		      duration: 70,
+		      duration: 520,
 		      startValue: 0,
 		      endValue: this.$["btnPhoto0"+photoIndex].endY,
 		      node: this.$["btnPhoto0"+photoIndex].hasNode(),
