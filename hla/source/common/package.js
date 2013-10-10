@@ -1,5 +1,11 @@
 enyo.depends(
 	"AnchorTag.js",
+	"AnimMenuArea.js",
+	"LogoButton.js",
+	"ParallaxBG.js",
+	"PhotoButton.js",
+	"MenuScroller.js",
+	"LogOutButton.js",
 	"ButtonCheckBox.js",
 	"InputDateTimeControl.js",
 	"InputTextAreaControl.js",

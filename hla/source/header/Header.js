@@ -1,7 +1,6 @@
 enyo.kind({
 	name: "Header",
 	kind: "onyx.Toolbar",
-	title:"TopMark",
 	layoutKind: "FittableColumnsLayout",
 	classes:"std45px reset",
 	components: [
@@ -54,7 +53,7 @@ enyo.kind({
 		var defaults = {
 			kind: "onyx.Button",
 			classes:"roundedCorner headerButton",
-			content:"Button",
+			content:"",
 			disabled: false,
 			visible: true,
 			event: '',

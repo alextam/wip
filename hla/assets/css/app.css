@@ -1,13 +1,14 @@
 @charset 'UTF-8';
 @import "buttons.css";
 
-body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;background: #e6e6e6; }
+body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;background: #0a1d3b; }
 .onyx-scrim {opacity:0.4 !important;}
 .mainBg{background:url("../img/topMarkBg.jpg");background-position:top center;background-size:1024px 748px;border-left:5px solid #990000;background-color:#e6e6e6;}
 .dashboardBg{background:url("../img/menu-bg.png") no-repeat;background-position:top center;background-size:1024px 748px;background-color:#5b91b7;}
 .iosFlickerFix{-webkit-perspective: 1000 !important;-webkit-backface-visibility: hidden !important;-webkit-transform:translateZ(0) !important; }
 .selectorBg{width:100%;background-color:#f2f2f2}
 .whiteBg {background: #ffffff !important;}
+.parallax {height:415px;}
 .popUpMenu {margin-top:56px !important;font-weight:600;width:110px;min-height:41px !important;max-height:210px !important;}
 .toUpperCase{font-size:0.9em !important;text-transform: uppercase;}
 .panelSlider > * {width: 300px;}
@@ -15,7 +16,16 @@ body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;b
 .drugType { font-size:0.7em !important;}
 .headerTextTitle { line-height:32px;font-size:1em !important;}
 .customPanelSlider > * {width: 305px;min-width:60px !important;}
-.onyx-toolbar{background-color:#000 !important;color:#fff !important;background-image:-webkit-gradient(linear, left top, left bottom, from(#444444), to(#000000)) !important;background-image:-webkit-linear-gradient(#444444, #000000) !important;background-image:-moz-linear-gradient(#444444, #000000) !important;background-image:-ms-linear-gradient(#444444, #000000) !important;background-image:-o-linear-gradient(#444444, #000000) !important;background-image:linear-gradient(#444444, #000000) !important;border:none !important;margin:0px !important;}
+.parallax {
+	background-color:#2a62ad;
+	height:415px;
+}
+
+.scrollMenu {
+	background-color:#0a1d3b;
+	height:308px;
+}
+.onyx-toolbar{background:#fff !important;color:#000 !important;border:none !important;margin:0px !important;}
 .pnCell {width:25% !important;max-width:25% !important; padding:5px;font-weight:bold;}
 h1.pnCell {font-size:1em !important;line-height:50px;}
 .pnCellOfFive{width:1002px;height:56px;margin-top:5px;margin-bottom:0px;}

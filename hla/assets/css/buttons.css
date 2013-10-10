@@ -16,6 +16,124 @@
 	background: none !important;
 }
 
+.photoButtonBase {
+	background: url("../img/photoFrame.jpg") no-repeat !important;
+	width:186px;
+	height:214px;
+	position:absolute;
+	border:1px solid #ccc;
+	-webkit-box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+}
+.photoH1 {
+	width:100%;
+	text-align:center;
+	font-size:1em;
+	margin-top:4px;
+}
+
+.pictureFrame {
+	margin-top:10px !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+	width:173px;
+	height:173px;
+	background: #28262a;
+}
+
+.photoButtonBase.btn1 {
+	top:-300px;
+	left:115px;
+	-webkit-transform: rotate(-11deg);
+	-moz-transform:  rotate(-11deg);
+	-ms-transform: rotate(-11deg);
+	z-index:10;	
+}
+
+.photoButtonBase.btn2 {
+	top:-300px;
+	left:325px;
+	-webkit-transform: rotate(10deg);
+	-moz-transform:  rotate(10deg);
+	-ms-transform: rotate(10deg);
+	z-index:10;		
+}
+
+.photoButtonBase.btn3 {
+	top:-300px;
+	left:527px;
+	-webkit-transform: rotate(-10deg);
+	-moz-transform:  rotate(-10deg);
+	-ms-transform: rotate(-10deg);
+	z-index:10;	
+}
+
+.photoButtonBase.btn4 {
+	top:-300px;
+	left:740px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform:  rotate(0deg);
+	-ms-transform: rotate(0deg);
+	z-index:10;
+}
+
+.photoButtonBase.btn5 {
+	top:-300px;
+	left:111px;
+	-webkit-transform: rotate(-3deg);
+	-moz-transform:  rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	z-index:5;
+}
+
+.photoButtonBase.btn6 {
+	top:-300px;
+	left:330px;
+	-webkit-transform: rotate(3deg);
+	-moz-transform:  rotate(3deg);
+	-ms-transform: rotate(3deg);
+	z-index:5;
+}
+
+.photoButtonBase.btn7 {
+	top:-300px;
+	left:535px;
+	-webkit-transform: rotate(0deg);
+	-moz-transform:  rotate(0deg);
+	-ms-transform: rotate(0deg);
+	z-index:5;
+}
+
+.photoButtonBase.btn8 {
+	top:-300px;
+	left:746px;
+	-webkit-transform: rotate(5deg);
+	-moz-transform:  rotate(5deg);
+	-ms-transform: rotate(5deg);
+	z-index:5;
+}
+
+
+
+
+
+button.logoButton {
+	background: url("../img/logo.png") no-repeat !important;
+	background-size: 228px 30px !important;
+	background-position:top center !important;
+	width: 228px !important;
+	height: 30px !important;
+}
+
+button.signUpButton {
+	background: url("../img/signUp.png") no-repeat !important;
+	background-size: 136px 30px !important;
+	background-position:top center !important;
+	width: 136px !important;
+	height: 30px !important;
+}
+
 .timerPicker button{
 	background:#f2f2f2 !important;
 	background-image: -webkit-gradient(linear, left top, left bottom, from( #f2f2f2 ) , to( #ddd )) !important;
