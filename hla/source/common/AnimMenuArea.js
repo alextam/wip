@@ -70,8 +70,8 @@ enyo.kind({
     startDrop:function(photoIndex) {
     	console.log("Dropping Card "+photoIndex);
     	var anim = new enyo.Animator({
-		      duration: 300,
-		      startValue: -100,
+		      duration: 70,
+		      startValue: 0,
 		      endValue: this.$["btnPhoto0"+photoIndex].endY,
 		      node: this.$["btnPhoto0"+photoIndex].hasNode(),
 		      onStep: enyo.bind(this, this.applyTransition),
