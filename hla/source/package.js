@@ -12,6 +12,7 @@ enyo.depends(
 	"model",
 	"panel",
 	"common",
+	"TestimonialPage.js",
 	"CEOMessagePage.js",
 	"App.js"
 );

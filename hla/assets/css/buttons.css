@@ -60,6 +60,21 @@
 	background: #28262a;
 }
 
+.ppl1 .pictureFrame {
+	background: url("../img/p1.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.ppl2 .pictureFrame {
+	background: url("../img/p2.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
+.ppl3 .pictureFrame {
+	background: url("../img/p3.jpg") no-repeat !important;
+	background-size: 173px 173px !important;
+}
+
 .btn1 .pictureFrame {
 	background: url("../img/photo01.jpg") no-repeat !important;
 	background-size: 173px 173px !important;
@@ -100,6 +115,34 @@
 	background-size: 173px 173px !important;
 }
 
+.photoListItem0 {
+	margin-top:10px;
+	margin-left:10px;
+	-webkit-transform: rotate(-5deg) !important;
+	-moz-transform:  rotate(-5deg) !important;
+	-ms-transform: rotate(-5deg) !important;
+}
+
+.dataDiv0 {
+	position:absolute;
+	left:230px !important;
+}
+
+.dataDiv1 {
+	position:absolute;
+	left:10px !important;
+}
+
+
+.photoListItem1 {
+	left:275px;
+	margin-top:10px;
+	margin-left:10px;
+	-webkit-transform: rotate(5deg) !important;
+	-moz-transform:  rotate(5deg) !important;
+	-ms-transform: rotate(5deg) !important;
+}
+
 .photoButtonBase.btn1 {
 	top:-300px;
 	left:115px;
@@ -107,6 +150,10 @@
 	-moz-transform:  rotate(-11deg);
 	-ms-transform: rotate(-11deg);
 	z-index:10;	
+}
+
+.witnessListItem {
+	height:232px;
 }
 
 .videoButtonBase.video.static {

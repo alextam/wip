@@ -4,6 +4,8 @@ enyo.depends(
 	"LogoButton.js",
 	"ParallaxBG.js",
 	"PageView.js",
+	"WitnessListItem.js",
+	"TestimonialPageView.js",
 	"VideoButton.js",
 	"PhotoButton.js",
 	"MenuScroller.js",

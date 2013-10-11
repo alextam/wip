@@ -4,7 +4,9 @@
 body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;background: #0a1d3b; }
 @font-face { font-family: 'HandOfSean';src: url('../css/go/font/HandOfSeanDemo.ttf') format('truetype')}
 .seanFont { font-family:'HandOfSean';font-size:0.86em; }
+.standardHeader {font-family:Arial,'Helvetica';font-size:1em; font-weight: bold}
 .standardSeanH1 { font-family:'HandOfSean';font-size:1.5em;position: absolute;top:190px;left:340px;font-weight:normal; }
+.standardSeanH2 { font-family:'HandOfSean';font-size:1.6em;font-weight:normal; }
 .textAreaP1 {top:242px;left:338px;position: absolute;width:585px;height:120px;font-size:0.95em;font-weight:500;text-align:justify;}
 .textAreaP2 {top:388px;left:338px;position: absolute;width:252px;height:276px;font-size:0.95em;font-weight:500;text-align:justify;}
 .onyx-scrim {opacity:0.4 !important;}
