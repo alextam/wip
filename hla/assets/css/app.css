@@ -1,7 +1,12 @@
 @charset 'UTF-8';
 @import "buttons.css";
 
-body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;background: #0a1d3b; }
+body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;background: #0a1d3b; }
+@font-face { font-family: 'HandOfSean';src: url('../css/go/font/HandOfSeanDemo.ttf') format('truetype')}
+.seanFont { font-family:'HandOfSean';font-size:0.86em; }
+.standardSeanH1 { font-family:'HandOfSean';font-size:1.5em;position: absolute;top:190px;left:340px;font-weight:normal; }
+.textAreaP1 {top:242px;left:338px;position: absolute;width:585px;height:120px;font-size:0.95em;font-weight:500;text-align:justify;}
+.textAreaP2 {top:388px;left:338px;position: absolute;width:252px;height:276px;font-size:0.95em;font-weight:500;text-align:justify;}
 .onyx-scrim {opacity:0.4 !important;}
 .mainBg{background:url("../img/appHLABg.jpg");background-position:top center;background-size:1024px 768px;background-color:#676562 !important;}
 .dashboardBg{background:url("../img/menu-bg.png") no-repeat;background-position:top center;background-size:1024px 748px;}
@@ -20,7 +25,6 @@ body { font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif !important;b
 	background-color:#2a62ad;
 	height:415px;
 }
-
 .scrollMenu {
 	background-color:#0a1d3b;
 	height:308px;

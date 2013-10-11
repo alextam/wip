@@ -11,20 +11,20 @@ enyo.kind({
         {
         	tag:"h1",
         	name:"txtPhotoTitle",
-        	classes:"photoH1",
+        	classes:"photoH1 seanFont",
         	content:"Set Title..."
         }
     ],
     published:{
-        data:null		
+        title:null		
     },
     create: function() {
         this.inherited(arguments);
-      	if (this.data != null) {
-      	    this.dataChanged();
+      	if (this.title != null) {
+      	    this.titleChanged();
       	}  
     },
-    dataChanged: function() {
-    	console.log("data is set!");
+    titleChanged: function() {
+    	this.$.txtPhotoTitle.setContent(this.title);
     }
 });

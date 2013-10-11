@@ -26,11 +26,29 @@
 	-moz-box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
 	box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
 }
+
+.videoButtonBase {
+	background: url("../img/photoFrame.jpg") no-repeat !important;
+	position:absolute;
+	border:1px solid #ccc;
+	-webkit-box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 8px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.photoButtonBase:active:hover:not([disabled]) {
+	transform: scale(1.2,1.2);
+	-ms-transform: scale(1.2,1.2); /* IE 9 */
+	-webkit-transform: scale(1.2,1.2); /* Safari and Chrome */
+	z-index:100;	
+}
+
 .photoH1 {
 	width:100%;
 	text-align:center;
-	font-size:1em;
-	margin-top:4px;
+	margin-bottom:0px;
+	line-height:20px; 
+	margin-top:0px;
 }
 
 .pictureFrame {
@@ -89,6 +107,38 @@
 	-moz-transform:  rotate(-11deg);
 	-ms-transform: rotate(-11deg);
 	z-index:10;	
+}
+
+.videoButtonBase.video.static {
+	top:385px;
+	left:600px;
+	width:330px;
+	height:260px;
+	z-index:10;
+	/*
+	-webkit-transform: rotate(-1.5deg) translate3d( 0, 0, 0);
+	-moz-transform:  rotate(-1.5deg) translate3d( 0, 0, 0);
+	-ms-transform: rotate(-1.5deg) translate3d( 0, 0, 0);
+	*/	
+}
+
+.videoButtonBase .pictureFrame {
+	margin-top:10px !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+	display:block;
+	width:300px;
+	height:220px;
+	background: #28262a;
+}
+
+.photoButtonBase.btn2.static {
+	top:141px;
+	left:123px;
+	-webkit-transform: rotate(5deg);
+	-moz-transform:  rotate(5deg);
+	-ms-transform: rotate(5deg);
+	z-index:10;
 }
 
 .photoButtonBase.btn2 {
@@ -744,6 +794,20 @@ button.pickerButton.standardPopupCaller:disabled{
 	color:#333;
 	font-weight:600; 
 	background:red !important;
+}
+
+.actionButton {
+	font-family:"HandOfSean";
+	margin-top:40px;
+	background:rgba(0, 0, 0, 0.5) !important;
+	color:#fff;
+	width:100px;
+	height:40px;
+}
+
+.actionButton:active:hover:not([disabled]){
+	color:#000;
+	background:white !important;
 }
 
 .blueActionButton {

@@ -3,6 +3,8 @@ enyo.depends(
 	"AnimMenuArea.js",
 	"LogoButton.js",
 	"ParallaxBG.js",
+	"PageView.js",
+	"VideoButton.js",
 	"PhotoButton.js",
 	"MenuScroller.js",
 	"LogOutButton.js",

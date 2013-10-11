@@ -10,7 +10,8 @@ enyo.kind({
         	classes: ""
         },
         {
-        	name:"txtButtonTitle",
+        	style:"margin-top:-5px !important",
+            name:"txtButtonTitle",
         	allowHtml:true,
         	content:"Title"
         }
