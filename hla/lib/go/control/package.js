@@ -11,6 +11,8 @@ enyo.depends(
 	"CartPrice.js",
 	"ItemImageView.js",
 	"NativeSelect.js",
+	"ChartData.js",
+	"StandardChart.js",
 	"Layout.js",
 	"Scroller.js"
 );

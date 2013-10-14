@@ -3,6 +3,7 @@ enyo.depends(
 	"$lib/onyx",
 	"$lib/go",
 	"$lib/canvas",
+	"$lib/canvasjs.js",
 	"$lib/moment.js",
 	"$lib/taffy-min.js",
 	"Navigator.js",
@@ -12,6 +13,7 @@ enyo.depends(
 	"model",
 	"panel",
 	"common",
+	"IncomePage.js",
 	"TestimonialPage.js",
 	"CEOMessagePage.js",
 	"App.js"

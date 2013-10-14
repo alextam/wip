@@ -16,6 +16,23 @@
 	background: none !important;
 }
 
+.tapButtonControl {
+	color:#fff;
+	/*border:1px solid #ccc !important;*/
+	padding-left:15px !important;
+	padding-right:15px !important;
+	width:120px;
+	background:#000;
+}
+
+.tapButtonControl:active:hover:not([disabled]){
+	color:#000;
+	padding-left:15px !important;
+	padding-right:15px !important;
+	width:120px;
+	background:#fff;
+}
+
 .photoButtonBase {
 	background: url("../img/photoFrame.jpg") no-repeat !important;
 	width:186px;
@@ -849,7 +866,7 @@ button.pickerButton.standardPopupCaller:disabled{
 	background:rgba(0, 0, 0, 0.5) !important;
 	color:#fff;
 	width:100px;
-	height:40px;
+	height:40px !important;
 }
 
 .actionButton:active:hover:not([disabled]){

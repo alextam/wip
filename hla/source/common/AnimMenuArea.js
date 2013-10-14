@@ -39,7 +39,7 @@ enyo.kind({
         	kind:"PhotoButton",
         	classes:"btn4",
             title:"Income Potential",
-            page:null,
+            page:"IncomePage",
             ontap:"handleTap",
         	endY:196
         },

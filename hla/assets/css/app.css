@@ -10,6 +10,11 @@ body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;backgro
 .textAreaP1 {top:242px;left:338px;position: absolute;width:585px;height:120px;font-size:0.95em;font-weight:500;text-align:justify;}
 .textAreaP2 {top:388px;left:338px;position: absolute;width:252px;height:276px;font-size:0.95em;font-weight:500;text-align:justify;}
 .onyx-scrim {opacity:0.4 !important;}
+.boxBg {width:380px !important;margin-right:10px;}
+.textureBg {padding:20px;background:url("../img/photoFrame.jpg");-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);background-position:top center;width:380px !important;margin-right:10px;height:170px !important;border:1px solid #ccc;}
+.h5Content {font-size:0.9em;font-family: "Arial";width:240px;line-height:40px !important;text-indent: 10px;}
+.smallIcon {background:url("../img/hlaLogo.png");background-size:44px 51px;background-position:top center;width:44px !important;height:51px !important;margin-left:15px !important;margin-right:15px !important;margin-top:-10px !important; }
+.emptyBg{background:url("../img/appHLABgEmpty.jpg");background-position:top center;background-size:1024px 768px;background-color:#676562 !important;}
 .mainBg{background:url("../img/appHLABg.jpg");background-position:top center;background-size:1024px 768px;background-color:#676562 !important;}
 .dashboardBg{background:url("../img/menu-bg.png") no-repeat;background-position:top center;background-size:1024px 748px;}
 .iosFlickerFix{-webkit-perspective: 1000 !important;-webkit-backface-visibility: hidden !important;-webkit-transform:translateZ(0) !important; }
