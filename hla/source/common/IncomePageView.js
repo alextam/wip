@@ -155,7 +155,6 @@ enyo.kind({
 			{ label: "5th Year", y: Math.round(year5) }
 		];
 		var donutPlots = [       							
-       		//indexLabelFontColor: "darkgrey",
 			{ label: "Overriding", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.6), suffix:"k", name: "Overriding" ,indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
 		    { label: "Production Bonus", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.1), suffix:"k", name: "Production Bonus",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
 			{ label: "Persistence Bonus", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.1), suffix:"k", name: "Persistence Bonus",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },

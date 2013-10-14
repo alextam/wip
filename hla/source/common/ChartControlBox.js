@@ -84,10 +84,6 @@ enyo.kind({
     	return payLoad;
     },
     handleDataChanged:function(inSender,inEvent) {
-    	console.log("annualBusinessGrowth : "+this.$.annualBusinessGrowth.getValue());
-    	console.log("monthlyPremium : "+this.$.monthlyPremium.getValue());
-    	console.log("policyPerMonth : "+this.$.policyPerMonth.getValue());
-    	console.log(inEvent);
     	this.bubble("onDataChanged",{data:{annualGrowth:this.$.annualBusinessGrowth.getValue(),monthlyPremium:this.$.monthlyPremium.getValue(),policyPerMonth:this.$.policyPerMonth.getValue()}});
     }
 });
