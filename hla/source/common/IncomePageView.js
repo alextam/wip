@@ -155,10 +155,10 @@ enyo.kind({
 			{ label: "5th Year", y: Math.round(year5) }
 		];
 		var donutPlots = [       							
-			{ label: "Overriding", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.6), suffix:"k", name: "Overriding" ,indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
-		    { label: "Production Bonus", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.1), suffix:"k", name: "Production Bonus",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
-			{ label: "Persistence Bonus", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100 * 0.1), suffix:"k", name: "Persistence Bonus",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
-		    { label: "Basic Commission", y: (baseCompute*parseInt(initialData.annualGrowth,10)/100* 0.2), suffix:"k", name: "Basic Commission",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" }
+			{ label: "Overriding", y: baseCompute*0.6, suffix:"k", legendText: "Overriding ("+baseCompute*0.6+"k)" ,indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+		    { label: "Production Bonus", y: baseCompute*0.1, suffix:"k", legendText: "Production Bonus ("+baseCompute*0.1+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+			{ label: "Persistence Bonus", y: baseCompute*0.1, suffix:"k", legendText: "Persistence Bonus ("+baseCompute*0.1+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+		    { label: "Basic Commission", y: baseCompute*0.2, suffix:"k", legendText: "Basic Commission ("+baseCompute*0.2+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" }
 		]; 
 
 		var colorSet = {};
