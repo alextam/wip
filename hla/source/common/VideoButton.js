@@ -12,6 +12,7 @@ enyo.kind({
         */
         {
             tag:"video",
+            name:"videoBox",
             classes:"pictureFrame",
             ontap:"handlePlayPauseVideo",
             attributes:{
@@ -31,8 +32,27 @@ enyo.kind({
         }
     ],
     published:{
+        source:"",
+        poster:"",
         isPlaying:false,
         title:null		
+    },
+    playVideo:function(){
+        this.$.videoBox.hasNode().play();
+        //this.setIsPlaying(true);
+    },
+    pauseVideo:function(){
+        this.$.videoBox.hasNode().pause();
+        this.setIsPlaying(false);
+    },
+    posterChanged:function(){
+        this.$.videoBox.hasNode().poster = "";
+        //this.$.videoBox.hasNode().poster = this.poster;
+    },
+    sourceChanged:function(){
+        this.$.videoBox.hasNode().src = this.source;
+        //this.$.videoBox.hasNode().poster = this.poster;
+        //this.$.videoBox.render();
     },
     handlePlayPauseVideo:function(inSender,inEvent) {
         if (this.getIsPlaying()) {
@@ -42,7 +62,12 @@ enyo.kind({
         } else {
             inSender.hasNode().play();
             this.setIsPlaying(true);
-            inSender.hasNode().webkitEnterFullscreen();
+            
+        }
+    },
+    isPlayingChanged:function(){
+        if(this.getIsPlaying()) {
+            this.$.videoBox.hasNode().webkitEnterFullscreen();
         }
     },
     create: function() {

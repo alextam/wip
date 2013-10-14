@@ -29,6 +29,7 @@ enyo.kind({
         	]
         }
     ],
+
     published:{
         data:null		
     },
