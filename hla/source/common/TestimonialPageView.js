@@ -89,6 +89,7 @@ enyo.kind({
             name:"Adam Baker",
             year:7,
             alt:true,
+            video:"assets/video/male.mp4",
             photoClass:"ppl1",
             income:"105k"            
           },
@@ -96,6 +97,7 @@ enyo.kind({
             name:"Samson Dave",
             year:7,
             alt:false,
+            video:"assets/video/worklifebalance.mp4",
             photoClass:"ppl2",
             income:"105k"            
           },
@@ -103,6 +105,7 @@ enyo.kind({
             name:"Liza Teoh",
             year:7,
             alt:true,
+            video:"assets/video/female.mp4",
             photoClass:"ppl3",
             income:"105k"            
           }
@@ -113,6 +116,10 @@ enyo.kind({
         if (this.data != null) {
             this.dataChanged();
         }
+    },
+    listItemTapped:function(inSender,inEvent) {
+      //console.log(this.data[inEvent.index].video);
+      window.location = this.data[inEvent.index].video;
     },
     dataChanged: function() {
         this.$.testimonialRepeater.setCount(this.data.length);
