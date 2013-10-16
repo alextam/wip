@@ -115,6 +115,8 @@
             mouseout: null,
             mousemove: null,
             click: null,
+            touches:null,
+            touchstart: null,
             toolTipContent: null
         },
 
@@ -1343,6 +1345,7 @@
 
 
             this.overlaidCanvas.addEventListener(window.navigator.msPointerEnabled ? "MSPointerDown" : "touchstart", function (e) {
+                //TODO
                 that._touchEventHandler(e);
             }, false);
 
@@ -8743,7 +8746,7 @@
         //this.chart.canvas.addEventListener("mouseover", eventHandler);
         //this.chart.canvas.addEventListener("mousemove", eventHandler);
         //this.chart.canvas.addEventListener("mouseout", eventHandler);
-        //this.chart.canvas.addEventListener("click", eventHandler);
+
     }
 
     EventManager.prototype.reset = function () {
@@ -8791,7 +8794,6 @@
 
                 //var logString = xy.x.toString() + ", " + xy.y.toString() + " RGB:" + pix[0].toString() + ", " + pix[1].toString() + ", " + pix[2].toString() + ", " + pix[3].toString()
                 //    + " hex: " + intToHexColorString(id) + " dataPoint: [" + dataPoint.x.toString() + ", " + dataPoint.y.toString() + ", " + dataPoint.hexColor + "]";
-
                 //if (this.previousDataPointEventObject) {
                 //    logString += "  ds: " + this.previousDataPointEventObject.dataSeriesIndex + " dp: " + this.previousDataPointEventObject.dataPointIndex;
                 //}
@@ -8806,7 +8808,6 @@
                     }
 
                     if (dataPoint.mouseover) {
-
                         dataPoint.mouseover.call(dataPoint, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
                     }
 
@@ -8833,9 +8834,7 @@
 
                     if (dataSeries.mousemove)
                         dataSeries.mousemove.call(dataSeries, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
-
-                } else if (ev.type === "click") {
-
+                } else if ((ev.type === "click") || (ev.type === "mouseover")  || (ev.type === "touches")) {
                     var distanceTravelled = Math.sqrt(Math.pow(this.chart.dragStartPoint.x - xy.x, 2) + Math.pow(this.chart.dragStartPoint.y - xy.y, 2));
                     if (distanceTravelled < 5) {
 
@@ -8844,6 +8843,20 @@
 
                         if (dataSeries.click)
                             dataSeries.click.call(dataSeries, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
+
+                        if (dataPoint.touches)
+                            dataPoint.touches.call(dataPoint, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
+
+                        if (dataSeries.touches)
+                            dataSeries.touches.call(dataSeries, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
+
+                        
+                        if (dataPoint.mouseover)
+                            dataPoint.mouseover.call(dataPoint, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
+
+                        if (dataSeries.mouseover)
+                            dataSeries.mouseover.call(dataSeries, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });
+
 
                         if (this.chart.pieDoughnutClickHandler) {
                             this.chart.pieDoughnutClickHandler.call(dataSeries, { x: xy.x, y: xy.y, dataPoint: dataPoint, dataSeries: dataSeries, dataPointIndex: dataPointIndex });

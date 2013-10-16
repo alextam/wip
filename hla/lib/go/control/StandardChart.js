@@ -77,20 +77,23 @@ enyo.kind({
 		this.inherited(arguments);
 	},
 	setDatasource: function(key, datasource, legend, showInLegend, colorSet) {
+		var _this = this;
 		CanvasJS.addColorSet(colorSet.name, colorSet.data); 
 		this.chart = new CanvasJS.Chart(this.controls[0].id,
-			{
-				theme: this.theme,
-				width: this.width,
-			    height: this.height,
-			    zoomEnabled: this.zoomEnabled,
-			    backgroundColor: this.backgroundColor,
-			    animationEnabled: this.animationEnabled,
-			    colorSet: colorSet.name,
-			    culture: this.culture,
-				creditHref: this.creditHref,
-	            creditText: this.creditText
-			});
+				{
+					theme: this.theme,
+					width: this.width,
+				    height: this.height,
+				    zoomEnabled: this.zoomEnabled,
+				    backgroundColor: this.backgroundColor,
+				    animationEnabled: this.animationEnabled,
+				    colorSet: colorSet.name,
+				    culture: this.culture,
+					creditHref: this.creditHref,
+		            creditText: this.creditText		            
+				}
+				
+		);
 		
 		// find datasource
 		var d = this.find(key);
@@ -124,6 +127,10 @@ enyo.kind({
 				type: this.type,
 				name: this.data[i].legend,
 				showInLegend: this.data[i].showInLegend,
+				mouseover: function(e){
+					_this.bubble("onTouchChart",{type:e.dataSeries.type,x:e.dataPoint.x,y:e.dataPoint.y});
+					//console.log(  "dataSeries Event => Type: "+ e.dataSeries.type+ ", dataPoint { x:" + e.dataPoint.x + ", y: "+ e.dataPoint.y + " }" );
+    			},
 				dataPoints: this.data[i].data
 			};
 			this.chart.options.data.push(series);		

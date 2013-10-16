@@ -38,7 +38,12 @@ enyo.kind({
 							name:'donutChart',
 							chartId: 2,
 							theme:'theme2',
-							title:'',
+							title: {
+								text:"Year 1",
+								fontFamily:"HandOfSean",
+								fontSize:15,
+								fontColor: "#fff"
+							},
 							type:'doughnut',
 							backgroundColor: "#222",
 							xAxis: {
@@ -70,6 +75,7 @@ enyo.kind({
 						{ 
 							kind: 'StandardChart',
 							name: 'lineChart',
+							onTouchChart:"handleTouchChart",
 							theme: 'theme2',
 							title: {
 								text:"_",
@@ -85,7 +91,7 @@ enyo.kind({
 						        fontWeight:"bold",
 						        fontStyle:"oblique"      
 					      	},
-							xAxis: {
+					      	xAxis: {
 								title: " ",
 								tickColor:"black",
 								gridColor:"black",
@@ -133,6 +139,39 @@ enyo.kind({
     	return this.$.chartBox.getValue();
 
     },
+    handleTouchChart:function(inSender,inEvent) {
+    	console.log(inEvent.y);
+    	var colorSet = {};
+		colorSet.name = "goIngenious";
+		colorSet.data = [
+			 "#04558E",
+		     "#ff9933",
+		     "#669933",
+		     "#a11621",
+		     "#3EA0DD",
+		     "#F5A52A",
+		     "#23BFAA",
+		     "#FAA586",
+		     "#EB8CC6"
+	    ];
+    	baseCompute = 1;
+    	var donutPlots = [       							
+			{ label: "Overriding", y: baseCompute*0.6, suffix:"k", legendText: "Overriding ("+baseCompute*0.6+"k)" ,indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+		    { label: "Production Bonus", y: baseCompute*0.1, suffix:"k", legendText: "Production Bonus ("+baseCompute*0.1+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+			{ label: "Persistence Bonus", y: baseCompute*0.1, suffix:"k", legendText: "Persistence Bonus ("+baseCompute*0.1+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
+		    { label: "Basic Commission", y: baseCompute*0.2, suffix:"k", legendText: "Basic Commission ("+baseCompute*0.2+"k)",indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" }
+		];
+		var linePlots = [
+			{ label: "1st Year" },
+			{ label: "2nd Year" },
+			{ label: "3rd Year" },                                    
+			{ label: "4th Year" },
+			{ label: "5th Year" }
+		];
+		this.$.donutChart.title.text = linePlots[inEvent.x].label;
+    	this.$.donutChart.refresh();
+    	this.$.donutChart.setDatasource('key1', donutPlots, 'Income', true, colorSet);
+    },
     handleDataChanged:function(inSender,inEvent) {
     	this.plotCharts();
     },
@@ -148,11 +187,11 @@ enyo.kind({
     	var year4 = (baseCompute*4.8 + parseInt(initialData.annualGrowth,10))/(100) + 2.5 + (parseInt(initialData.annualGrowth,10)/12);
     	var year5 = (baseCompute*6.0 + parseInt(initialData.annualGrowth,10))/(100) + 20.5 + (parseInt(initialData.annualGrowth,10)/12);
     	var linePlots = [
-			{ label: "1st Year", y: Math.round(year1) },
-			{ label: "2nd Year", y: Math.round(year2) },
-			{ label: "3rd Year", y: Math.round(year3) },                                    
-			{ label: "4th Year", y: Math.round(year4) },
-			{ label: "5th Year", y: Math.round(year5) }
+			{ label: "1st Year", y: Math.round(year1), markerSize: 16, markerBorderThickness:5 },
+			{ label: "2nd Year", y: Math.round(year2), markerSize: 16, markerBorderThickness:5 },
+			{ label: "3rd Year", y: Math.round(year3), markerSize: 16, markerBorderThickness:5 },                                    
+			{ label: "4th Year", y: Math.round(year4), markerSize: 16, markerBorderThickness:5 },
+			{ label: "5th Year", y: Math.round(year5), markerSize: 16, markerBorderThickness:5 }
 		];
 		var donutPlots = [       							
 			{ label: "Overriding", y: baseCompute*0.6, suffix:"k", legendText: "Overriding ("+baseCompute*0.6+"k)" ,indexLabelFontFamily:"HandOfSean", indexLabelFontColor: "#fff", indexLabelFontSize: 12,indexLabelFontWeight:"normal" },
