@@ -20,7 +20,7 @@ enyo.kind({
                 src:"assets/video/ceovid.mp4",
                 width:300,
                 height:220,
-                type:"video/mp4"
+                autoplay:false
             }
         },
         {
@@ -52,9 +52,9 @@ enyo.kind({
         this.$.videoBox.hasNode().src = this.source;
     },
     handlePlayPauseVideo:function(inSender,inEvent) {
-        if (this.getIsPlaying()) {
+        if ( !this.$.videoBox.hasNode().paused ) {
             this.setIsPlaying(false);
-            //inSender.hasNode().currentTime = 0;
+            // inSender.hasNode().currentTime = 0;
             inSender.hasNode().pause();
         } else {
             inSender.hasNode().play();
@@ -72,14 +72,18 @@ enyo.kind({
         if (this.title != null) {
       	    this.titleChanged();
       	}  
-
+        //this.$.videoBox.hasNode().play = false;
     },
     rendered:function() {
         this.inherited(arguments);
         this.posterChanged();
         this.$.videoBox.hasNode().addEventListener("webkitbeginfullscreen",function(evt){
-            this.$.videoBox.hasNode().play();
+            if ( this.$.videoBox.hasNode().paused ) {
+                this.$.videoBox.hasNode().play();
+            }
         });
+        this.$.videoBox.hasNode().autoplay = true;
+        this.$.videoBox.hasNode().autoplay = false;
     },
     titleChanged: function() {
     	this.$.txtPhotoTitle.setContent(this.title);
