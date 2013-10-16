@@ -94,7 +94,7 @@ enyo.kind({
             name:"Adam Baker",
             year:7,
             alt:true,
-            poster:"",
+            poster:"assets/img/p1Shot.jpg",
             video:"assets/video/male.mp4",
             photoClass:"ppl1",
             income:"105k"            
@@ -103,7 +103,7 @@ enyo.kind({
             name:"Samson Dave",
             year:7,
             alt:false,
-            poster:"",
+            poster:"assets/img/p2Shot.jpg",
             video:"assets/video/ceovid.mp4",
             photoClass:"ppl2",
             income:"105k"            
@@ -112,7 +112,7 @@ enyo.kind({
             name:"Liza Teoh",
             year:7,
             alt:true,
-            poster:"",
+            poster:"assets/img/p3Shot.jpg",
             video:"assets/video/female.mp4",
             photoClass:"ppl3",
             income:"105k"            

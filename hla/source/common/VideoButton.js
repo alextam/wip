@@ -44,6 +44,7 @@ enyo.kind({
         this.$.videoBox.hasNode().pause();
         this.setIsPlaying(false);
     },
+
     posterChanged:function(){
         this.$.videoBox.hasNode().poster = this.poster;
     },
@@ -76,6 +77,9 @@ enyo.kind({
     rendered:function() {
         this.inherited(arguments);
         this.posterChanged();
+        this.$.videoBox.hasNode().addEventListener("webkitfullscreenchange",function(evt){
+            console.log(evt);
+        });
     },
     titleChanged: function() {
     	this.$.txtPhotoTitle.setContent(this.title);
