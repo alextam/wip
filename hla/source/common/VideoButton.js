@@ -17,7 +17,6 @@ enyo.kind({
             ontap:"handlePlayPauseVideo",
             attributes:{
                 controls:false,
-                poster:"assets/img/posterCEO.jpg",
                 src:"assets/video/ceovid.mp4",
                 width:300,
                 height:220,
@@ -33,7 +32,7 @@ enyo.kind({
     ],
     published:{
         source:"",
-        poster:"",
+        poster:null,
         isPlaying:false,
         title:null		
     },
@@ -46,13 +45,10 @@ enyo.kind({
         this.setIsPlaying(false);
     },
     posterChanged:function(){
-        this.$.videoBox.hasNode().poster = "";
-        //this.$.videoBox.hasNode().poster = this.poster;
+        this.$.videoBox.hasNode().poster = this.poster;
     },
     sourceChanged:function(){
         this.$.videoBox.hasNode().src = this.source;
-        //this.$.videoBox.hasNode().poster = this.poster;
-        //this.$.videoBox.render();
     },
     handlePlayPauseVideo:function(inSender,inEvent) {
         if (this.getIsPlaying()) {
@@ -72,9 +68,14 @@ enyo.kind({
     },
     create: function() {
         this.inherited(arguments);
-      	if (this.title != null) {
+        if (this.title != null) {
       	    this.titleChanged();
       	}  
+
+    },
+    rendered:function() {
+        this.inherited(arguments);
+        this.posterChanged();
     },
     titleChanged: function() {
     	this.$.txtPhotoTitle.setContent(this.title);

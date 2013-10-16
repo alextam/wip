@@ -22,6 +22,7 @@ enyo.kind({
         {
         	name:"videoBox",
         	kind:"VideoButton",
+            poster:"assets/img/posterCEO.jpg",
         	classes:"video static",
         	title:""
         },
