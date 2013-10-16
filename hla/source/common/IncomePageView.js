@@ -65,7 +65,7 @@ enyo.kind({
         			fit:true,
         			components:[
 						{
-							style:"height:100px"
+							style:"height:80px"
 						},
 						{ 
 							kind: 'StandardChart',
