@@ -77,8 +77,8 @@ enyo.kind({
     rendered:function() {
         this.inherited(arguments);
         this.posterChanged();
-        this.$.videoBox.hasNode().addEventListener("webkitfullscreenchange",function(evt){
-            console.log(evt);
+        this.$.videoBox.hasNode().addEventListener("webkitbeginfullscreen",function(evt){
+            this.$.videoBox.hasNode().play();
         });
     },
     titleChanged: function() {
