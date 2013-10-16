@@ -94,7 +94,7 @@ enyo.kind({
   	},
     startDrop:function(photoIndex) {
     	var anim = new enyo.Animator({
-		      duration: 180,
+		      duration: 160,
 		      startValue: 0,
 		      endValue: this.$["btnPhoto0"+photoIndex].endY,
 		      node: this.$["btnPhoto0"+photoIndex].hasNode(),
