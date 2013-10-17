@@ -119,7 +119,7 @@ enyo.kind({
 								titleFontFamily:"HandOfSean"
 							},
 							
-							style:"width:550px;height:446px;border:1px solid #fff"
+							style:"width:550px;height:446px;"
 						}
 					]
 
