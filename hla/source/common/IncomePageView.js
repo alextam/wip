@@ -118,7 +118,6 @@ enyo.kind({
 								labelFontFamily:"HandOfSean",
 								titleFontFamily:"HandOfSean"
 							},
-							
 							style:"width:550px;height:446px;"
 						}
 					]
