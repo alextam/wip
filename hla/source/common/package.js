@@ -1,9 +1,11 @@
 enyo.depends(
 	"AnchorTag.js",
-	"AnimMenuArea.js",
+	"AnimMenuAreaView.js",
 	"LogoButton.js",
+	"MemberListItem.js",
 	"ParallaxBG.js",
 	"PageView.js",
+	"ListGraphView.js",
 	"ChartControlBox.js",
 	"IncomePageView.js",
 	"WitnessListItem.js",

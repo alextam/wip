@@ -4,7 +4,7 @@ enyo.kind({
     classes:"enyo-fit enyo-unselectable",
 	nav: Navigator,
 	components:[
-		{ kind:"AnimMenuArea" }
+		{ kind:"AnimMenuAreaView" }
     ],		
 	create: function() {
 		this.inherited(arguments);

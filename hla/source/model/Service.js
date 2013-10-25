@@ -42,6 +42,41 @@ enyo.kind({
         ];
         return this.resolveDfd(priceGuide);
     },
+    usersData:function() {
+        var fullData = [
+            {
+                id:1,
+                name:"Mohd Shafiq bin Fairuz",
+                photo:"p1.jpg",
+                vote:3
+            },
+            {
+                id:2,
+                name:"Albert Tan Beng Chong",
+                photo:"p2.jpg",
+                vote:2
+            },
+            {
+                id:3,
+                name:"Mogan Raju a/l Ratnam",
+                photo:"photo02.jpg",
+                vote:1
+            },
+            {
+                id:4,
+                name:"Ivy Lim Chong Mei",
+                photo:"p3.jpg",
+                vote:1
+            },
+            {
+                id:5,
+                name:"Janice Tan Mei Sim",
+                photo:"photo08.jpg",
+                vote:0
+            }
+        ];
+        return this.resolveDfd(fullData);
+    },
     initData:function() {
         console.log("Installing Sample Data...");
         var fullData = [

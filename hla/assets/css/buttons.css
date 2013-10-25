@@ -16,6 +16,19 @@
 	background: none !important;
 }
 
+.starButton {
+	padding:2px;
+	font-size:1.2em;
+	color:#55504c !important;
+	opacity: 0.8; 
+	text-shadow: 0 -2px -2px #000 !important;
+}
+
+.starButton.active {
+	color:gold !important;
+	text-shadow: 0 -2px -2px #000 !important;
+}
+
 .tapButtonControl {
 	color:#fff;
 	/*border:1px solid #ccc !important;*/
@@ -31,6 +44,11 @@
 	padding-right:15px !important;
 	width:120px;
 	background:#fff;
+}
+
+.photoBase {
+	background: url("../img/photoFrame.jpg") no-repeat !important;
+
 }
 
 .photoButtonBase {
@@ -171,6 +189,10 @@
 
 .witnessListItem {
 	height:242px;
+}
+
+.memberListItem {
+	height:90px;
 }
 
 .videoButtonBase.video.static {

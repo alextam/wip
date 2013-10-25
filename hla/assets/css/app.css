@@ -7,6 +7,7 @@ body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;backgro
 .standardHeader {font-family:Arial,'Helvetica';font-size:1em; font-weight: bold}
 .standardSeanH1 { font-family:'HandOfSean';font-size:1.5em;position: absolute;top:190px;left:340px;font-weight:normal; }
 .standardSeanH2 { font-family:'HandOfSean';font-size:1.6em;font-weight:normal; }
+.standardSeanH3 { font-family:'Arial';font-size:1.0em;font-weight:bold;margin-bottom:8px;margin-top:10px; width:310px; }
 .textAreaP1 {top:242px;left:338px;position: absolute;width:585px;height:120px;font-size:0.95em;font-weight:500;text-align:justify;}
 .textAreaP2 {top:388px;left:338px;position: absolute;width:252px;height:276px;font-size:0.95em;font-weight:500;text-align:justify;}
 .onyx-scrim {opacity:0.4 !important;}
@@ -14,12 +15,12 @@ body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;backgro
 .textureBg {padding:20px;background:url("../img/photoFrame.jpg");-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);-moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);background-position:top center;width:380px !important;margin-right:10px;height:170px !important;border:1px solid #ccc;}
 .h5Content {font-size:0.9em;font-family: "Arial";width:240px;line-height:40px !important;text-indent: 10px;}
 .smallIcon {background:url("../img/hlaLogo.png");background-size:44px 51px;background-position:top center;width:44px !important;height:51px !important;margin-left:15px !important;margin-right:15px !important;margin-top:-10px !important; }
+.whiteBg{background:#ddd;}
 .emptyBg{background:url("../img/appHLABgEmpty.jpg");background-position:top center;background-size:1024px 768px;background-color:#676562 !important;}
 .mainBg{background:url("../img/appHLABg.jpg");background-position:top center;background-size:1024px 768px;background-color:#676562 !important;}
 .dashboardBg{background:url("../img/menu-bg.png") no-repeat;background-position:top center;background-size:1024px 748px;}
 .iosFlickerFix{-webkit-perspective: 1000 !important;-webkit-backface-visibility: hidden !important;-webkit-transform:translateZ(0) !important; }
 .selectorBg{width:100%;background-color:#f2f2f2}
-.whiteBg {background: #ffffff !important;}
 .parallax {height:415px;}
 .popUpMenu {margin-top:56px !important;font-weight:600;width:110px;min-height:41px !important;max-height:210px !important;}
 .toUpperCase{font-size:0.9em !important;text-transform: uppercase;}

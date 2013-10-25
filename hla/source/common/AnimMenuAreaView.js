@@ -1,5 +1,5 @@
 enyo.kind({
-    name: "AnimMenuArea",
+    name: "AnimMenuAreaView",
     kind: "Control",
     fit:true,
     global: go.Global,
@@ -66,7 +66,7 @@ enyo.kind({
         	kind:"PhotoButton",
         	classes:"btn7",
             title:"",
-            page:null,
+            page:"OpportunityPage",
             ontap:"handleTap",
         	endY:414
         },

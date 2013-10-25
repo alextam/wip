@@ -153,7 +153,7 @@ enyo.kind({
 
 		setTimeout(function() {
 			dfd.resolve.apply(dfd, args);
-		}, 1000);
+		}, 100);
 
 		return dfd.promise();
 	},

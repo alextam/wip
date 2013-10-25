@@ -14,6 +14,7 @@ enyo.depends(
 	"panel",
 	"common",
 	"IncomePage.js",
+	"OpportunityPage.js",
 	"TestimonialPage.js",
 	"CEOMessagePage.js",
 	"App.js"
