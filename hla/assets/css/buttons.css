@@ -21,12 +21,10 @@
 	font-size:1.2em;
 	color:#55504c !important;
 	opacity: 0.8; 
-	text-shadow: 0 -2px -2px #000 !important;
 }
 
 .starButton.active {
 	color:gold !important;
-	text-shadow: 0 -2px -2px #000 !important;
 }
 
 .tapButtonControl {
