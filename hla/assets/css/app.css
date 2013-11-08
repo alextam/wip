@@ -2,7 +2,11 @@
 @import "buttons.css";
 
 body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;background: #0a1d3b; }
+@font-face { font-family: 'RobotoCondense';src: url('../css/go/font/RobotoCondensed-Bold.ttf') format('truetype')}
+@font-face { font-family: 'RobotoCondenseLight';src: url('../css/go/font/RobotoCondensed-Light.ttf') format('truetype')}
 @font-face { font-family: 'HandOfSean';src: url('../css/go/font/HandOfSeanDemo.ttf') format('truetype')}
+@font-face { font-family: 'OpenSansBold';src: url('../css/go/font/OpenSans-Bold.ttf') format('truetype')}
+
 .seanFont { font-family:'HandOfSean';font-size:0.86em; }
 .standardHeader {font-family:Arial,'Helvetica';font-size:1em; font-weight: bold}
 .standardSeanH1 { font-family:'HandOfSean';font-size:1.5em;position: absolute;top:190px;left:340px;font-weight:normal; }
@@ -24,7 +28,6 @@ body { font-family: 'Georgia', 'Helvetica', Arial, sans-serif !important;backgro
 .parallax {height:415px;}
 .popUpMenu {margin-top:56px !important;font-weight:600;width:110px;min-height:41px !important;max-height:210px !important;}
 .toUpperCase{font-size:0.9em !important;text-transform: uppercase;}
-.panelSlider > * {width: 300px;}
 .panelSliderButton { width:86%;font-size:1.5em;color:#c82c30}
 .drugType { font-size:0.7em !important;}
 .headerTextTitle { line-height:32px;font-size:1em !important;}
@@ -1203,6 +1206,7 @@ textarea {
 	font-family: 'Helvetica', 'Nimbus Sans L', Arial, sans-serif;
 }
 
+/*
 .appInputForm {
  	background: #a52025 !important;
  	color:#fff !important;
@@ -1219,11 +1223,6 @@ textarea {
 
 .appInputForm.onyx-disabled input {
  	color:#666 !important;
-}
-
-
-.onyx-input-decorator.appInputForm {
-	border:none !important;
 }
 
 .onyx-input-decorator.appInputFormDateTime {
@@ -1243,6 +1242,7 @@ textarea {
 .appInputFormDateTime .appInputContainer {
 	height:50px !important;
 }
+*/
 
 .appSimpleInputForm {
 	background: #fff !important;

@@ -57,7 +57,7 @@ enyo.kind({
         	kind:"PhotoButton",
         	classes:"btn6",
             title:"",
-            page:null,
+            page:"ProRecruitPage",
             ontap:"handleTap",
         	endY:407
         },

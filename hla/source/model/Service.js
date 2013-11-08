@@ -2,6 +2,128 @@ enyo.kind({
 	name: "Service",
 	kind: "go.WebService",
     global:go.Global,
+    getClientele: function() {
+        var data = [
+            {
+                name:"Michelle Tan Wei Ling",
+                contactno:"0126630232",
+                education:"Degree",
+                income:80000,
+                photo:"p0.png",
+                occupation:"Teacher",
+                rating:5,
+                address:"",
+                postcode:"",
+                email:"michelle_88@hotmail.com",
+                goal:"Travel around the world"
+            },
+            {
+                name:"Micheal Jacobson",
+                contactno:"0126630335",
+                education:"Degree",
+                income:62000,
+                photo:"p1.png",
+                occupation:"Teacher",
+                rating:2,
+                address:"",
+                postcode:"",
+                email:"mic_1997@hotmail.com",
+                goal:"Escape the rat race!"
+            },
+            {
+                name:"Mohd. Khalid bin Mohd. Rasdi",
+                contactno:"0126620222",
+                education:"Diploma",
+                income:60000,
+                photo:"p2.png",
+                occupation:"IT Executives",
+                rating:1,
+                address:"",
+                postcode:"",
+                email:"mkhalid23@gomobileapp.com",
+                goal:"Buying my dreamhouse in Ampang EcoPark."
+            },
+            {
+                name:"Mohd Khairy bin Saifuddin",
+                contactno:"0104620222",
+                education:"Diploma",
+                income:60000,
+                photo:"p6.png",
+                occupation:"Web Developer",
+                rating:2,
+                address:"",
+                postcode:"",
+                email:"raizen23@gomobileapp.com",
+                goal:"Start my own business."
+            },
+            {
+                name:"Alice Chong Wei Sze",
+                contactno:"0115620112",
+                education:"Diploma",
+                income:70000,
+                photo:"p3.png",
+                occupation:"Bank Officer",
+                rating:4,
+                address:"",
+                postcode:"",
+                email:"alicechong_1990@gmail.com",
+                goal:"Own a 2nd hand car dealer business."
+            },
+            {
+                name:"Murali a/l Muthusamy",
+                contactno:"0104620110",
+                education:"High School",
+                income:30000,
+                photo:"p10.png",
+                occupation:"Security Officer",
+                rating:4,
+                address:"",
+                postcode:"",
+                email:"matomaman@securebrothers.com",
+                goal:"Better income."
+            },
+            {
+                name:"Guster Lee Ming Hoi",
+                contactno:"0135620112",
+                education:"Master Degree",
+                income:90000,
+                photo:"p5.png",
+                occupation:"Real Estate Agent",
+                rating:3,
+                address:"",
+                postcode:"",
+                email:"gusterBman@outlook.com",
+                goal:"Become a CEO!"
+            },
+            {
+                name:"Suzanna Abdul Rahim",
+                contactno:"0135620112",
+                education:"Degree",
+                income:50000,
+                photo:"p4.png",
+                occupation:"Technical Writer",
+                rating:5,
+                address:"",
+                postcode:"",
+                email:"katnissjaySz@gmail.com",
+                goal:"To become a Technopreneur someday!"
+            },
+            {
+                name:"Susan Lancaster",
+                contactno:"0135620100",
+                education:"Degree",
+                income:75000,
+                photo:"p7.png",
+                occupation:"Senior Editor",
+                rating:0,
+                address:"",
+                postcode:"",
+                email:"littleponny81@gmail.com",
+                goal:"Own my own farmhouse in Scotland"
+            }
+        ];
+        return this.resolveDfd(data,100);
+    },
 	getSearchResult: function(field, param) {
         var dfd = new Deferred();
 	       	

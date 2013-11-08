@@ -55,7 +55,7 @@ enyo.kind({
                                             		},
                                             		{
                                                         name:"inputSearch",
-                                                        style:"color:#ffffff !important;font-size:1.4em;text-align:right;width:30px !important;",
+                                                        style:"font-size:1.4em;text-align:right;width:30px !important;",
                                                         classes: "formDecoratorButton icon-search"
                                                     }
                                             	]

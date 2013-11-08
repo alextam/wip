@@ -15,14 +15,14 @@ enyo.kind({
           components:[
               { style:"width:2%;height:405px;" },
               {
-                  style:"width:96%;",
+                  style:"width:96%;text-align:center;",
                   components:[
                     {
                       style:"height:5px"
                     },
                     { 
                       kind:"Image",
-                      style:"width:920px;",
+                      style:"width:920px;text-align:center;",
                       src:"assets/img/RecuitmentDash.jpg"
                     }
                   ]

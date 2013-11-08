@@ -1,0 +1,293 @@
+/* custom.css */
+@white: #fff;
+@slightGray: #fff;
+@pink: #FCA89C;
+@creamred:#F57C77;
+@creamblue: #E8F0F3;
+@black:#000;
+@header:#A3AFC0;
+@toolbar: #30373C;
+@lighterblue:#E8F0F3;
+@darkenblue:#9CB2C0;
+@silver: silver;
+@activegreen:#A6BD41;
+@toolbarline: #3B454F;
+@rate5: #CC0000;
+@rate4: #FF9900;
+@rate3: #FFFF33;
+@rate2: #99CC00;
+@rate1: #009999;
+@rate0: #6699CC;
+@widthForContactCard:348px;
+@widthForContent:250px;
+@sortbyHeight:40px;
+
+
+.no-corners (@radius: 0px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.left-corners (@radiusHalf: 0.6em) {
+	-moz-border-radius-topright: @radiusHalf;
+	-webkit-border-top-right-radius: @radiusHalf;
+	border-top-right-radius: @radiusHalf;
+	-moz-border-radius-bottom-right: @radiusHalf;
+	-webkit-border-bottom-right-radius: @radiusHalf;
+	border-bottom-right-radius: @radiusHalf;
+}
+
+.verylightshadow {
+	-webkit-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-shadow {
+	-webkit-box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 5px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.proPage {
+	background: @white !important;	
+}
+
+.onyx-toolbar{
+	background:@toolbar !important;
+	color:@creamblue !important;
+	border:none !important;
+}
+.panelSlider > * {
+	width: @widthForContactCard;
+}
+
+.formInput {
+	padding:8px !important; 
+}
+
+.formDecoratorButton {
+	color:@darkenblue !important;
+}
+
+.sortByContainerBox {
+	padding-left:8px;
+	padding-right:8px;
+	height:@sortbyHeight;
+}
+
+.sortByContainerBox h1 {
+	line-height:@sortbyHeight;
+	color:@white;
+	text-indent: 15px;
+	font-size:1em;
+	font-family: "OpenSansBold"
+}
+
+.sortByColumnLabel {
+	width:100px;
+	background: darken(@darkenblue,10%);
+}
+
+.sortByButton {
+	width:76px;
+	font-family: "OpenSansBold";	
+	background: darken(@creamblue,15%);
+	font-size:0.9em;
+	color:@white;
+	border-left:1px solid @darkenblue;
+	border-top:none !important;
+	border-bottom:none !important;
+	border-right:none !important;
+	height:@sortbyHeight;
+}
+
+.sortByButton.active {
+	.verylightshadow;
+	border:none;
+	background: @activegreen;
+}
+
+.appInputForm {
+	.no-corners; 
+	padding-top:10px !important;
+	border:1px solid @darkenblue;
+	background:@white !important;
+}
+
+.standardContent {
+	font-size:1.0em;
+	width:@widthForContent;
+	padding-left:10px;
+	padding-right:10px;
+	color: darken(@darkenblue, 5%);
+	font-weight:300;
+	font-family:"RobotoCondense";
+}
+
+.headerOccupation {
+	text-indent:2px;
+	line-height:20px;
+	font-size:1.1em;
+	color:lighten(@black, 75%) !important;
+}
+
+.searchingBoxControl {
+	height:110px;
+	border-bottom:2px solid lighten(@darkenblue,20%);
+	background: @slightGray;
+}
+
+.searchableContactBox {
+	border-right:3px solid @darkenblue !important;
+	background: darken(@darkenblue, 5%);
+}
+
+.iconicAnchor {
+	color:@creamblue !important;
+	text-align: center !important;
+	width:45px;
+	margin-left: 0px;
+	font-size:1.4em !important;
+}
+
+.businessCardBox {
+	background:@white;
+	position:relative;
+}
+
+.businessCardContentArea {
+	height:100px;
+}
+
+/*
+.businessCardContentArea:active:hover:not([disabled]){
+	background:darken(@creamblue,15%);
+}
+
+.businessCardContentArea:active:hover:not([disabled]) .businessCardName{
+	background: darken(@darkenblue,2%);
+	color:@white !important;
+}
+
+.businessCardContentArea:active:hover:not([disabled]) .standardContent, 
+.businessCardContentArea:active:hover:not([disabled]) .headerOccupation{
+	color:@white !important;
+}
+*/
+
+.businessCardBox.active .businessCardContentArea {
+	background: lighten(@creamred, 10%);
+	//background:darken(@creamblue,12%);
+}
+
+.businessCardBox.active .businessCardContentArea .businessCardName {
+	background: darken(@creamred,5%);
+	//background: darken(@darkenblue,2%);
+	color:@white !important;
+}
+
+.businessCardBox.active .businessCardContentArea .standardContent, 
+.businessCardBox.active .businessCardContentArea .headerOccupation{
+	color:@slightGray !important;
+}
+
+.businessCardName {
+	height:30px;
+	width:@widthForContent;
+	padding-left:10px;
+	padding-right:10px;
+	//background: @darkenblue;
+	font-size:1.1em;
+	background: lighten(@header, 25%);
+	line-height:30px;
+	font-family:"RobotoCondense";
+	color:lighten(@black, 50%) !important;
+}
+
+.businessCardPhoto {
+	max-width:80px;
+	height:100px;
+	background: @creamblue;
+}
+
+.contentContainerBox {
+	padding:15px;
+	background: @lighterblue !important;
+}
+
+.contextButton {
+	text-align: center !important;
+	width:45px;
+	padding:0px !important;
+	background: @toolbar;
+	margin:0px !important;
+	border-right:none;
+	border-top:none;
+	border-bottom:none;
+	border-left:1px solid @toolbarline !important;
+}
+
+.cardHolder {
+	height:100px;
+	background:@white;
+	border-bottom:1px solid @creamblue; 
+}
+
+h1.headerTextTitle {
+	font-family: 'OpenSansBold';
+	line-height:25px !important;
+	color:@creamblue !important;
+}
+
+.headerButton {
+	text-transform: uppercase;
+	//font-family: 'RobotoCondense' !important;
+	background: @creamred !important;
+	font-size:1.5em;
+	border:6px solid @toolbar !important;
+}
+
+.rate0 {
+	.left-corners;
+	.left-shadow;
+	background:@rate0;
+}
+
+.rate1 {
+	.left-corners;
+	.left-shadow;
+	background:@rate1;
+}
+
+.rate2 {
+	.left-corners;
+	.left-shadow;
+	background:@rate2;
+}
+
+.rate3 {
+	.left-corners;
+	.left-shadow;
+	background:@rate3;
+}
+
+.rate4 {
+	.left-corners;
+	.left-shadow;
+	background:@rate4;
+}	
+
+.rate5 {
+	.left-corners;
+	.left-shadow;
+	background:@rate5;
+}
+
+.headerButton:active:hover:not([disabled]){
+	color:ligten(@pink,20%) !important;
+	background: darken(@creamred, 10%) !important; 
+}
