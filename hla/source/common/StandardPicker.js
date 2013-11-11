@@ -30,6 +30,7 @@ enyo.kind({
 					name:"inputDecorator",
                     kind: "onyx.PickerButton",
  					onChange: "pickerDisplayChange",
+                    allowHtml:true,
                     style:"width:100%;padding-top:12px !important;padding-bottom:12px !important;",
  					classes: "appInputForm pickerButton",
                     layoutKind: "FittableColumnsLayout",
@@ -37,6 +38,7 @@ enyo.kind({
  						{
  							content:"Select One...",
  							name:"labelPickerButtonControl",
+                            allowHtml:true,
  							classes:"truncate",
                             style:"width:88%;"
  						},
@@ -50,6 +52,7 @@ enyo.kind({
 				{
 					kind: "onyx.Picker", 
                     classes:"stdPickerMenu",
+                    allowHtml:true,
 					name:"pickerMenuControl"
 				}
                 
@@ -114,7 +117,7 @@ enyo.kind({
             if (items[i].active === true) {
                 selected = true;
             }
-    		this.$.pickerMenuControl.createComponent( items[i] );	
+            this.$.pickerMenuControl.createComponent( items[i] );	
     	}
     	this.render();
 

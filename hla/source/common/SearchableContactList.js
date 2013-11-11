@@ -51,6 +51,9 @@ enyo.kind({
         this.inherited(arguments);
         this.loadContacts();
     },
+    rendered: function() {
+        this.inherited(arguments);
+    },
     handleSearch: function(inSender,inEvent) {
     	this.setKeyboardInput( inEvent.getValue() );
  		this.refreshList();
@@ -59,6 +62,9 @@ enyo.kind({
     	if(this.data != null) {
     		this.refreshList();	
     	}
+    },
+    listItemTapped: function(inSender,inEvent) {
+        this.bubble("onDataTap",{index:inEvent.index,data:this.filteredData[inEvent.index]});
     },
     loadContacts: function() {
     	var _this = this;

@@ -22,13 +22,18 @@
 @widthForContent:250px;
 @sortbyHeight:40px;
 
-
 .no-corners (@radius: 0px) {
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   -ms-border-radius: @radius;
   -o-border-radius: @radius;
   border-radius: @radius;
+}
+
+.no-shadow {
+	-webkit-box-shadow:none ;
+    -moz-box-shadow:none ;
+	box-shadow:none ;
 }
 
 .left-corners (@radiusHalf: 0.6em) {
@@ -38,6 +43,41 @@
 	-moz-border-radius-bottom-right: @radiusHalf;
 	-webkit-border-bottom-right-radius: @radiusHalf;
 	border-bottom-right-radius: @radiusHalf;
+}
+
+.toolBarDiv {
+	text-align: left;
+	margin:0px;
+	background: @toolbar;
+	border-left:1px solid @toolbar;
+	border-right:1px solid @toolbar;	
+}
+
+.contentDataHeaders {
+	text-align: left;
+	margin-top:5px !important;
+	line-height:40px !important;
+	font-family:"OpenSansBold";
+	color:@toolbar;
+	font-size:1.1em;
+}
+
+.contentBoxDiv {
+	padding:15px;
+	height:600px;
+	border-left:1px solid @darkenblue;
+	border-right:1px solid @darkenblue;
+	border-bottom:1px solid @darkenblue;
+	background: @white;
+}
+
+.contentHeader {
+	margin:0px;
+	text-align: left;
+	padding:10px 15px 10px 15px;
+	color:@white;
+	font-size:1.3em;
+	font-family: "RobotoCondense";
 }
 
 .verylightshadow {
@@ -154,6 +194,11 @@
 	font-size:1.4em !important;
 }
 
+.whiteBg {
+	margin-top:-8px;
+	background: @white;
+}
+
 .businessCardBox {
 	background:@white;
 	position:relative;
@@ -161,6 +206,15 @@
 
 .businessCardContentArea {
 	height:100px;
+}
+
+.contextPopupHeader  {
+	height:45px;
+	background: @toolbar;
+}
+
+.contextPopupHeader h1 {
+	font-family: "OpenSansBold"
 }
 
 /*
@@ -208,6 +262,33 @@
 	color:lighten(@black, 50%) !important;
 }
 
+.contextIcon {
+	font-size:1.5em;
+	color:@creamblue;
+}
+
+.contextMenuPopup {
+	margin-top:-1px;
+	width:210px !important;
+}
+
+.contextMenuPopup .onyx-menu-item {
+	border:1px solid #eee;
+	height:25px;
+	font-family: "RobotoCondense";
+	font-size:1.3em;
+	background:#eee;
+	color:#666;
+	line-height: 30px !important;
+	border-bottom:1px solid #bbb !important;
+}
+
+.contextMenuPopup .onyx-menu-item:hover {
+	background: #9cb4c2;
+	border:1px solid #9cb4c2;
+	color:#fff;
+}
+
 .businessCardPhoto {
 	max-width:80px;
 	height:100px;
@@ -222,6 +303,7 @@
 .contextButton {
 	text-align: center !important;
 	width:45px;
+	height:45px;
 	padding:0px !important;
 	background: @toolbar;
 	margin:0px !important;
@@ -229,6 +311,10 @@
 	border-top:none;
 	border-bottom:none;
 	border-left:1px solid @toolbarline !important;
+}
+
+.contextButton .active {
+	background: @creamred !important;
 }
 
 .cardHolder {
@@ -247,8 +333,18 @@ h1.headerTextTitle {
 	text-transform: uppercase;
 	//font-family: 'RobotoCondense' !important;
 	background: @creamred !important;
-	font-size:1.5em;
+	font-size:1.6em;
 	border:6px solid @toolbar !important;
+}
+
+.contextPopupHeader button {
+	text-transform: uppercase;
+	//font-family: 'RobotoCondense' !important;
+	background: @creamred !important;
+	font-size:1.5em;
+	font-family: "RobotoCondense";
+	height:45px !important;
+	border:6px solid @toolbar !important;	
 }
 
 .rate0 {
@@ -287,7 +383,248 @@ h1.headerTextTitle {
 	background:@rate5;
 }
 
+.rate0picker {
+	background:@rate0;
+}
+
+.rate1picker {
+	background:@rate1;
+}
+
+.rate2picker {
+	background:@rate2;
+}
+
+.rate3picker {
+	background:@rate3;
+}
+
+.rate4picker {
+	background:@rate4;
+}	
+
+.rate5picker {
+	background:@rate5;
+}
+
 .headerButton:active:hover:not([disabled]){
 	color:ligten(@pink,20%) !important;
 	background: darken(@creamred, 10%) !important; 
+}
+
+.seperatorBarDiv {
+	font-family: "OpenSansBold";
+	color:@white;
+	margin-top:15px;
+	padding:5px 10px 5px 10px;
+	background: darken(@darkenblue,10%);
+}
+
+.seperatorBarDiv h1{
+	font-family: "OpenSansBold";
+	margin:0px !important;
+	font-size:1.0em;
+}
+
+.emptyContent {
+	color: lighten(@darkenblue,15%);
+}
+
+h1.emptyContent {
+	font-family: "OpenSansBold";
+	margin:0px !important;
+	font-size:1.0em;
+	text-transform: uppercase;
+	color: lighten(@darkenblue,15%);
+}
+
+.contentBarDiv {
+	background:@white;
+	color:lighten(@black,50%);
+	font-family: "OpenSansBold";
+	margin:0px;
+	//padding:15px 10px 15px 10px;
+	font-size:1.1em;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+}
+
+.ratingCaptionDiv {
+	width:160px;
+	text-indent:10px;
+	line-height: 40px;
+	color:lighten(@black,50%);
+	font-family: "OpenSansBold";
+	font-size:1.1em;
+	color:@white;
+	background: darken(@darkenblue,10%);
+}
+
+.ratingCellDiv {
+	margin:0px;
+	width:65px;
+	.no-corners;
+	.no-shadow;
+	border-left:@toolbarline;
+	border-right:none;
+	border-top:none;
+	border-bottom:none;
+	height:40px;
+}
+
+.ratingCellDiv .rate0 {
+	.rate0;
+}
+
+.ratingCellDiv .rate1 {
+	.rate1;
+}
+
+.ratingCellDiv .rate2 {
+	.rate2;
+}
+
+.ratingCellDiv .rate3 {
+	.rate3;
+}
+
+.ratingCellDiv .rate4 {
+	.rate4;
+}
+
+.ratingCellDiv .rate5 {
+	.rate5;
+}
+
+.ratingCellDiv.rate0.active{
+	.left-shadow;
+}
+
+.ratingCellDiv.rate1.active{
+	.left-shadow;
+}
+
+.ratingCellDiv.rate2.active{
+	.left-shadow;
+}
+
+.ratingCellDiv.rate3.active{
+	.left-shadow;
+}
+
+.ratingCellDiv.rate4.active{
+	.left-shadow;
+}
+
+.ratingCellDiv.rate5.active{
+	.left-shadow;
+}
+
+
+
+.ratingSelector {
+	height:50px;
+	// margin-top:15px;
+}
+
+.pickerButton {
+	font-family: "RobotoCondense";
+	line-height:18px !important;
+	font-size: 1.2em;
+	margin-top:0px !important;
+}
+
+.ratingSelector .labels {
+	width:160px;
+	font-family: "OpenSansBold";
+	font-size:1.0em;
+	color:@white;
+	height:50px;
+	text-indent:10px;
+	line-height: 48px;
+	background: darken(@darkenblue,10%);
+}
+
+.ratingSelector .data {
+	margin:0px !important;
+}
+
+.stdPickerMenu {
+	margin-top:0px !important;
+}
+
+.stdPickerMenu .onyx-menu-item.selected {
+	color:#fff !important;
+	font-family: "RobotoCondense";
+	font-size:1.2em;
+	background: @creamred !important;	
+}
+
+.stdPickerMenu .onyx-menu-item{
+	font-family: "RobotoCondense";
+	text-align: left !important;
+	font-weight: bold;
+	font-size:1.2em;
+	background: @white;
+	border:1px solid #ccc !important;
+	color:#333 !important;
+	line-height:32px !important;
+	height:28px !important;
+}
+
+.stdPickerMenu .onyx-menu-item:hover{
+	color:#fff !important;
+	font-family: "RobotoCondense";
+	.no-shadow;
+	background: darken(@creamblue, 10%) !important;
+}
+
+.contentBarDiv .labels {
+	padding:10px 10px 10px 10px;
+	color:@white;
+	background: lighten(@darkenblue,15%);
+	font-family:"OpenSansBold";
+	font-size:0.9em;
+	width:160px;
+}
+
+.contentBarDiv .labels.address {
+	height:70px;
+}
+
+.contentBarDiv .data {
+	padding:10px 10px 10px 10px;
+	font-family:"RobotoCondense";
+	font-size:1em;
+	width:454px;
+}
+
+//CHAT BUBBLE//
+.twitterBubble {
+	position:relative;
+	padding:18px;
+	margin:25px 15px;
+	color:@toolbar;
+	width:475px;
+	background:#eee;
+	text-align:left;
+	font-size: 1.1em;
+	font-family:"RobotoCondense";
+	/* css3 */
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+/* creates the triangle */
+.twitterBubble:after {
+	content:"";
+	position:absolute;
+	top:5px;
+	left:-15px;
+	border:15px solid transparent;
+	border-bottom-color:#eee;
+    /* reduce the damage in FF3.0 */
+    display:block; 
+    width:0;
 }

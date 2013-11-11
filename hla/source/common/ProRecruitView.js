@@ -20,12 +20,7 @@ enyo.kind({
                     visible:true,
                     classes:"contextButton",
                     position:"right",
-                    kind:"Button",
-                    components:[
-                        {
-                            classes:"icon-ellipsis-vertical iconicAnchor"
-                        }
-                    ]
+                    kind:"ContextMenu"
                 }
             ],
             onHeaderButtonTapped:"handleHeaderButtonTapped"
@@ -41,21 +36,49 @@ enyo.kind({
             wrap: false,
             components:[
                 {
-                    kind:"SearchableContactList"                                        
+                    kind:"SearchableContactList",
+                    onDataTap:"handleOnDataTap"                                        
                 },
                 {
                     classes:"contentContainerBox",
-                    content:"Content Area..."
+                    name:"profileView",
+                    kind:"ProfileView"
                 }
-
             ]
+        },
+        {
+            name:"popUpChart",
+            kind:"GenericPopup",
+            btnLeft:"",
+            btnRight:"Done",
+            contentPage:"ConversionChartView",
+            contentClass:"whiteBg",
+            onControlButtonTapped:"handleControlPopupButtonTapped",
+            title:"Conversion Chart"
         }
     ],
+    handlers:{
+        onContextMenuSelected:"handleContextSelected"
+    },
     published:{
         data:null		
     },
     create: function() {
     	this.inherited(arguments);
+    },
+    handleOnDataTap: function(inSender,inEvent) {
+        this.$.profileView.setData(inEvent.data);
+    },
+    handleControlPopupButtonTapped: function(inSender,inEvent) {
+        this.$.popUpChart.hide();
+    },
+    handleHeaderButtonTapped: function(inSender,inEvent) {
+        this.nav.gotoPage("App");
+    },
+    handleContextSelected: function(inSender,inEvent) {
+        if (inEvent.page == "Conversion Chart") {
+            this.$.popUpChart.show();
+        }
     }
     
 });

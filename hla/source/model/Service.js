@@ -12,10 +12,10 @@ enyo.kind({
                 photo:"p0.png",
                 occupation:"Teacher",
                 rating:5,
-                address:"",
+                address:"No. 70, Jalan Bagur, Taman Melawati, Rawang, Selangor",
                 postcode:"",
                 email:"michelle_88@hotmail.com",
-                goal:"Travel around the world"
+                goal:"Travel around the world!"
             },
             {
                 name:"Micheal Jacobson",
@@ -25,7 +25,7 @@ enyo.kind({
                 photo:"p1.png",
                 occupation:"Teacher",
                 rating:2,
-                address:"",
+                address:"No 98, Jalan Palas, Taman Selatan, Klang",
                 postcode:"",
                 email:"mic_1997@hotmail.com",
                 goal:"Escape the rat race!"
@@ -38,7 +38,7 @@ enyo.kind({
                 photo:"p2.png",
                 occupation:"IT Executives",
                 rating:1,
-                address:"",
+                address:"No. 55th Precint, Taman SummerGlades, Cyberjaya",
                 postcode:"",
                 email:"mkhalid23@gomobileapp.com",
                 goal:"Buying my dreamhouse in Ampang EcoPark."
@@ -51,10 +51,10 @@ enyo.kind({
                 photo:"p6.png",
                 occupation:"Web Developer",
                 rating:2,
-                address:"",
+                address:"No. 55-B, Angsana Putra, Jalan Sultan Hishamuddin, Kuala Lumpur",
                 postcode:"",
                 email:"raizen23@gomobileapp.com",
-                goal:"Start my own business."
+                goal:"Start my own business in three years time."
             },
             {
                 name:"Alice Chong Wei Sze",
@@ -64,10 +64,10 @@ enyo.kind({
                 photo:"p3.png",
                 occupation:"Bank Officer",
                 rating:4,
-                address:"",
+                address:"No. 182-C, Putra Flats, Jalan Kelana Square, Petaling Jaya",
                 postcode:"",
                 email:"alicechong_1990@gmail.com",
-                goal:"Own a 2nd hand car dealer business."
+                goal:"Own my own second hand car dealer business."
             },
             {
                 name:"Murali a/l Muthusamy",
@@ -77,10 +77,10 @@ enyo.kind({
                 photo:"p10.png",
                 occupation:"Security Officer",
                 rating:4,
-                address:"",
+                address:"No. 102-E, Wawasan Flats, Jalan Kelana Square, Petaling Jaya",
                 postcode:"",
                 email:"matomaman@securebrothers.com",
-                goal:"Better income."
+                goal:"Better and more stable income."
             },
             {
                 name:"Guster Lee Ming Hoi",
@@ -90,7 +90,7 @@ enyo.kind({
                 photo:"p5.png",
                 occupation:"Real Estate Agent",
                 rating:3,
-                address:"",
+                address:"No 88-A, Perdana Condominium, Jalan Megah, Taman Mega, Petaling Jaya",
                 postcode:"",
                 email:"gusterBman@outlook.com",
                 goal:"Become a CEO!"
@@ -103,10 +103,10 @@ enyo.kind({
                 photo:"p4.png",
                 occupation:"Technical Writer",
                 rating:5,
-                address:"",
+                address:"No 88, Jalan Pagar, Taman Chi Liung, Klang",
                 postcode:"",
                 email:"katnissjaySz@gmail.com",
-                goal:"To become a Technopreneur someday!"
+                goal:"To become a technopreneur someday!"
             },
             {
                 name:"Susan Lancaster",
@@ -116,7 +116,7 @@ enyo.kind({
                 photo:"p7.png",
                 occupation:"Senior Editor",
                 rating:0,
-                address:"",
+                address:"No 58-E, Perdana Condominium, Jalan Megah, Taman Mega, Petaling Jaya",
                 postcode:"",
                 email:"littleponny81@gmail.com",
                 goal:"Own my own farmhouse in Scotland"
