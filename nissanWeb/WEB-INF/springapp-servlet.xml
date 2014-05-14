@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd"> 
+
+	<bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                <prop key="MaxUploadSizeExceededException">       
+                    uploaderror
+                </prop>
+                <!-- Add in by nyiam if any below error happen then redirect to the login page -->
+                <!-- add in exception resolver for session expire. Even we have interceptor, but it is not enough. This is because user use "SessionAttribute" annotation, it will run early then interceptor and causing noisy error come out. -->
+                <prop key="HttpSessionRequiredException">       
+                    redirect:/?err=s1
+                </prop>
+                <!-- user try to direct access without login -->
+                <prop key="HttpRequestMethodNotSupportedException">
+                	redirect:/?err=s2
+                </prop>
+            </props>
+        </property>
+    </bean>
+	
+</beans>

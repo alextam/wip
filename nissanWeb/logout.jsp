@@ -1,0 +1,1 @@
+<%session.invalidate();%><html><head><script>parent.location.href="${pageContext.request.contextPath}/index.jsp";</script></head></html>
