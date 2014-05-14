@@ -12,6 +12,7 @@ enyo.kind({
         	components:[
         		{
         			kind:"onyx.Slider",
+                    classes:"icon6",
         			increment:10
         		}
         	]
@@ -28,6 +29,7 @@ enyo.kind({
         	components:[
         		{
         			kind:"onyx.Slider",
+                    classes:"icon7",
         			increment:10
         		}
         	]
@@ -44,6 +46,7 @@ enyo.kind({
         	components:[
         		{
         			kind:"onyx.Slider",
+                    classes:"icon8",
         			increment:10
         		}
         	]

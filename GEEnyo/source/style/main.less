@@ -18,7 +18,12 @@ body {
 input {
 	font-size:1em;
 	color:#aaa;
-	border:1px solid #fff;
+	border-top:none !important;
+	border-left:none !important;
+	border-right:none !important;
+	-moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+ 	border-radius: 0px !important;
 }
 
 button:focus,input:focus {
@@ -73,7 +78,7 @@ button:focus,input:focus {
 	width:40px;
 	height:40px !important;
 	background:@GERed;
-	line-height: 45px;
+	line-height: 40px;
 	color:#fff;
 	border:none !important;
 	text-align: center;
@@ -172,20 +177,20 @@ button:focus,input:focus {
 }
 
 .darkerRed {
-	height:50px;
+	height:50px !important;
 	background: darken(@GERed,8%);
 }
 
 .searchBox {
-	-moz-border-radius: 0.8em;
-	-webkit-border-radius: 0.8em;
-	border-radius: 0.8em;
+	-moz-border-radius: 0.8em !important;
+	-webkit-border-radius: 0.8em !important;
+	border-radius: 0.8em !important;
 	padding-left:10px;
 	padding-right:10px;
-	margin:10px;
-	font-size:1em;
-	border:none;
-	height:30px;
+	margin:8px;
+	font-size:0.9em;
+	border:none !important;
+	height:30px !important;
 	width:260px;
 }
 
@@ -425,6 +430,10 @@ button:focus,input:focus {
 	height:250px;
 }
 
+.vertical-slider .onyx-progress-bar-bar {
+	background:lighten(@GERed,15%);
+}
+
 .onyx-progress-bar-bar {
 	background:lighten(@GERed,15%);
 }
@@ -444,7 +453,7 @@ button:focus,input:focus {
 	font-weight: bold;
 	color:@GEBlackTitle;
 	text-align:center;
-	height:30px;
+	height:40px;
 }
 
 .descriptionLabel {
@@ -512,6 +521,27 @@ button:focus,input:focus {
 	background:url("../../assets/img/IconsForGE.png") no-repeat;
 	background-size: 440px 44px;
 	background-position:-220px 0px;
+	background-color:#fff; 
+}
+
+.icon6 .onyx-slider-knob {
+	width:34px !important;
+	height:34px !important;
+	margin: -25px -25px;
+	background-color:#fff; 
+}
+
+.icon7 .onyx-slider-knob {
+	width:34px !important;
+	height:34px !important;
+	margin: -25px -25px;
+	background-color:#fff; 
+}
+
+.icon8 .onyx-slider-knob {
+	width:34px !important;
+	height:34px !important;
+	margin: -25px -25px;
 	background-color:#fff; 
 }
 

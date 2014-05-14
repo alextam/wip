@@ -15,7 +15,7 @@ enyo.kind({
         			style:"width:155px;font-weight:bold;line-height:45px;"
         		},
         		{
-        			style:"width:550px;height:40px;",
+        			style:"width:544px;height:40px;",
         			components:[
         				{
         					name:"pillBox",
