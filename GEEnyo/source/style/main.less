@@ -1,0 +1,527 @@
+/*
++    App-specific LESS/CSS would go here, but to make your
++    application easier to maintain, you should try to
++    minimize the use of custom CSS.
++*/
+@import url("assets/font-awesome.min.css");
+@GERed:#ED3337;
+@GEBlue:#2A5196;
+@GEBlack:#121212;
+@GEBlackTitle:#666;
+@borderColor:#ddd;
+
+
+body {
+	background:#ffffff;
+}
+
+input {
+	font-size:1em;
+	color:#aaa;
+	border:1px solid #fff;
+}
+
+button:focus,input:focus {
+	outline:0
+}
+
+.labelField {
+	color:#666;
+}
+
+::-webkit-input-placeholder {
+   color: @borderColor;
+   font-size:1em;
+}
+
+:-moz-placeholder { 
+   color: @borderColor;
+   font-size:1em;  
+}
+
+::-moz-placeholder { 
+   color: @borderColor;
+   font-size:1em;  
+}
+
+::-ms-input-placeholder {  
+   color: @borderColor;
+   font-size:1em;  
+}
+
+.dataBox {
+	
+	padding:10px;
+	width:708px;
+}
+
+.dataBoxRemaining {
+	width:708px;
+	padding:10px;	
+}
+
+.dataBoxSmaller {
+	//padding:10px;
+	height:55px !important;
+	width:50%;
+}
+.endLine {
+	border-bottom:1px solid @borderColor;
+}
+
+.specialIcon {
+	width:40px;
+	height:40px !important;
+	background:@GERed;
+	line-height: 45px;
+	color:#fff;
+	border:none !important;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.logoGE {
+	background-color:#ffffff;
+	background:url("../../assets/img/BG.png") no-repeat;
+	background-position:center center;
+	width:768px;
+	height:100%;
+
+}
+
+.extraMenuItem {
+	height:50px;
+}
+
+.extraMenu {
+	padding:15px;
+}
+
+.menuMainMenu {
+	width: 25%;
+	max-width:280px;
+	background:@GEBlack;
+}
+
+.remainingContent {
+	width:75%;
+}
+
+.menuSubMenu {
+	width: 300px;
+	background:@GERed;
+}
+
+.bodyContent {
+	background: #fff;
+}
+
+.paddedContent {
+	padding:20px;
+}
+
+.panels-sliding-content {
+	padding:20px;
+}
+
+.panels-main-menuitem {
+	height:50px;
+	line-height:50px;
+	font-size:1em;
+	background:lighten(@GEBlack,10%);
+	border-top:none !important;
+	border-left:none !important;
+	border-right:none !important;
+	font-weight:bold;
+	color:#fff;
+	padding-left:15px;
+	border-bottom:1px solid #444 !important;
+}
+
+.panels-main-menuitem:active:hover:not([disabled]){
+	background: @GERed;
+	color:#fff;
+}
+
+.panels-inner-menuitem {
+	height:50px;
+	font-weight: bold;
+	line-height:50px;	
+	background:@GERed;
+	color:#fff;
+	padding-left:15px;
+	border-top:none !important;
+	border-left:none !important;
+	border-right:none !important;
+	border-bottom:1px solid lighten(@GERed, 10%) !important;
+}
+
+.panels-inner-menuitem:active:hover:not([disabled]){
+	background: #fff;
+	color:@GERed;
+}
+
+.panels-main-menuitem.selected{
+	background: @GERed;
+	color:#fff;
+}
+
+.panels-inner-menuitem.selected{
+	background: #fff;
+	color:@GERed;
+}
+
+.darkerRed {
+	height:50px;
+	background: darken(@GERed,8%);
+}
+
+.searchBox {
+	-moz-border-radius: 0.8em;
+	-webkit-border-radius: 0.8em;
+	border-radius: 0.8em;
+	padding-left:10px;
+	padding-right:10px;
+	margin:10px;
+	font-size:1em;
+	border:none;
+	height:30px;
+	width:260px;
+}
+
+.headerTxt {
+	margin-top:10px;
+	font-size:1em;
+	margin-bottom:10px;
+}
+
+.sliderContainer {
+	padding:5px;
+	width:320px;
+}
+
+.dateInput {
+	-moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+ 	border-radius: 0.5em;
+	width:240px;
+	padding:10px !important;
+}
+
+.logoPos {
+	width: 256px;
+	height:90px;
+	background:url("../../assets/img/LogoApp.png") no-repeat;
+	background-color:@GEBlack;
+	border-bottom:1px solid #444;
+}
+
+.paddingSupport {
+	color:@GEBlackTitle;
+	border-top:1px solid #ddd;
+	background:#f2f2f2;
+	height:270px;
+	border-bottom:4px solid @GERed;
+	padding:20px;
+}
+
+.smallPaddingSupport {
+	border-top:1px solid #ddd;
+	height:85px;
+	padding:20px;
+	border-bottom:4px solid @GERed;
+}
+
+
+.standardToolBar {
+	background: darken(@GEBlackTitle,10%);;
+	color:@GEBlackTitle;
+	height:30px;
+}
+
+.gridContent {
+	height:45px;
+	font-size:0.9em;
+	line-height: 45px;
+	background: #fff;
+	border-bottom:1px solid #ddd;
+}
+
+.gridContainerBox {
+	border:1px solid #ddd;
+	height:500px;
+	overflow:hidden;
+	background:#ddd;
+}
+
+.extended {
+	background:#ddd;
+	border:1px solid #ddd;
+	height:620px !important;
+}
+
+.gridRow .cellData {
+	padding:10px;
+	font-size:0.9em;
+	line-height: 30px;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.headerCell {
+	background:@GEBlack;
+	color:#fff;
+	width:25%;
+	font-weight: bold;
+	font-size: 0.9em;
+	padding:10px;
+	text-align: center;
+}
+
+.headerCellValue {
+	background:#fff;
+	color:@GEBlackTitle;
+	width:25%;
+	font-weight: bold;
+	font-size: 0.9em;
+	padding:10px;
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.gridRow {
+	height:auto;
+	background: #fff;
+	border-bottom:1px solid #ddd;
+}
+
+.gridContent.selected, .gridRow.selected {
+	background: @GERed;
+	color:#fff;
+}
+
+.gridContent:active:hover:not([disabled]){
+	background: @GERed;
+	color:#fff;	
+}
+
+.gridRow:active:hover:not([disabled]){
+	background: @GERed;
+	color:#fff;	
+}
+
+.gridHeader .cell{
+	font-size: 0.9em;
+	font-weight: bold;
+	padding:10px;
+	color:#fff;
+	background: @GEBlack;
+}
+
+.gridScroller {
+	height:500px;	
+}
+
+.centerText {
+	font-weight: bold;
+	color:#fff;
+	text-align: center !important;
+	line-height: 30px;
+}
+
+.navButton {
+	width: 40px !important;
+	height:35px;
+	padding:4px;
+	text-align: center;
+	color:#fff;
+	border:none !important;
+	//background: @GEBlackTitle;
+	font-weight: bold !important;
+	margin:0px !important;
+}
+
+.standardToolBar .navButton:active:hover:not([disabled]){
+	background: darken(@GEBlackTitle,5%);
+}
+
+.pillBoxSelector {
+	border:2px solid @GERed;
+	-moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+ 	border-radius: 0.8em;
+ 	height:40px;
+ 	overflow: hidden;
+}
+
+.selectButton {
+	width:25%;
+	height:40px;
+	font-weight: bold;
+	color:@GERed;
+	background: #fff;
+	border:none !important;
+}
+
+.selectButton.active {
+	background: @GERed;
+	color:#fff;
+}
+
+.onyx-toggle-button-knob {
+	width:30px;
+	height:30px;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+ 	border-radius: 15px;
+	background: #fff !important;
+}
+
+.onyx-toggle-button {
+	border:1px solid #ccc;
+	box-shadow: none;
+	-moz-border-radius: 16px !important;
+    -webkit-border-radius: 16px !important;
+ 	border-radius: 16px !important;
+ 	background:none !important;
+ 	color:#ccc;
+}
+
+.onyx-toggle-button.off {
+	background-color:@GERed !important;
+	color:#fff;
+} 
+
+.onyx-toggle-button.on {
+	border:1px solid #ccc !important;
+	color:#ccc;
+	background-color:@GERed !important;
+} 
+
+.stdButton {
+	border:2px solid darken(@GEBlackTitle,10%);
+	padding:6px;
+	width:150px;
+	-moz-border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+ 	border-radius: 10px !important;
+ 	box-shadow:none !important;
+ 	-webkit-appearance:none;
+ 	font-weight: bold;
+ 	color:#fff;
+ 	background:@GEBlackTitle;
+}
+
+.stdButton:active:hover:not([disabled]){
+	background:lighten(@GEBlackTitle,5%);	
+}
+
+.vertical-slider.onyx-progress-bar {
+	height:250px;
+}
+
+.onyx-progress-bar-bar {
+	background:lighten(@GERed,15%);
+}
+
+.alignCenter {
+	margin-left:auto !important;
+	margin-right:auto !important;
+}
+
+.headerRed {
+	color:@GERed;
+	text-transform: uppercase;
+	font-size:1.3em;
+}
+
+.valueLabel {
+	font-weight: bold;
+	color:@GEBlackTitle;
+	text-align:center;
+	height:30px;
+}
+
+.descriptionLabel {
+	font-weight: bold;
+	color:@GERed;
+	font-size:0.8em;
+	text-align:center;
+	height:50px;
+}
+
+.onyx-slider-knob {
+	position: relative;
+	height: 44px;
+	width: 44px;
+	border:3px solid @GEBlackTitle;
+	background: lighten(@GEBlackTitle, 70%);
+	margin: -30px -25px;
+	-moz-border-radius: 25px !important;
+    -webkit-border-radius: 25px !important;
+ 	border-radius: 25px !important;
+ 	box-shadow:none !important;
+
+}
+
+.vertical-slider .onyx-slider-knob {
+	margin-left: -23px;
+}
+
+.icon0 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:0px 0px;
+	background-color:#fff; 
+}
+
+.icon1 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:-44px 0px;
+	background-color:#fff; 
+}
+
+.icon2 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:-88px 0px;
+	background-color:#fff; 
+}
+
+.icon3 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:-132px 0px;
+	background-color:#fff; 
+}
+
+.icon4 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:-176px 0px;
+	background-color:#fff; 
+}
+
+.icon5 .onyx-slider-knob {
+	background:url("../../assets/img/IconsForGE.png") no-repeat;
+	background-size: 440px 44px;
+	background-position:-220px 0px;
+	background-color:#fff; 
+}
+
+.panels-main-menuitem-dll {
+	height:50px;
+	line-height:45px;
+	font-size:1em;
+	background:@GEBlack;
+	font-weight:bold;
+	color:darken(#fff,20%);
+	padding-left:15px;
+	border:none !important;
+}

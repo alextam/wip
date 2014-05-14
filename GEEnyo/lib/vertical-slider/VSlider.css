@@ -1,0 +1,23 @@
+/* ProgressBar.css */
+.vertical-slider.onyx-progress-bar {
+  position: relative;
+  margin: 14px;
+  height: 400px;
+  width: 5px;
+  border: 1px solid rgba(15, 15, 15, 0.2);
+  border-radius: 3px;
+  background: #b8b8b8 url(./../images/gradient-invert.png) repeat-x;
+  background-size: auto 100%;
+}
+
+.vertical-slider .onyx-progress-bar-bar {
+  width: 100%;
+  border-radius: 3px;
+  background: #58abef url(./../images/gradient.png) repeat-x;
+  background-size: auto 100%;
+  position: absolute;
+}
+
+.vertical-slider .onyx-slider-knob {
+    margin-left: -18px;
+}
