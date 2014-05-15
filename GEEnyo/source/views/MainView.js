@@ -120,7 +120,10 @@ enyo.kind({
 				break;
 
 				case 6:
-
+					this.$.header.setReadOnly(false);
+					var financeAnalysisView = new FinanceAnalysis();
+					this.$.contentBox.addControl(financeAnalysisView);
+					this.$.contentBox.render();
 				break;
 
 				default:
@@ -133,7 +136,7 @@ enyo.kind({
 			
 			
 		} else {
-			alert("Select a Contact First");
+			this.promptError();
 			return true;
 		}
 
@@ -197,7 +200,7 @@ enyo.kind({
 					this.$.contentBox.addControl(quotationView);
 					this.$.contentBox.render();
 				} else {
-					alert("Select a Contact First");
+					this.promptError();
 					return true;
 				}
 			break;
@@ -212,6 +215,9 @@ enyo.kind({
 				return true;
 			break;
 		}
+	},
+	promptError:function() {
+		alert("Select a Contact First");
 	},
 	setupMainMenuItem:function(inSender,inEvent) {
 		this.$.menuItem.setData(this.moduleName[inEvent.index]);

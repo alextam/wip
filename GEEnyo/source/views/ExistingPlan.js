@@ -2,7 +2,7 @@ enyo.kind({
     name: "ExistingPlan",
     kind: "Control",
     components: [
-         {
+        {
         	tag:"h1",
         	classes:"headerRed",
         	content:"Existing Plan"

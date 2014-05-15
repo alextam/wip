@@ -2,6 +2,7 @@ enyo.depends(
 	"FormItem.js",
 	"GridItem.js",
 	"MoreContent.js",
+	"FinanceAnalysis.js",
 	"QuotationHeaderP1.js",
 	"QuotationHeaderP2.js",
 	"QuotationItemTotal.js",
