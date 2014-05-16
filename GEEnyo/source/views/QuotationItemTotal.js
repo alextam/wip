@@ -13,6 +13,7 @@ enyo.kind({
         		{
         			fit:true,
         			classes:"cell",
+                    name:"txtLabel",
         			allowHtml:true,
         			content:"<strong>TOTAL</strong>"
         		},
@@ -44,6 +45,7 @@ enyo.kind({
         data:null        
     },
     dataChanged: function() {
+        this.$.txtLabel.setContent("<strong>"+this.data.label+"</strong>");
         this.$.txtTotal.setContent(this.data.total);
     }
 });

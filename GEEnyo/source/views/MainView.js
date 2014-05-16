@@ -17,7 +17,7 @@ enyo.kind({
 				{
 					name:"mainMenuList",
 					kind: "List",
-					style:'height:265px', 
+					style:'height:355px', 
 					touch: true, 
 					count: 0,
 					onSetupItem: "setupMainMenuItem", 
@@ -30,7 +30,7 @@ enyo.kind({
 						}
 					]
 				},
-				{ style:"height:60px" },
+				{ style:"height:80px" },
 				{
 					kind:"ContactMenu"
 				}
@@ -71,14 +71,15 @@ enyo.kind({
 	published:{
 		recordSelectedIndex:-1,
 		selectedIndex:-1,
-	    moduleName:["My Contacts","Customer Fact Find","Quotation","e-Signature","Payment"],
+	    moduleName:["My Contacts","Customer Fact Find","Quotation","Proposal","Supplementary","E-Signature","Payment"],
 	    cffModuleName:["Life Priorities","Dependent","Existing Plan","Risk Profile","Net Worth","Monthly Cash Flow","Financial Analysis"],	    
-		quotationModuleName:["Sample Calculation","Generate PDF"]
+		quotationModuleName:["Email Quotation","Generate PDF"],
+		sigModuleName:["Reset"]
 	},
 	handlers:{
 		onClosePanel:"handleClosePanel",
 		onCFFTapped:"handleCFFTapped",
-		onQuotationTapped:"handleQuotationTapped",
+		onSigTapped:"handleSigTapped",
 		onContactTapped:"handleRecordTapped"
 	},
 	create: function() {
@@ -99,6 +100,10 @@ enyo.kind({
 		if (this.selectedIndex > -1) {
 			this.$.myPanel.setIndex(!this.$.myPanel.getIndex());
 		}
+	},
+	handleSigTapped:function(inSender,inEvent) {
+		this.$.contentBox.controls[0].controls[2].clearCanvas();
+		//console.log(  );
 	},
 	handleCFFTapped:function(inSender,inEvent) {
 		if (this.getRecordSelectedIndex() > -1) {
@@ -154,12 +159,6 @@ enyo.kind({
 		this.$.header.setData({name:this.mydata.getData()[inEvent.index].name,readOnly:false});
 		formView.setData(this.mydata.getData()[inEvent.index]);
 	},
-	handleQuotationTapped:function(inSender,inEvent) {
-		this.$.header.setReadOnly(false);
-		var quatationP2View = new QuotationP2();
-		this.$.contentBox.addControl(quatationP2View);
-		this.$.contentBox.render();
-	},
 	handleMainMenuItemTapped:function(inSender,inEvent) {
 		switch(inEvent.index){
 			case 0:
@@ -212,15 +211,31 @@ enyo.kind({
 				}
 			break;
 
-			case 3:
+			case 5:
+				this.setSelectedIndex(2);
+				this.$.header.setReadOnly(false);
+				var sigModuleList = new SigList();
+				sigModuleList.setSelectedIndex(this.getSelectedIndex());
+				sigModuleList.setData( this.sigModuleName );
+				this.$.subMenu.destroyClientControls();
+				this.$.subMenu.addControl(sigModuleList);
+				this.$.subMenu.render();
+				this.$.myPanel.setIndex(1);
+
+				this.$.contentBox.setClasses("");
+				this.$.contentBox.destroyClientControls();
+		    	this.$.contentBox.setClasses("paddedContent");
+
+				var eSig = new ESig();
+				this.$.contentBox.addControl(eSig);
+				this.$.contentBox.render();
+			break;
+
+			default:
 				this.$.myPanel.setIndex(1);
 				return true;
 			break;
 
-			case 4:
-				this.$.myPanel.setIndex(1);
-				return true;
-			break;
 		}
 	},
 	promptError:function() {
