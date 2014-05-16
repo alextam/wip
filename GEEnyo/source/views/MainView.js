@@ -73,11 +73,12 @@ enyo.kind({
 		selectedIndex:-1,
 	    moduleName:["My Contacts","Customer Fact Find","Quotation","e-Signature","Payment"],
 	    cffModuleName:["Life Priorities","Dependent","Existing Plan","Risk Profile","Net Worth","Monthly Cash Flow","Financial Analysis"],	    
-		quotationModuleName:["Email Quotation","Generate PDF"]
+		quotationModuleName:["Sample Calculation","Generate PDF"]
 	},
 	handlers:{
 		onClosePanel:"handleClosePanel",
 		onCFFTapped:"handleCFFTapped",
+		onQuotationTapped:"handleQuotationTapped",
 		onContactTapped:"handleRecordTapped"
 	},
 	create: function() {
@@ -152,6 +153,12 @@ enyo.kind({
 		this.$.contentBox.render();
 		this.$.header.setData({name:this.mydata.getData()[inEvent.index].name,readOnly:false});
 		formView.setData(this.mydata.getData()[inEvent.index]);
+	},
+	handleQuotationTapped:function(inSender,inEvent) {
+		this.$.header.setReadOnly(false);
+		var quatationP2View = new QuotationP2();
+		this.$.contentBox.addControl(quatationP2View);
+		this.$.contentBox.render();
 	},
 	handleMainMenuItemTapped:function(inSender,inEvent) {
 		switch(inEvent.index){
