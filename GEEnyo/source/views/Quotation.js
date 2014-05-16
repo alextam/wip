@@ -69,6 +69,10 @@ enyo.kind({
 			        {
 			        	name:"item10",
 			        	kind:"QuotationItemTotal"
+			        },
+			        {
+			        	name:"item11",
+			        	kind:"QuotationItemTotal"
 			        }
 			    ]
 			}
@@ -100,9 +104,11 @@ enyo.kind({
 				annual:"5,775.50"
         	},
         	{
+        		label:"Total",
         		total:"8,311.00"
         	},
         	{
+				select:true,
 				title:"Accidental Death &amp; Dismemberment",
 				terms:"20 yrs",
 				sum:"10,000",
@@ -173,7 +179,12 @@ enyo.kind({
 				annual:"20.00"
         	},
         	{
-        		total:"155.00"
+        		label:"Total",
+        		total:"20.00"
+        	},
+        	{
+        		label:"Grand Total",
+        		total:"8,331.00"
         	}
         ]		
     },
@@ -193,5 +204,6 @@ enyo.kind({
     	this.$.item8.setData(this.data[8]);
     	this.$.item9.setData(this.data[9]);
     	this.$.item10.setData(this.data[10]);
+    	this.$.item11.setData(this.data[11]);
     }
 });
