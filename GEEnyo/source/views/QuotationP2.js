@@ -13,10 +13,12 @@ enyo.kind({
         	components:[
         		{
         			kind:"Button",
+        			classes:"justButton",
         			content:"Male"
         		},
         		{
         			kind:"Button",
+        			classes:"justButton",
         			content:"Female"
         		}
         	]
@@ -27,10 +29,12 @@ enyo.kind({
         	components:[
         		{
         			kind:"Button",
+        			classes:"justButton",
         			content:"Smoker"
         		},
         		{
         			kind:"Button",
+        			classes:"justButton",
         			content:"Non-Smoker"
         		}
         	]
@@ -41,7 +45,7 @@ enyo.kind({
         	placeholder:"Insert Age..."
         },
         {
-        	
+
         }
     ]
 });	
