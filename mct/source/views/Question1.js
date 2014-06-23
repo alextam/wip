@@ -130,7 +130,6 @@ enyo.kind({
                                 name:"txtNRICPassport",
                                 placeholder:"NRIC or Passport",
                                 attributes:{
-                                    required: "required",
                                     maxlength:50  
                                 }
                             }
@@ -168,6 +167,30 @@ enyo.kind({
         this.inherited(arguments);
     },
     getFormData:function() {
+        /*
+        //firstname
+        //lastname
+        //title
+        //address
+        //contactno
+        //email
+        //nricpassport
+        //currenthome
+        occupation
+        race
+        maritial
+        nationality
+        agegroup
+        incomegroup
+        finance
+        naturebusiness
+        projectinterest
+        attendedby
+        heardfrom
+        notifycall
+        notifysms
+        notifyemail
+        */
         var payLoad = {};
         payLoad.firstname = this.$.txtFirstName.getValue();
         payLoad.lastname = this.$.txtLastName.getValue();

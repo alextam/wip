@@ -5,6 +5,7 @@ enyo.kind({
     thumb:true,
     classes:"panel-view",
     fit:true,
+    global:go.Global,
     strategyKind:"TransitionScrollStrategy",
     components: [
         { style:"height:20px" },
@@ -109,9 +110,48 @@ enyo.kind({
                 }
             ]
         },
-        { style:"height:80px" }
+        { style:"height:100px" }
     ],
+    create: function() {
+        this.inherited(arguments);
+        this.myPayLoad = this.global.getObject("PAYLOAD");
+    },
+    getFormData:function() {
+        /*
+        projectinterest
+        attendedby
+        heardfrom
+        notifycall
+        notifysms
+        notifyemail
+        */
+        var payLoad = {};
+        payLoad.occupation = this.$.txtOccupation.getValue();
+        payLoad.maritial = this.$.txtMaritial.getValue();
+        payLoad.nationality = this.$.txtNationality.getValue();
+        payLoad.race = this.$.txtRace.getValue();
+        payLoad.naturebusiness = this.$.txtBusinessNature.getValue();
+        payLoad.nricpassport = this.$.txtFinanceGroup.getValue();
+        payLoad.agegroup = this.$.txtAgeGroup.getValue();
+        payLoad.incomegroup = this.$.txtIncome.getValue();
+        payLoad.finance = this.$.txtFinanceGroup.getValue();
+        return payLoad;
+    },
     handleButtonTapped:function(inSender,inEvent) {
+        this.myPayLoad = this.global.getObject("PAYLOAD");
+        var formData = this.getFormData();
+        this.myPayLoad.occupation = formData.occupation;
+        this.myPayLoad.maritial = formData.maritial;
+        this.myPayLoad.nationality = formData.nationality;
+        this.myPayLoad.race = formData.race;
+        this.myPayLoad.naturebusiness = formData.naturebusiness;
+        this.myPayLoad.nricpassport = formData.nricpassport;
+        this.myPayLoad.agegroup = formData.agegroup;
+        this.myPayLoad.incomegroup = formData.incomegroup;
+        this.myPayLoad.finance = formData.finance;
+        
+        console.log(this.myPayLoad);
+        this.global.setObject("PAYLOAD",this.myPayLoad);
     	this.bubble("onHandleButtonTapped");
     }
 });
