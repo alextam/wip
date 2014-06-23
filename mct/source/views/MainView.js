@@ -9,7 +9,7 @@ enyo.kind({
 	kind:"Control",
 	classes:"enyo-fit",
 	components:[
-		{ kind:"Header" },
+		{ withBack:false,name:"header",kind:"Header", onBackTapped:"handleBackTapped" },
 		{
 			name:"myPanel",
 			kind: "Panels",
@@ -25,31 +25,20 @@ enyo.kind({
 			]
 		}
 	],
-	handleCountrySelected:function(inSender,inEvent) {
-		console.log(inEvent);
-		this.global.setObject("NationalitySelected",inEvent.label);
-		this.$.countryNation.setData(this.global.getObject("NationalitySelected"));
-		this.$.myPanel.setIndex(3);	
-	},
-	handleNationTapped:function(inSender,inEvent) {
-		this.$.myPanel.setIndex(4);
-	},
-	handleGotoMainPage:function(inSender,inEvent) {
-		this.$.myPanel.setIndex(0);
-		window.location.reload();
-	},
-	handleAgeGroupTapped:function(inSender,inEvent) {
-		this.$.myPanel.setIndex(8);
-	},
-	handleAgeGroupSelected:function(inSender,inEvent) {
-		this.global.setObject("AgeGroupSelected",inEvent.label);
-		this.$.miscForm.setDataAge(this.global.getObject("AgeGroupSelected"));
-		this.$.myPanel.setIndex(7);
-	},
-	handleButtonSkipTapped:function(inSender,inEvent) {
-		this.$.myPanel.setIndex(6);
+	handleBackTapped:function(inSender,inEvent) {
+		this.$.myPanel.setIndex(this.$.myPanel.getIndex()-1);
+		if (this.$.myPanel.getIndex() > 0) {
+			this.$.header.setWithBack(true);
+		} else {
+			this.$.header.setWithBack(false);
+		}
 	},
 	handleButtonTapped: function(inSender, inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()+1);
+		if (this.$.myPanel.getIndex() > 0) {
+			this.$.header.setWithBack(true);
+		} else {
+			this.$.header.setWithBack(false);
+		}
 	}
 });

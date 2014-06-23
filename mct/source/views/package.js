@@ -16,6 +16,7 @@ enyo.depends(
 	"Question3.js",
 	"Question2.js",
 	"Question1.js",
+	"StandardPicker.js",
 	"Home.js",
 	"Header.js",
 	"MainView.js"

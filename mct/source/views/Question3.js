@@ -1,8 +1,8 @@
 enyo.kind({
     name: "Question3",
     kind: "Scroller",
-    touch:true, 
-    thumb:true,
+    touch:false, 
+    thumb:false,
     classes:"panel-view",
     fit:true,
     global:go.Global,
@@ -12,40 +12,128 @@ enyo.kind({
         {
             classes:"scrimCover",
             components:[
-                { style:"height:20px" },
+                { style:"height:80px" },
                 {
-                    classes:"mct-inputBox",
+                    layoutKind: "FittableColumnsLayout",
+                    style:"text-align:center",                    
                     components:[
-                        { tag:"h2", content:"Type of project interested" }
+                        {
+                            classes:"width50",
+                            components:[
+                                { tag:"h2", content:"Type of development interested" },
+                                {
+                                    classes:"mct-inputBoxGroupForSplit",
+                                    components:[
+                                        {
+                                            name:"txtDevInterest",
+                                            kind:"StandardPicker",
+                                            defaultText:"Select Project Group...",
+                                            datasource:[
+                                                { content:"Sgl/Double Storey Link",value:"Sgl/Double Storey Link", active:true },
+                                                { content:"Townhouse",value:"Townhouse" },
+                                                { content:"Semi-D/Zero-lot",value:"Semi-D/Zero-lot" },
+                                                { content:"Bungalow/Villa",value:"Bungalow/Villa" },
+                                                { content:"SOHO",value:"SOHO" },
+                                                { content:"Apt/Condo",value:"Apt/Condo" },
+                                                { content:"Shop Lot",value:"Shop Lot" },
+                                                { content:"Factory Lot",value:"Factory Lot" },
+                                                { content:"Retail Lot",value:"Retail Lot" },
+                                                { content:"Office Suite",value:"Office Suite" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            classes:"width50",
+                            components:[
+                               { tag:"h2", content:"Attended by" },
+                               {
+                                    classes:"mct-inputBoxGroupForSplit",
+                                    components:[
+                                        {
+                                            name:"txtAttendedBy",
+                                            kind:"StandardPicker",
+                                            defaultText:"Select Attendee...",
+                                            datasource:[
+                                                { content:"Adam",value:"1", active:true },
+                                                { content:"Ammy",value:"2" },
+                                                { content:"Andrew",value:"3" },
+                                                { content:"Bryan",value:"4" },
+                                                { content:"Claressa",value:"5" },
+                                                { content:"Henry",value:"6" },
+                                                { content:"Janice",value:"7" },
+                                                { content:"Jessly",value:"8" },
+                                                { content:"Leon",value:"9" },
+                                                { content:"Phoebe",value:"10" },
+                                                { content:"Tony",value:"11" },
+                                                { content:"Vernon",value:"12" },
+                                                { content:"Others",value:"13" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        }
                     ]
                 },
                 {
-                   name:"txtProjectGroup",
-                   kind:"ProjectGroup",
-                   active:0
-                },
-                {
-                    classes:"mct-inputBox",
+                    layoutKind: "FittableColumnsLayout",
+                    style:"text-align:center",                    
                     components:[
-                        { tag:"h2", content:"Attended by" }
+                        {
+                            classes:"width50",
+                            components:[
+                               { tag:"h2", content:"Type of project interested" },
+                               {
+                                    classes:"mct-inputBoxGroupForSplit",
+                                    components:[
+                                        {
+                                            name:"txtProjectInterest",
+                                            kind:"StandardPicker",
+                                            defaultText:"Select Group...",
+                                             datasource:[
+                                                { content:"Lakefront Residence",value:"1", active:true},
+                                                { content:"Lakefront Villa",value:"2" },
+                                                { content:"Cyber South",value:"3" },
+                                                { content:"MCT Mall",value:"4" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        },
+                        {
+                            classes:"width50",
+                            components:[
+                                { tag:"h2", content:"Heard about this project from..." },
+                                {
+                                    classes:"mct-inputBoxGroupForSplit",
+                                    components:[
+                                        {
+                                            name:"txtKnowAbout",
+                                            kind:"StandardPicker",
+                                            defaultText:"Select Group...",
+                                            datasource:[
+                                                { content:"Internet",value:"Internet", active:true },
+                                                { content:"Newspaper",value:"Newspaper" },
+                                                { content:"Exhibition",value:"Exhibition" },
+                                                { content:"Brochure",value:"Brochure" },
+                                                { content:"Word of Mouth",value:"Word of Mouth" },
+                                                { content:"Street Bunting",value:"Street Bunting" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                        
                     ]
                 },
-                {
-                    name:"txtAttendedBy",
-                    kind:"AttendGroup",
-                    active:0
-                },
-                {
-                    classes:"mct-inputBox",
-                    components:[
-                        { tag:"h2", content:"Heard about this project from..." }
-                    ]
-                },
-                {
-                    name:"txtKnowAbout",
-                    kind:"AboutGroup",
-                    active:0
-                },
+                { style:"height:30px" },
                 {
                     classes:"mct-inputBox",
                     components:[
@@ -99,7 +187,7 @@ enyo.kind({
                         }
                     ]
                 },
-                { style:"height:20px" },
+                { style:"height:10px" },
                 {
                     classes:"mct-inputBox",
                     components:[
@@ -128,6 +216,7 @@ enyo.kind({
                         }
                         ]
                 },
+                
                 {
                     classes:"mct-inputBoxGroup align-right",
                     components:[
@@ -160,23 +249,27 @@ enyo.kind({
         notifyemail
         */
         var payLoad = {};
-        payLoad.projectinterest = this.$.txtProjectGroup.getValue();
+        payLoad.devinterest = this.$.txtDevInterest.getValue();
+        payLoad.projectinterest = this.$.txtProjectInterest.getValue();
         payLoad.attendedby = this.$.txtAttendedBy.getValue();
         payLoad.heardfrom = this.$.txtKnowAbout.getValue();
         payLoad.notifycall = this.$.txtNotifyCall.getValue();
         payLoad.notifysms = this.$.txtNotifySMS.getValue();
         payLoad.notifyemail = this.$.txtNotifyEmail.getValue();
+        payLoad.secret_key = "eregmct2640e6d";
         return payLoad;
     },
     handleButtonTapped:function(inSender,inEvent) {
         this.myPayLoad = this.global.getObject("PAYLOAD");
         var formData = this.getFormData();
+        this.myPayLoad.devinterest = formData.devinterest;
         this.myPayLoad.projectinterest = formData.projectinterest;
         this.myPayLoad.attendedby = formData.attendedby;
         this.myPayLoad.heardfrom = formData.heardfrom;
         this.myPayLoad.notifycall = formData.notifycall;
         this.myPayLoad.notifysms = formData.notifysms;
         this.myPayLoad.notifyemail = formData.notifyemail;
+        this.myPayLoad.secret_key = "eregmct2640e6d";
         
         if (this.$.txtAgree.getValue() == false) {
             this.phoneGap.alert("Please agree with the disclaimer before submitting the registration form.");
@@ -196,6 +289,7 @@ enyo.kind({
             _this.phoneGap.alert("Registration Successful.");
             _this.$.submitButton.setDisabled(false);
             _this.bubble("onGotoMainPage");
+            console.log(inResponse);
         }
         function onError(error){
             _this.$.submitButton.setDisabled(false);

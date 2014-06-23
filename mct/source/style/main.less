@@ -11,7 +11,7 @@
 @blueDarkButton:darken(#0099FF,20%);
 @colorInput:darken(#058685,40%);
 @inputBoxBlack:rgba(0,0,0,0.6);
-@scrimBlack:rgba(0,0,0,0.5);
+@scrimBlack:rgba(0,0,0,0.4);
 
 @font-face {
 	font-family: 'titilliumtext25l';
@@ -31,6 +31,21 @@ input {
 
 }
 
+.onyx-menu-item {
+	text-align: left !important;
+}
+
+.pickerButton {
+	text-align: left;
+	color:@fontWhite;
+	background:@buttonGreen;
+}
+
+.width50 {
+	width:45%;
+	text-align:left;
+}
+
 textarea {
    font-family: 'titilliumtext25l';
    font-size:1.1em;	
@@ -40,9 +55,15 @@ textarea {
 
 .e-registration {
 	float:right;
-	font-style: oblique;
+	background:url("../../assets/img/title.png");
+	background-size:230px 38px;
+	margin-top:10px;
+	width:230px;
+	height: 38px;
+	/*font-style: oblique;
 	font-weight: bold;
-	line-height: 40px;
+	line-height: 40px;*/
+
 }
 
 .placeholderStyle {
@@ -106,7 +127,6 @@ body {
 }
 
 button {
-	color:@fontWhite;
 	border:none !important;
 	padding:15px;
 	font-size:1.1em;
@@ -114,6 +134,7 @@ button {
     -webkit-border-radius: 0.5em;
 	border-radius: 0.5em;
 	outline:none;
+	color:@fontWhite;
 	background:@buttonGreen;
 }
 
@@ -145,6 +166,7 @@ button:active:hover:not([disabled]){
 button.blueButton {
 	border:1px solid lighten(@blueButton,15%) !important;
 	background:@blueButton !important;
+	width: 120px;
 }
 
 button.blueButton.active:hover:not([disabled]){
@@ -184,7 +206,18 @@ button.blueButton.active:hover:not([disabled]){
 
 .pickerButton {
 	border:1px solid lighten(@buttonGreenDarker,5%) !important;
+	height:55px;
 	width:100%;
+	line-height: 30px;
+	font-size: 1.2em !important;
+}
+
+.mct-back {
+	background:url("../../assets/img/btnBack.png");
+	/* 60px 100px */
+	width: 30px;
+	height:50px;
+	background-size: 30px 50px;
 }
 
 .mctLogo {
@@ -205,6 +238,23 @@ button.blueButton.active:hover:not([disabled]){
 .mct-inputBoxGroup {
 	.mct-inputBox;
 	padding:0px !important;
+}
+
+.mct-inputBoxGroup55pc {
+	.mct-inputBox;
+	width: 55% !important;
+	padding:0px !important;
+}
+
+.mct-inputRemaining {
+	width:31% !important;
+}
+
+.mct-inputBoxGroupForSplit {
+	.mct-inputBox;
+	width:96%;
+	padding:0px !important;
+	margin:0px !important;
 }
 
 .exactBoxing {
@@ -236,11 +286,13 @@ button.blueButton.active:hover:not([disabled]){
 
 .mct-inputBox h2 {
 	margin-top:0px;
+	font-weight: bold !important;
 	margin-bottom:0px;
 }
 
 .scrimCover {
 	padding:5px;
+	height:800px;
 	background: @scrimBlack !important;
 }
 

@@ -11,144 +11,220 @@ enyo.kind({
             name:"form1Data",
             classes:"scrimCover",
             components:[
-                    { style:"height:20px" },
+                    /*
                     {
                         tag:"h2",
                         classes:'note-text',
                         content:"Please fill up your name below."
                     },
+                    */
                     {
-                        classes:"mct-inputBoxGroup",
+                        style:"height:100px;"
+                    },
+                    {
+                        layoutKind: "FittableColumnsLayout",
+                        style:"text-align:center",
                         components:[
                             {
-                                classes:"mct-realInput",
-                                kind:"Input",
-                                name:"txtFirstName",
-                                placeholder:"First Name",
-                                attributes:{
-                                    required: "required",
-                                    maxlength:50  
-                                }
+                                style:"width:24%;background:red",
+                                classes:"mct-inputBoxGroup",
+                                components:[
+                                    {
+                                        name:"txtTitle",
+                                        kind:"StandardPicker",
+                                        defaultText:"Select Title...",
+                                        datasource:[
+                                            { content:"Mr",value:"Mr", active:true },
+                                            { content:"Mrs", value:"Mrs"},
+                                            { content:"Ms", value:"Ms"},
+                                            { content:"Dr", value:"Dr"},
+                                            { content:"Dato'", value:"Dato'"},
+                                            { content:"Datin", value:"Datin"},
+                                            { content:"Dato' Seri", value:"Dato' Seri" },
+                                            { content:"Tan Sri", value:"Tan Sri"}
+                                        ]
+                                    }
+                                ]
+                            },
+                            { style:"width:1%" },
+                            {
+                                style:"width:30%",
+                                components:[
+                                    {
+                                        classes:"mct-realInput",
+                                        kind:"Input",
+                                        name:"txtFirstName",
+                                        placeholder:"First Name",
+                                        attributes:{
+                                            required: "required",
+                                            maxlength:50  
+                                        }
+                                    }
+                                ]       
+                            },
+                            { style:"width:1%" },
+                            {
+                                style:"width:30%",
+                                components:[
+                                    {
+                                        classes:"mct-realInput",
+                                        kind:"Input",
+                                        name:"txtLastName",
+                                        placeholder:"Last Name",
+                                        attributes:{
+                                            required: "required",
+                                            maxlength:50  
+                                        }
+                                    }
+                                ]
                             }
+                        ]
+                    },
+                    
+                    { style:"height:10px" },
+                    {
+                        style:"text-align:center",
+                        layoutKind: "FittableColumnsLayout",
+                        components:[
+                            {
+                                classes:"mct-inputBoxGroup55pc",
+                                components:[
+                                    {
+                                        classes:"mct-realInputTxtArea",
+                                        kind:"TextArea",
+                                        name:"txtAddress",
+                                        validation: "required",
+                                        placeholder:"Correspondence Address",
+                                        attributes:{
+                                            required: "required",
+                                            maxlength:150  
+                                        }
+                                    }
+                                ]        
+                            },
+                            { classes:"mct-inputRemaining" }
+                        ]
+                        
+                    },
+                    { style:"height:5px" },
+                    {
+                        style:"text-align:center",
+                        layoutKind: "FittableColumnsLayout",
+                        components:[
+                            {
+                                classes:"mct-inputBoxGroup55pc",
+                                components:[
+                                    {
+                                        classes:"mct-realInput",
+                                        kind:"Input",
+                                        name:"txtContactNo",
+                                        placeholder:"Mobile No (60123467890)",
+                                        attributes:{
+                                            required: 'pattern ^601[0-9]{6,8}$|^601[0-9][0-9]{6,8}$ true',
+                                            maxlength:12  
+                                        }
+                                    }
+                                ]
+                            },
+                            { classes:"mct-inputRemaining" }
+                        ]
+                        
+                    },
+                    { style:"height:5px" },
+                    {
+                        style:"text-align:center",
+                        layoutKind: "FittableColumnsLayout",
+                        components:[
+                            {
+                                classes:"mct-inputBoxGroup55pc",
+                                //classes:"mct-inputBoxGroup",
+                                components:[
+                                    {
+                                        classes:"mct-realInput",
+                                        kind:"Input",
+                                        name:"txtEmail",
+                                        placeholder:"Email",
+                                        attributes:{
+                                            required: "email",
+                                            maxlength:255  
+                                        }
+                                    }
+                                ]
+                            },
+                            { classes:"mct-inputRemaining" }
                         ]
                     },
                     { style:"height:5px" },
                     {
-                        classes:"mct-inputBoxGroup",
+                        style:"text-align:center",
+                        layoutKind: "FittableColumnsLayout",
                         components:[
                             {
-                                classes:"mct-realInput",
-                                kind:"Input",
-                                name:"txtLastName",
-                                placeholder:"Last Name",
-                                attributes:{
-                                    required: "required",
-                                    maxlength:50  
-                                }
-                            }
+                                classes:"mct-inputBoxGroup55pc",
+                                //classes:"mct-realInput",
+                                components:[
+                                    {
+                                        classes:"mct-realInput",
+                                        kind:"Input",
+                                        name:"txtNRICPassport",
+                                        placeholder:"NRIC or Passport",
+                                        attributes:{
+                                            maxlength:50  
+                                        }
+                                    }
+                                ]
+                            },
+                            { classes:"mct-inputRemaining" }
                         ]
                     },
-                    { style:"height:15px" },
-                    {
-                        classes:"mct-inputBox",
-                        components:[
-                            { tag:"h2", content:"Title" }
-                        ]
-                    },
-                    {
-                       name:"txtTitle",
-                       kind:"TitleGroup",
-                       active:0
-                    },
-                    { style:"height:15px" },
-                    {
-                        classes:"mct-inputBox",
-                        components:[
-                            { tag:"h2", content:"Correspondence Address" }
-                        ]
-                    },
-                    {
-                        classes:"mct-inputBoxGroup",
-                        components:[
-                            {
-                                classes:"mct-realInputTxtArea",
-                                kind:"TextArea",
-                                name:"txtAddress",
-                                validation: "required",
-                                placeholder:"Insert address...",
-                                attributes:{
-                                    required: "required",
-                                    maxlength:150  
-                                }
-                            }
-                        ]
-                    },
-                    { style:"height:5px" },
-                    {
-                        classes:"mct-inputBox",
-                        components:[
-                            { tag:"h2", content:"Contact Details" }
-                        ]
-                    },
-                    {
-                        classes:"mct-inputBoxGroup",
-                        components:[
-                            {
-                                classes:"mct-realInput",
-                                kind:"Input",
-                                name:"txtContactNo",
-                                placeholder:"Mobile No (60123467890)",
-                                attributes:{
-                                    required: 'pattern ^601[0-9]{6,8}$|^01[0-9][0-9]{6,8}$ true',
-                                    maxlength:12  
-                                }
-                            }
-                        ]
-                    },
-                    { style:"height:5px" },
-                    {
-                        classes:"mct-inputBoxGroup",
-                        components:[
-                            {
-                                classes:"mct-realInput",
-                                kind:"Input",
-                                name:"txtEmail",
-                                placeholder:"Email",
-                                attributes:{
-                                    required: "email",
-                                    maxlength:255  
-                                }
-                            }
-                        ]
-                    },
-                    { style:"height:5px" },
-                    {
-                        classes:"mct-inputBoxGroup",
-                        components:[
-                            {
-                                classes:"mct-realInput",
-                                kind:"Input",
-                                name:"txtNRICPassport",
-                                placeholder:"NRIC or Passport",
-                                attributes:{
-                                    maxlength:50  
-                                }
-                            }
-                        ]
-                    },
-                    { style:"height:5px" },
                     {
                         classes:"mct-inputBox",
                         components:[
                             { tag:"h2", content:"Current Home" }
                         ]
                     },
+                    /*
                     {
-                        name:"txtCurrentHome",
-                        kind:"CurrentHomeGroup",
-                        active:0
+                        classes:"mct-inputBoxGroup",
+                        components:[
+                            {
+                                kind:"StandardPicker",
+                                name:"txtCurrentHome",
+                                defaultText:"Select Current Home...",
+                                datasource:[
+                                    { content:"Owner", value:"Owner", active:true},
+                                    { content:"Rented", value:"Rented"},
+                                    { content:"Stay with Family", value:"Stay with Family"},
+                                    { content:"Others", value:"Others"}
+                                ]
+                            }
+                        ]
                     },
-                    { style:"height:15px" },
+                    */
+                    {
+                        style:"text-align:center",
+                        layoutKind: "FittableColumnsLayout",
+                        components:[
+                            {
+                                classes:"mct-inputBoxGroup55pc",
+                                components:[
+                                    {
+                                        kind:"StandardPicker",
+                                        name:"txtCurrentHome",
+                                        defaultText:"Select Current Home...",
+                                        datasource:[
+                                            { content:"Owner", value:"Owner", active:true},
+                                            { content:"Rented", value:"Rented"},
+                                            { content:"Stay with Family", value:"Stay with Family"},
+                                            { content:"Others", value:"Others"}
+                                        ]
+                                    }
+                                ]
+                            },
+                            { classes:"mct-inputRemaining" }
+                        ]
+                    },
+                    { style:"height:10px" },
                     {
                         classes:"mct-inputBoxGroup align-right",
                         components:[
@@ -160,7 +236,7 @@ enyo.kind({
                             }
                         ]
                     },
-                    { style:"height:100px" } 
+                    { style:"height:50px" } 
                     
                 ]
     }],
