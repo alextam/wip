@@ -1,0 +1,22 @@
+enyo.depends(
+	"FeedBackUser.js",
+	"RaceGroup.js",
+	"AboutGroup.js",
+	"ProjectGroup.js",
+	"AgeGroup.js",
+	"AttendGroup.js",
+	"BusinessNatureGroup.js",
+	"FinanceGroup.js",
+	"IncomeGroup.js",
+	"NationalityGroup.js",
+	"MaritialGroup.js",
+	"OccupationGroup.js",
+	"TitleGroup.js",
+	"CurrentHomeGroup.js",
+	"Question3.js",
+	"Question2.js",
+	"Question1.js",
+	"Home.js",
+	"Header.js",
+	"MainView.js"
+);
