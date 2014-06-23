@@ -9,6 +9,7 @@ enyo.kind({
     strategyKind:"TransitionScrollStrategy",
     components: [{
             name:"form1Data",
+            classes:"scrimCover",
             components:[
                     { style:"height:20px" },
                     {

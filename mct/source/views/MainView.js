@@ -21,7 +21,7 @@ enyo.kind({
 			components:[
 				{kind:"Question1",onHandleButtonTapped:"handleButtonTapped"},
 				{kind:"Question2",onHandleButtonTapped:"handleButtonTapped"},
-				{kind:"Question3",onHandleButtonTapped:"handleButtonTapped"}
+				{kind:"Question3",onHandleButtonTapped:"handleButtonTapped",onGotoMainPage:"handleGotoMainPage"}
 			]
 		}
 	],
@@ -33,6 +33,10 @@ enyo.kind({
 	},
 	handleNationTapped:function(inSender,inEvent) {
 		this.$.myPanel.setIndex(4);
+	},
+	handleGotoMainPage:function(inSender,inEvent) {
+		this.$.myPanel.setIndex(0);
+		window.location.reload();
 	},
 	handleAgeGroupTapped:function(inSender,inEvent) {
 		this.$.myPanel.setIndex(8);

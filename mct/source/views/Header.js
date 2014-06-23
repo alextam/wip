@@ -1,17 +1,16 @@
 enyo.kind({
     name: "Header",
     kind: "onyx.Toolbar",
+    classes:"myToolBar",
     components: [
         {
-        	tag:"div"
-        	//content: "This is Control"
+        	tag:"div",
+        	classes:"mct-logo"
         },
         {
-        	fit:true
-        },
-        {
-        	tag:"div"
-        	//content: "This is Control"
+        	tag:"div",
+            classes:"e-registration",
+        	content: "e-Registration"
         }
     ]
 });

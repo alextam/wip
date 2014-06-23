@@ -10,7 +10,8 @@
 @blueButton:#0099FF;
 @blueDarkButton:darken(#0099FF,20%);
 @colorInput:darken(#058685,40%);
-@inputBoxBlack:rgba(0,0,0,0.3);
+@inputBoxBlack:rgba(0,0,0,0.6);
+@scrimBlack:rgba(0,0,0,0.5);
 
 @font-face {
 	font-family: 'titilliumtext25l';
@@ -35,6 +36,13 @@ textarea {
    font-size:1.1em;	
    color:@fontWhite;
    background: @inputBoxBlack !important;
+}
+
+.e-registration {
+	float:right;
+	font-style: oblique;
+	font-weight: bold;
+	line-height: 40px;
 }
 
 .placeholderStyle {
@@ -231,12 +239,30 @@ button.blueButton.active:hover:not([disabled]){
 	margin-bottom:0px;
 }
 
+.scrimCover {
+	padding:5px;
+	background: @scrimBlack !important;
+}
+
 .fullbox {
 	border:1px solid @fontWhite;
 }
 
+.onyx-toolbar.myToolBar {
+	padding:5px !important;
+	background:#000 !important;
+}
+
+.mct-logo {
+	background:url("../../assets/img/smallLogo.png") no-repeat;
+	background-size: 116px 40px;
+	width:116px;
+	height:40px;
+}
+
 .main-view {
-	background:url("../../assets/img/blur-background07.jpg");
+	background:url("../../assets/img/mctBG.jpg") no-repeat;
+	background-size: 100% 100%;
 	width:100%;
 	height:100%;
 }
