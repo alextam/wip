@@ -97,9 +97,9 @@ enyo.kind({
                                 classes:"mct-realInput",
                                 kind:"Input",
                                 name:"txtContactNo",
-                                placeholder:"Mobile No (0123467890)",
+                                placeholder:"Mobile No (60123467890)",
                                 attributes:{
-                                    required: 'pattern ^01[0-9]{6,8}$|^01[0-9][0-9]{6,8}$ true',
+                                    required: 'pattern ^601[0-9]{6,8}$|^01[0-9][0-9]{6,8}$ true',
                                     maxlength:12  
                                 }
                             }
