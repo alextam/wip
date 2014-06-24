@@ -6,6 +6,7 @@ enyo.depends(
 	//"Theme.less",	// uncomment this line, and follow the steps described in Theme.less
 	"$lib/canvas",
 	"$lib/go",
+	"$lib/taffy-min.js",
 	"$lib/vertical-slider",
 	// CSS/LESS style files
 	"style",
