@@ -150,6 +150,7 @@ enyo.kind({
                                 {
                                     kind:"onyx.Checkbox",
                                     name:"txtNotifyCall",
+                                    active:true,
                                     classes:"mct-checkbox"
                                 },
                                 {
@@ -163,6 +164,7 @@ enyo.kind({
                                 {
                                     kind:"onyx.Checkbox",
                                     name:"txtNotifySMS",
+                                    active:true,
                                     classes:"mct-checkbox"
                                 },
                                 {
@@ -176,6 +178,7 @@ enyo.kind({
                                 {
                                     kind:"onyx.Checkbox",
                                     name:"txtNotifyEmail",
+                                    active:true,
                                     classes:"mct-checkbox"
                                 },
                                 {
@@ -300,6 +303,16 @@ enyo.kind({
             _this.$.submitButton.setDisabled(false);
             _this.phoneGap.alert("There's an error connecting to server, try again later.");
         }
+    },
+    resetForm:function(){
+        this.$.txtAgree.setValue(true);
+        this.$.txtProjectInterest.setValue("1");
+        this.$.txtKnowAbout.setValue("Internet");
+        this.$.txtDevInterest.setValue("Sgl/Double Storey Link");
+        this.$.txtAttendedBy.setValue("1");
+        this.$.txtNotifyEmail.setValue(true);
+        this.$.txtNotifySMS.setValue(true);
+        this.$.txtNotifyCall.setValue(true);
     }
 
 });

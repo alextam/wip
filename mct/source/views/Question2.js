@@ -283,5 +283,16 @@ enyo.kind({
         console.log(this.myPayLoad);
         this.global.setObject("PAYLOAD",this.myPayLoad);
     	this.bubble("onHandleButtonTapped");
+        //this.resetForm();
+    },
+    resetForm:function() {
+        this.$.txtIncome.setValue("Below RM 4,000");
+        this.$.txtRace.setValue("Malay");
+        this.$.txtNationality.setValue("Malaysian");
+        this.$.txtOccupation.setValue("Professional");
+        this.$.txtMaritial.setValue("Single");
+        this.$.txtFinanceGroup.setValue("Bank");
+        this.$.txtAgeGroup.setValue("20 - 30");
+        this.$.txtBusinessNature.setValue("Accounting / Finance");
     }
 });

@@ -8,6 +8,7 @@ enyo.kind({
 	name: "MainView",
 	kind:"Control",
 	classes:"enyo-fit",
+	global:go.Global,
 	components:[
 		{ withBack:false,name:"header",kind:"Header", onBackTapped:"handleBackTapped" },
 		{
@@ -19,30 +20,48 @@ enyo.kind({
 			classes:"main-view",
 			arrangerKind: "CardSlideInArranger",
 			components:[
-				{kind:"Question1",onHandleButtonTapped:"handleButtonTapped"},
-				{kind:"Question2",onHandleButtonTapped:"handleButtonTapped"},
-				{kind:"Question3",onHandleButtonTapped:"handleButtonTapped"},
+				{name:"question1",kind:"Question1",onHandleButtonTapped:"handleButtonTapped"},
+				{name:"question2",kind:"Question2",onHandleButtonTapped:"handleButtonTapped"},
+				{name:"question3",kind:"Question3",onHandleButtonTapped:"handleButtonTapped"},
 				{kind:"EndPage",onResetForm:"handleFormReset"}
 			]
 		}
 	],
 	handleFormReset:function(inSender,inEvent) {
-		window.location.reload();
+		if (this.global.getObject("PAYLOAD") != null){
+			this.global.setObject("PAYLOAD",null);
+		}
+        this.$.question1.resetForm();
+		this.$.question2.resetForm();
+		this.$.question3.resetForm();
+		this.$.myPanel.setIndex(0);
 	},
 	handleBackTapped:function(inSender,inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()-1);
-		if (this.$.myPanel.getIndex() > 0) {
-			this.$.header.setWithBack(true);
-		} else {
-			this.$.header.setWithBack(false);
+		switch(this.$.myPanel.getIndex()) {
+			case 0:
+				this.$.header.setWithBack(false);
+			break;
+			case 3:
+				this.$.header.setWithBack(false);
+			break;
+			default:
+				this.$.header.setWithBack(true);
+			break;
 		}
 	},
 	handleButtonTapped: function(inSender, inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()+1);
-		if (this.$.myPanel.getIndex() > 0) {
-			this.$.header.setWithBack(true);
-		} else {
-			this.$.header.setWithBack(false);
+		switch(this.$.myPanel.getIndex()) {
+			case 0:
+				this.$.header.setWithBack(false);
+			break;
+			case 3:
+				this.$.header.setWithBack(false);
+			break;
+			default:
+				this.$.header.setWithBack(true);
+			break;
 		}
 	}
 });

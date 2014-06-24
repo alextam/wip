@@ -94,6 +94,7 @@ enyo.kind({
                                         validation: "required",
                                         placeholder:"Correspondence Address",
                                         onfocus:"handleZoom",
+                                        onblur:"handleZoomBack",
                                         attributes:{
                                             required: "required",
                                             maxlength:150  
@@ -117,6 +118,7 @@ enyo.kind({
                                         kind:"Input",
                                         name:"txtContactNo",
                                         onfocus:"handleZoom",
+                                        onblur:"handleZoomBack",
                                         placeholder:"Mobile No (60123467890)",
                                         attributes:{
                                             required: 'pattern ^601[0-9]{6,8}$|^601[0-9][0-9]{6,8}$ true',
@@ -147,6 +149,7 @@ enyo.kind({
                                         name:"txtEmail",
                                         placeholder:"Email",
                                         onfocus:"handleZoom",
+                                        onblur:"handleZoomBack",
                                         attributes:{
                                             required: "email",
                                             maxlength:255  
@@ -174,6 +177,7 @@ enyo.kind({
                                         kind:"Input",
                                         name:"txtNRICPassport",
                                         onfocus:"handleZoom",
+                                        onblur:"handleZoomBack",
                                         placeholder:"NRIC or Passport",
                                         attributes:{
                                             maxlength:50  
@@ -269,6 +273,19 @@ enyo.kind({
         payLoad.currenthome = this.$.txtCurrentHome.getValue();
         return payLoad;
     },
+    handleZoomBack:function(inSender,inEvent) {
+         this.scrollToTop();
+    },
+    resetForm:function(){
+        this.$.txtTitle.setValue("Mr");
+        this.$.txtFirstName.setValue("");
+        this.$.txtLastName.setValue("");
+        this.$.txtContactNo.setValue("");
+        this.$.txtEmail.setValue("");
+        this.$.txtNRICPassport.setValue("");
+        this.$.txtAddress.setValue("");
+        this.$.txtCurrentHome.setValue("Owner");
+    },
     handleZoom:function(inSender,inEvent) {
         switch(inSender.name) {
             case "txtAddress" :
@@ -304,6 +321,6 @@ enyo.kind({
             this.feedBackUser = new FeedBackUser();
             this.feedBackUser.handleFormError(error);
         }
-        
+        //this.resetForm();
     }
 });
