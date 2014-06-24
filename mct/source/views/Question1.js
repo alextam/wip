@@ -123,7 +123,10 @@ enyo.kind({
                                     }
                                 ]
                             },
-                            { classes:"mct-inputRemaining" }
+                            { 
+                                classes:"mct-inputRemaining",
+                                content:"E.g. 60123467890"
+                            }
                         ]
                         
                     },
@@ -148,7 +151,10 @@ enyo.kind({
                                     }
                                 ]
                             },
-                            { classes:"mct-inputRemaining" }
+                            { 
+                                classes:"mct-inputRemaining",
+                                content:"E.g. johndoe@email.com" 
+                            }
                         ]
                     },
                     { style:"height:5px" },
