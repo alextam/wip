@@ -93,6 +93,7 @@ enyo.kind({
                                         name:"txtAddress",
                                         validation: "required",
                                         placeholder:"Correspondence Address",
+                                        onfocus:"handleZoom",
                                         attributes:{
                                             required: "required",
                                             maxlength:150  
@@ -115,6 +116,7 @@ enyo.kind({
                                         classes:"mct-realInput",
                                         kind:"Input",
                                         name:"txtContactNo",
+                                        onfocus:"handleZoom",
                                         placeholder:"Mobile No (60123467890)",
                                         attributes:{
                                             required: 'pattern ^601[0-9]{6,8}$|^601[0-9][0-9]{6,8}$ true',
@@ -144,6 +146,7 @@ enyo.kind({
                                         kind:"Input",
                                         name:"txtEmail",
                                         placeholder:"Email",
+                                        onfocus:"handleZoom",
                                         attributes:{
                                             required: "email",
                                             maxlength:255  
@@ -170,6 +173,7 @@ enyo.kind({
                                         classes:"mct-realInput",
                                         kind:"Input",
                                         name:"txtNRICPassport",
+                                        onfocus:"handleZoom",
                                         placeholder:"NRIC or Passport",
                                         attributes:{
                                             maxlength:50  
@@ -186,24 +190,7 @@ enyo.kind({
                             { tag:"h2", content:"Current Home" }
                         ]
                     },
-                    /*
-                    {
-                        classes:"mct-inputBoxGroup",
-                        components:[
-                            {
-                                kind:"StandardPicker",
-                                name:"txtCurrentHome",
-                                defaultText:"Select Current Home...",
-                                datasource:[
-                                    { content:"Owner", value:"Owner", active:true},
-                                    { content:"Rented", value:"Rented"},
-                                    { content:"Stay with Family", value:"Stay with Family"},
-                                    { content:"Others", value:"Others"}
-                                ]
-                            }
-                        ]
-                    },
-                    */
+                   
                     {
                         style:"text-align:center",
                         layoutKind: "FittableColumnsLayout",
@@ -239,7 +226,7 @@ enyo.kind({
                             }
                         ]
                     },
-                    { style:"height:400px" } 
+                    { style:"height:0px" } 
                     
                 ]
     }],
@@ -281,6 +268,26 @@ enyo.kind({
         payLoad.address = this.$.txtAddress.getValue();
         payLoad.currenthome = this.$.txtCurrentHome.getValue();
         return payLoad;
+    },
+    handleZoom:function(inSender,inEvent) {
+        switch(inSender.name) {
+            case "txtAddress" :
+                this.scrollTo(0,100);
+            break;
+
+            case "txtContactNo" :
+                this.scrollTo(0,150);
+            break;
+
+            case "txtEmail" :
+                this.scrollTo(0,200);
+            break;
+
+            case "txtNRICPassport" :
+                this.scrollTo(0,250);
+            break;
+        }
+        
     },
     handleButtonTapped:function(inSender,inEvent) {
         var _this = this;
