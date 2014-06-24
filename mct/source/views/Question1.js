@@ -233,7 +233,7 @@ enyo.kind({
                             }
                         ]
                     },
-                    { style:"height:500px" } 
+                    { style:"height:400px" } 
                     
                 ]
     }],
