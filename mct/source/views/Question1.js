@@ -1,8 +1,8 @@
 enyo.kind({
     name: "Question1",
     kind: "Scroller",
-    touch:false, 
-    thumb:false,
+    touch:true, 
+    thumb:true,
     classes:"panel-view",
     fit:true,
     global:go.Global,
