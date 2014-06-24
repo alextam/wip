@@ -277,7 +277,7 @@ enyo.kind({
          //this.scrollToTop();
     },
     resetForm:function(){
-        this.$.question1.scrollTop();
+        this.scrollToTop();
         this.$.txtTitle.setValue("Mr");
         this.$.txtFirstName.setValue("");
         this.$.txtLastName.setValue("");
@@ -308,7 +308,7 @@ enyo.kind({
         
     },
     handleButtonTapped:function(inSender,inEvent) {
-        this.scrollTop();
+        this.scrollToTop();
         var _this = this;
         var myValidator = new go.Validator();
         myValidator.validate(this.$.form1Data,onSuccessValidate,onFailValidate);
