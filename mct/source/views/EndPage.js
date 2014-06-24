@@ -14,7 +14,7 @@ enyo.kind({
         		}
         	]
         },
-        { style:"height:145px" },
+        { style:"height:245px" },
        	{
             classes:"mct-inputBoxGroup align-center",
             components:[
