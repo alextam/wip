@@ -24,7 +24,7 @@ enyo.kind({
                         style:"text-align:center",
                         components:[
                             {
-                                style:"width:24%;background:red",
+                                style:"width:24%;",
                                 classes:"mct-inputBoxGroup",
                                 components:[
                                     {
