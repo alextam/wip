@@ -274,7 +274,7 @@ enyo.kind({
         return payLoad;
     },
     handleZoomBack:function(inSender,inEvent) {
-         this.scrollToTop();
+         //this.scrollToTop();
     },
     resetForm:function(){
         this.$.txtTitle.setValue("Mr");
