@@ -137,7 +137,7 @@ enyo.kind({
                 {
                     classes:"mct-inputBox",
                     components:[
-                        { tag:"h2", content:"Please notify me on future property launches by..." }
+                        { tag:"h2", content:"Please notify me on future property launches by...", classes:"checkBoxGroup" }
                     ]
                 },
                 {
@@ -145,6 +145,7 @@ enyo.kind({
                         components:[
                         {
                             layoutKind: "FittableColumnsLayout",
+                            classes:"checkBoxGroup",
                             components:[
                                 {
                                     kind:"onyx.Checkbox",
@@ -153,7 +154,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
-                                    style:"line-height:35px;",
+                                    style:"line-height:35px;font-weight:bold !important;",
                                     content:"Call"
                                 },
                                 {
@@ -166,7 +167,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
-                                    style:"line-height:35px;",
+                                    style:"line-height:35px;font-weight:bold !important;",
                                     content:"SMS"
                                 },
                                 {
@@ -179,7 +180,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
-                                    style:"line-height:35px;",
+                                    style:"line-height:35px;font-weight:bold !important;",
                                     content:"Email"
                                 }
 
@@ -195,7 +196,7 @@ enyo.kind({
                     ]
                 },
                 {
-                        classes:"mct-inputBox",
+                        classes:"mct-inputBox checkBoxGroup",
                         components:[
                         {
                             layoutKind: "FittableColumnsLayout",
@@ -209,7 +210,7 @@ enyo.kind({
                                 {
                                     fit:true,
                                     tag:"p",
-                                    style:"line-height:20px;text-align:justify",
+                                    style:"line-height:20px;text-align:justify;padding-right:15px;",
                                     content:"* I hereby agree and expressly give consent to MCT Consortium Berhad and its group of companies to collect and process my personal data for their records so as to enable them to keep me informed of any updates/ information with regard to MCT Consortium Berhad’s event and any other future events, promotion, products, services, and marketing related information, provided that the use of my personal data will not breach any applicable data protection legislation."
                                 }
                             ]
@@ -283,15 +284,19 @@ enyo.kind({
         console.log("Submitting Payload...");
         var _this = this;
         var myPostman = new go.Postman();
+        console.log(this.getUrl());
         myPostman.init(this.getUrl(),80,3000);
-        myPostman.postTo("",payload,onSuccess,onError);
-        function onSuccess(inEvent,inResponse){
+        var extraParam = {};
+        extraParam.contentType = "form";
+
+        myPostman.postTo("",payload,onPostSuccess,onPostError,extraParam);
+        function onPostSuccess(inEvent,inResponse){
             _this.phoneGap.alert("Registration Successful.");
             _this.$.submitButton.setDisabled(false);
-            _this.bubble("onGotoMainPage");
+            _this.bubble("onHandleButtonTapped");
             console.log(inResponse);
         }
-        function onError(error){
+        function onPostError(error){
             _this.$.submitButton.setDisabled(false);
             _this.phoneGap.alert("There's an error connecting to server, try again later.");
         }

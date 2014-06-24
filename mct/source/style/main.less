@@ -10,8 +10,8 @@
 @blueButton:#0099FF;
 @blueDarkButton:darken(#0099FF,20%);
 @colorInput:darken(#058685,40%);
-@inputBoxBlack:rgba(0,0,0,0.6);
-@scrimBlack:rgba(0,0,0,0.4);
+@inputBoxBlack:rgba(0,0,0,0.5);
+@scrimBlack:rgba(0,0,0,0.3);
 
 @font-face {
 	font-family: 'titilliumtext25l';
@@ -29,6 +29,11 @@ input {
    color:@fontWhite;
    border:1px solid @fontWhite;
 
+}
+
+h1.big-text {
+	font-weight: bold;
+	font-size:2em !important;
 }
 
 .onyx-menu-item {
@@ -92,6 +97,10 @@ textarea {
 	text-align: right !important;
 }
 
+.align-center {
+	text-align: center !important;	
+}
+
 h1,h2,h3,h4,h5 {
 	font-weight:normal !important;
 }
@@ -101,15 +110,17 @@ h1 {
 }
 
 h2 {
-	font-size:1.1em;
+	font-size:1.2em;
 }
 
 h2.note-text {
-	font-size:1.1em;
+	font-size:1.2em;
+	font-weight: bold !important;
 	text-align: left;
 	width:86%;
 	margin-right:auto;
 	margin-left:auto;
+	padding:5px;
 }
 
 body {
@@ -160,7 +171,6 @@ button:active:hover:not([disabled]){
 
 .pickerLikeButton.active,.groupButton.active {
 	background:darken(@buttonGreenDarker,5%) !important;
-
 }
 
 button.blueButton {
@@ -169,7 +179,7 @@ button.blueButton {
 	width: 120px;
 }
 
-button.blueButton.active:hover:not([disabled]){
+button.blueButton:hover:not([disabled]) {
 	border:1px solid lighten(@blueButton,15%) !important;
 	background:@blueDarkButton !important;
 }
@@ -294,6 +304,20 @@ button.blueButton.active:hover:not([disabled]){
 	padding:5px;
 	height:800px;
 	background: @scrimBlack !important;
+}
+
+.checkBoxGroup {
+	padding:5px;
+	background: @inputBoxBlack !important;	
+}
+
+.textOverlay {
+	padding:5px;
+	background: @inputBoxBlack !important;	
+}
+
+.endButton {
+	width:220px !important;
 }
 
 .fullbox {

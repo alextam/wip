@@ -1,8 +1,8 @@
 enyo.kind({
     name: "Question1",
     kind: "Scroller",
-    touch:true, 
-    thumb:true,
+    touch:false, 
+    thumb:false,
     classes:"panel-view",
     fit:true,
     global:go.Global,
@@ -11,15 +11,13 @@ enyo.kind({
             name:"form1Data",
             classes:"scrimCover",
             components:[
-                    /*
+                    {
+                        style:"height:50px;"
+                    },
                     {
                         tag:"h2",
                         classes:'note-text',
-                        content:"Please fill up your name below."
-                    },
-                    */
-                    {
-                        style:"height:100px;"
+                        content:"Please fill up the form below."
                     },
                     {
                         layoutKind: "FittableColumnsLayout",
@@ -87,7 +85,7 @@ enyo.kind({
                         layoutKind: "FittableColumnsLayout",
                         components:[
                             {
-                                classes:"mct-inputBoxGroup55pc",
+                                classes:"mct-inputBoxGroup",
                                 components:[
                                     {
                                         classes:"mct-realInputTxtArea",
@@ -101,8 +99,7 @@ enyo.kind({
                                         }
                                     }
                                 ]        
-                            },
-                            { classes:"mct-inputRemaining" }
+                            }
                         ]
                         
                     },

@@ -13,6 +13,7 @@ enyo.depends(
 	"OccupationGroup.js",
 	"TitleGroup.js",
 	"CurrentHomeGroup.js",
+	"EndPage.js",
 	"Question3.js",
 	"Question2.js",
 	"Question1.js",

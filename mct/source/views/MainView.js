@@ -21,10 +21,14 @@ enyo.kind({
 			components:[
 				{kind:"Question1",onHandleButtonTapped:"handleButtonTapped"},
 				{kind:"Question2",onHandleButtonTapped:"handleButtonTapped"},
-				{kind:"Question3",onHandleButtonTapped:"handleButtonTapped",onGotoMainPage:"handleGotoMainPage"}
+				{kind:"Question3",onHandleButtonTapped:"handleButtonTapped"},
+				{kind:"EndPage",onResetForm:"handleFormReset"}
 			]
 		}
 	],
+	handleFormReset:function(inSender,inEvent) {
+		window.location.reload();
+	},
 	handleBackTapped:function(inSender,inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()-1);
 		if (this.$.myPanel.getIndex() > 0) {

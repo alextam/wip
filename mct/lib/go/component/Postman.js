@@ -21,7 +21,11 @@ enyo.kind({
 	title:"Alert",
 	init : function(sUrl, iPort, iMiliSeconds){
 		this.setBaseURL(sUrl);
-		this.setPort(iPort);
+		if (iPort != 80) {
+			this.setPort(iPort);
+		} else {
+			this.setPort("");
+		}
 		this.setTimeOutDelay(iMiliSeconds);
 	},
 	setAuthKey: function(sUsername, sPassword){
@@ -208,12 +212,23 @@ enyo.kind({
 	},
 	postTo: function(sRouteURL,payLoad,onSuccess,onError,extra){
 		// 3. Standard web service connection. Payload must be in {json}.
-		if (navigator.onLine){
+		//if (navigator.onLine){
 			if(arguments.length > 3){
 				//All criteria met
 				var extraParam = this.checkExtraParam(extra);
+				var sRouteString = "";
+				if (sRouteURL != "") {
+					sRouteString = "/"+sRouteURL;
+				} else {
+					sRouteString = "";
+				}
+				if (this.port == "") {
+					this.port = "";
+				} else {
+					this.port = ":"+this.port;
+				}
 				var postMan = new enyo.Ajax({
-					url:this.url+":"+this.port+"/"+sRouteURL,
+					url:this.url+this.port+sRouteString,
 					method:extraParam.method,
 					timeout:this.timeout,
 					headers:extraParam.headers,
@@ -226,9 +241,9 @@ enyo.kind({
 			} else {
 				console.log("postTo method: Missing Route URL and required callback names");
 			}
-		} else {
-			this.failNetwork(); 
-		}
+		//} else {
+		//	this.failNetwork(); 
+		//}
 	},
 	jsonp: function(sRouteURL,payLoad,onSuccess,onError,extra){
 		// 4. JSONP web service connection, uses just full URL including port and slashes. Payload must be {json}
