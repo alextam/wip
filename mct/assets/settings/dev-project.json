@@ -1,0 +1,15 @@
+<option value="Sgl/Double Storey Link">Sgl/Double Storey Link</option>
+<option value="Townhouse">Townhouse</option>
+<option value="Semi-D/Zero-lot">Semi-D/Zero-lot</option>
+<option value="Bungalow/Villa">Bungalow/Villa</option>
+<option value="SOHO">SOHO</option>
+<option value="Apt/Condo">Apt/Condo</option>
+<option value="Shop Lot">Shop Lot</option>
+<option value="Factory Lot">Factory Lot</option>
+<option value="Retail Lot">Retail Lot</option>
+<option value="Office Suite">Office Suite</option>
+
+[
+	{"name":"Sgl/Double Storey Link","value":"Sgl/Double Storey Link"},
+	{"name":"Sgl/Double Storey Link","value":"Sgl/Double Storey Link"},
+]

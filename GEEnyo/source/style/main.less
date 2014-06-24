@@ -45,6 +45,11 @@ input {
  	border-radius: 0px !important;
 }
 
+.justButton.active {
+	background: red !important;
+	color:#fff;
+}
+
 button:focus,input:focus {
 	outline:0
 }
@@ -58,7 +63,7 @@ button:focus,input:focus {
    font-size:1em;
 }
 
-:-moz-placeholder { 
+::-moz-placeholder { 
    color: @borderColor;
    font-size:1em;  
 }
@@ -237,8 +242,9 @@ button:focus,input:focus {
 }
 
 .logoPos {
-	width: 256px;
+	width:233px;
 	height:90px;
+	background-position:center center; 
 	background:url("../../assets/img/LogoApp.png") no-repeat;
 	background-color:@GEBlack;
 	border-bottom:1px solid #444;

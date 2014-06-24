@@ -1,0 +1,426 @@
+/*
++    App-specific LESS/CSS would go here, but to make your
++    application easier to maintain, you should try to
++    minimize the use of custom CSS.
++*/
+@fontWhite:#fff;
+@buttonGreen: #4DB89C;
+@buttonGreenDarker: #058685;
+@placeholderColor: #bbb;
+@blueButton:#0099FF;
+@blueDarkButton:darken(#0099FF,20%);
+@colorInput:darken(#058685,40%);
+@inputBoxBlack:rgba(0,0,0,0.5);
+@scrimBlack:rgba(0,0,0,0.3);
+
+@font-face {
+	font-family: 'titilliumtext25l';
+	src: url('../../assets/fonts/FuturaLightBT.eot');
+	src: url('../../assets/fonts/FuturaLightBT.woff') format('woff'), url('../../assets/fonts/FuturaLightBT.ttf') format('truetype');
+}
+
+input {
+   font-family: 'titilliumtext25l';
+   font-size:1.1em;
+   border-top:none;
+   border-right:none;
+   border-left:none;
+   background: @inputBoxBlack;
+   color:@fontWhite;
+   border:1px solid @fontWhite;
+
+}
+
+h1.big-text {
+	font-weight: bold;
+	font-size:2em !important;
+}
+
+.onyx-menu-item {
+	text-align: left !important;
+}
+
+.pickerButton {
+	text-align: left;
+	color:@fontWhite;
+	background:@buttonGreen;
+}
+
+.width50 {
+	width:45%;
+	text-align:left;
+}
+
+textarea {
+   font-family: 'titilliumtext25l';
+   font-size:1.1em;	
+   color:@fontWhite;
+   background: @inputBoxBlack !important;
+}
+
+.e-registration {
+	float:right;
+	background:url("../../assets/img/title.png");
+	background-size:230px 38px;
+	margin-top:10px;
+	width:230px;
+	height: 38px;
+	/*font-style: oblique;
+	font-weight: bold;
+	line-height: 40px;*/
+
+}
+
+.placeholderStyle {
+   color: @placeholderColor;
+   font-family: 'titilliumtext25l';
+   font-size:1.1em;
+}
+
+::-webkit-input-placeholder {
+   .placeholderStyle
+}
+
+::-moz-placeholder { 
+   .placeholderStyle  
+}
+
+::-moz-placeholder { 
+   .placeholderStyle  
+}
+
+::-ms-input-placeholder {  
+   .placeholderStyle
+}
+
+.align-right {
+	text-align: right !important;
+}
+
+.align-center {
+	text-align: center !important;	
+}
+
+h1,h2,h3,h4,h5 {
+	font-weight:normal !important;
+}
+
+h1 {
+	font-size:1.4em;
+}
+
+h2 {
+	font-size:1.2em;
+}
+
+h2.note-text {
+	font-size:1.2em;
+	font-weight: bold !important;
+	text-align: left;
+	width:86%;
+	margin-right:auto;
+	margin-left:auto;
+	padding:5px;
+}
+
+body {
+	font-family:'titilliumtext25l' !important;
+	color:@fontWhite;
+}
+
+.centerDiv {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.panel-view {
+	text-align: center;
+}
+
+button {
+	border:none !important;
+	padding:15px;
+	font-size:1.1em;
+	-moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+	outline:none;
+	color:@fontWhite;
+	background:@buttonGreen;
+}
+
+button:active:hover:not([disabled]){
+	background:@buttonGreenDarker;	
+}
+
+.groupButton {
+	margin:0px;
+	width:33% !important;
+	-moz-border-radius: 0em;
+    -webkit-border-radius: 0em;
+	border-radius: 0em;
+	border-left:1px solid lighten(@buttonGreen,5%) !important;
+	border-right:1px solid lighten(@buttonGreen,5%) !important;
+}
+
+.groupButton.four {
+	.groupButton;
+	font-size:1em;
+	width:50% !important;
+}
+
+.pickerLikeButton.active,.groupButton.active {
+	background:darken(@buttonGreenDarker,5%) !important;
+}
+
+button.blueButton {
+	border:1px solid lighten(@blueButton,15%) !important;
+	background:@blueButton !important;
+	width: 120px;
+}
+
+button.blueButton:hover:not([disabled]) {
+	border:1px solid lighten(@blueButton,15%) !important;
+	background:@blueDarkButton !important;
+}
+
+.groupButton.start {
+	border:none !important;
+	-moz-border-radius-topleft: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	-moz-border-radius-bottom-left: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+}
+
+.groupButton.end {
+	border:none !important;
+	-moz-border-radius-topright: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	-moz-border-radius-bottom-right: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+}
+
+.pickerLikeButton {
+	width:100%;
+	heigth:30px;
+	margin:2px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border:1px solid lighten(@buttonGreenDarker,5%) !important;
+	text-align: left;
+}
+
+.pickerButton {
+	border:1px solid lighten(@buttonGreenDarker,5%) !important;
+	height:55px;
+	width:100%;
+	line-height: 30px;
+	font-size: 1.2em !important;
+}
+
+.mct-back {
+	background:url("../../assets/img/btnBack.png");
+	/* 60px 100px */
+	width: 30px;
+	height:50px;
+	background-size: 30px 50px;
+}
+
+.mctLogo {
+	background:url("../../assets/img/mctLogo.png");
+	width:290px;
+	height:100px;
+	margin-top:14%;
+	.centerDiv;
+}
+
+.mct-inputBox {
+	width:86%;
+	text-align: left;
+	padding:10px;
+	.centerDiv;
+}
+
+.mct-inputBoxGroup {
+	.mct-inputBox;
+	padding:0px !important;
+}
+
+.mct-inputBoxGroup55pc {
+	.mct-inputBox;
+	width: 55% !important;
+	padding:0px !important;
+}
+
+.mct-inputRemaining {
+	width:31% !important;
+}
+
+.mct-inputBoxGroupForSplit {
+	.mct-inputBox;
+	width:96%;
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.exactBoxing {
+	webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+.mct-realInput {
+	width:100%;
+	padding:15px;
+	.exactBoxing;
+	outline:none;
+}
+
+.mct-realInputTxtArea {
+	.mct-realInput;
+	background: none;
+	border:1px solid @fontWhite;
+	height:100px;
+}
+
+.mct-checkbox {
+	width:32px !important;
+	height:32px !important;
+	margin-left:15px;
+	margin-right:15px;
+}
+
+.mct-inputBox h2 {
+	margin-top:0px;
+	font-weight: bold !important;
+	margin-bottom:0px;
+}
+
+.scrimCover {
+	padding:5px;
+	height:800px;
+	background: @scrimBlack !important;
+}
+
+.checkBoxGroup {
+	padding:5px;
+	background: @inputBoxBlack !important;	
+}
+
+.textOverlay {
+	padding:5px;
+	background: @inputBoxBlack !important;	
+}
+
+.endButton {
+	width:220px !important;
+}
+
+.fullbox {
+	border:1px solid @fontWhite;
+}
+
+.onyx-toolbar.myToolBar {
+	padding:5px !important;
+	background:#000 !important;
+}
+
+.mct-logo {
+	background:url("../../assets/img/smallLogo.png") no-repeat;
+	background-size: 116px 40px;
+	width:116px;
+	height:40px;
+}
+
+.main-view {
+	background:url("../../assets/img/mctBG.jpg") no-repeat;
+	background-size: 100% 100%;
+	width:100%;
+	height:100%;
+}
+
+.listItems {
+	margin-left:auto;
+	margin-right: auto;
+	background: @fontWhite;
+	border-top: 1px solid #f2f2f2;
+	height:48px;
+	width:95%;
+	border-bottom: 1px solid #ccc; 
+}
+
+.listItems:active:hover:not([disabled]){
+	background: lighten(@blueButton, 10%);	
+}
+
+.listItemButtons {
+	margin-top:0px;
+	color:#333;
+	font-size:0.9em;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: left;
+	margin-bottom:0px;
+	line-height:50px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+}
+
+.listItemButtons:active:hover:not([disabled]){
+	color:@fontWhite;
+	border-top:1px solid @blueButton;
+	border-bottom:1px solid @blueButton; 
+	background: lighten(@blueButton, 10%);		
+}
+
+
+
+.goAlert.onyx-popup {
+ 	background:@fontWhite !important;
+	padding:5px !important;
+ 	max-width:285px !important;
+}
+
+.goAlert .title {
+ 	font-size:0.8em !important;
+	text-indent: 5px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	color:#ddd !important;
+	margin-top:7px !important;
+	margin-bottom:7px !important;
+}
+
+.goAlert .alertContent {
+ 	padding:10px !important;
+ 	width:265px !important;
+ 	font-weight:bold !important;
+ 	background:@fontWhite !important;
+ 	min-height:60px !important;
+ 	color:#000 !important;
+
+}
+
+.goAlert .onyx-scrim {
+ 	opacity:0.4 !important;
+}
+
+.alertButtonOK {
+	background: lighten(@blueButton, 10%);		
+	color:@fontWhite;
+	height:40px;
+}
+
+.alertButtonOK:active:hover:not([disabled]){
+	background: darken(@blueButton, 5%);		
+	color:@fontWhite;
+	height:40px;
+}
+
+.setWidthFull {
+	width:100%;
+}

@@ -6,6 +6,7 @@ enyo.depends(
 	"Quotation2.js",
 	"MoreContent.js",
 	"FinanceAnalysis.js",
+	"QuotationP2.js",
 	"QuotationHeaderP1.js",
 	"QuotationHeaderP2.js",
 	"QuotationItemTotal.js",

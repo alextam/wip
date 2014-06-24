@@ -1,0 +1,16 @@
+enyo.depends(
+	"Header.js",
+	"MoreContent.js",
+	"JamesSliderTank.js",
+	"STRMoreContent.js",
+	"CategoryDrawer.js",
+	"CategorySTRDrawer.js",
+	"CoreButton.js",
+	"StrengthView.js",
+	"StrTestView.js",
+	"JamesLabeller.js",
+	"JamesSlider.js",
+	"SmallNumVerticalStepper.js",
+	"CoreControl.js",
+	"MainView.js"
+);

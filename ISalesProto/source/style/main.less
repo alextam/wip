@@ -1,0 +1,310 @@
+/*
++    App-specific LESS/CSS would go here, but to make your
++    application easier to maintain, you should try to
++    minimize the use of custom CSS.
++*/
+@GEGray:#333;
+@BGBlue:lighten(#5C6973, 35%);
+@BGNavy:#0099FF;
+@GRed:#ED3337;
+
+@GraphBlue:#36A0E7;
+@GraphRed:#FF332F;
+@GraphGreen:#91C46B;
+@GraphPurple:#7562D9;
+@GraphDGreen:#5C6973;
+
+.navButton {
+	font-weight:bold;
+	background: @GEGray;
+	font-size:0.6em;
+	padding:6px;
+	text-transform: uppercase;
+	border:1px solid @GEGray;
+}
+
+.vertical-slider .onyx-slider-knob {
+	margin-left: -19px;
+}
+
+.finalTank {
+	background:#f2f2f2;
+	margin-top:60px;
+	margin-left:auto;
+	margin-right:auto;
+	
+	border:5px solid #fff;
+	height:500px;
+	width:250px;
+}
+
+.valueLabel {
+	top:5px;
+	left:5px;
+	width:130px;
+	text-align: center;
+	color:#fff;
+	position:absolute;
+}
+
+.valueTank {
+	width:130px;
+	margin-right:10px;
+	height:150px !important;
+	background:@BGBlue;
+}
+
+.valueTank.small {
+	margin-top:60px !important;
+	line-height:30px;
+	height:30px !important;
+}
+
+.valueTankHeighten {
+	width:130px;
+	margin-right:10px;
+	height:200px !important;
+	overflow: hidden;
+	background:darken(@BGBlue,10%);
+}
+
+.actualValueTank {
+	width:130px;
+	height:200px;
+	background:lighten(@GRed, 10%);
+	position:relative;
+}
+
+.questionBox {
+	height:40px;
+	font-size:0.8em;
+	margin-bottom: 10px;
+}
+
+.navButton:active:hover:not([disabled]){
+	background: red;	
+}
+
+.vertical-slider.onyx-progress-bar.scrollerTank {
+	height:200px !important;
+	width:3px;
+}
+
+.vertical-slider.onyx-progress-bar {
+	height:150px;
+	width:3px;
+}
+
+.valueBox {
+	width:45px;
+	height:30px;
+	font-weight: bold;
+	color:#666;
+	line-height:30px;
+	font-size:0.8em !important;
+	text-align: center;
+}
+
+.drawerContent {
+	background: #f2f2f2;
+	padding:0px !important;
+	/*height:255px;*/
+}
+
+.drawerContentBoxLabel {
+	height:235px !important;
+	color:#333;
+	width:250px;
+	padding:15px;
+	border-right:1px solid #ccc;
+}
+
+.drawerContentBoxLabel .questionBox {
+	width:200px;
+	text-align: center;
+}
+
+.drawerContentBoxLabel.special {
+	height:280px !important;
+}
+
+.drawerContentBox {
+	width:210px;
+	height:255px;
+	color:#333;
+	padding:15px;
+	border-right:1px solid #ccc;
+}
+
+.inflatePadding {
+	padding:15px;
+}
+
+.labelValue {
+	text-align: center;
+	font-size:1.5em;
+}
+
+.categoryDrawer {
+	color:#fff;
+	font-weight: bold;
+}
+
+.categoryDrawer .buttonDrawer {
+	padding-right:15px;
+	padding-left:15px;
+	line-height:65px;
+	height:65px;
+	border-bottom:1px solid #ccc;
+}
+
+.buttonDrawer.disabled {
+	background: @BGBlue;
+	color:lighten(@BGBlue, 15%);
+}
+
+.categoryDrawer.car {
+	background:@GraphBlue;
+}
+
+.categoryDrawer.wedding {
+	background: @GraphRed;	
+}
+
+.categoryDrawer.property {
+	background:@GraphPurple 
+}
+
+.categoryDrawer.newborn {
+	background: @GraphGreen;
+}
+
+.categoryDrawer.education {
+	background: @GraphDGreen;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	font-weight: bold;
+	color:@GRed;
+}
+
+h3.questionTxt {
+	color:#666;
+}
+
+.numStepper{
+	width:34px;
+	height:130px;
+}
+
+.numStepperButton {
+	width:40px;
+	height:40px;
+	margin-left:2px;
+	-moz-border-radius: 20px !important;
+    -webkit-border-radius: 20px !important;
+	border-radius: 20px !important;
+	font-size:1em;
+	border:2px solid lighten(@BGBlue,10%);
+	font-weight: bold;
+	color:lighten(@BGBlue,10%);
+	background: lighten(@BGBlue,20%);	
+	outline:none;
+}
+
+.numStepperButton:active:hover:not([disabled]){
+	background: darken(@BGBlue, 20%)		
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.centerText {
+	font-size:0.7em !important;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+}
+
+.containerForCore {
+	width:135px;
+	margin-left:15px;
+	text-align: center;
+}
+
+.coreButton {
+	margin-left:auto;
+	margin-right:auto;
+	width:127px;
+	height:127px;
+	background-color:@BGBlue;
+	border:3px solid #f2f2f2;
+	-moz-border-radius: 65px;
+    -webkit-border-radius: 65px;
+	border-radius: 65px;
+}
+
+.coreButton:active:hover:not([disabled]){
+	background-color:@BGNavy;	
+}
+
+.coreButton.selected {
+	background-color:@BGNavy;	
+}
+
+.coreButton.Car.selected {
+	background-color:@GraphBlue;
+}
+
+.coreButton.Wedding.selected {
+	background-color:@GraphRed;
+}
+
+.coreButton.Property.selected {
+	background-color:@GraphPurple;
+}
+
+.coreButton.NewBorn.selected {
+	background-color:@GraphGreen;
+}
+
+.coreButton.Education.selected {
+	background-color:@GraphDGreen;
+}
+
+.scrollContent{
+	background: #eee;
+}
+
+.Car {
+	background-image:url("../../assets/img/Icons.png");
+	background-size: 650px 130px;
+	background-position:0px 0px;
+}
+
+.Wedding {
+	background-image:url("../../assets/img/Icons.png");
+	background-size: 650px 130px;
+	background-position:-130px 0px;
+}
+
+.Property {
+	background-image:url("../../assets/img/Icons.png");
+	background-size: 650px 130px;
+	background-position:-260px 0px;
+}
+
+.NewBorn {
+	background-image:url("../../assets/img/Icons.png");
+	background-size: 650px 130px;
+	background-position:-390px 0px;	
+}
+
+.Education {
+	background-image:url("../../assets/img/Icons.png");
+	background-size: 650px 130px;
+	background-position:-520px 0px;	
+}
