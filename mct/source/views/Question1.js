@@ -308,8 +308,9 @@ enyo.kind({
         
     },
     handleButtonTapped:function(inSender,inEvent) {
+        this.scrollTop();
         var _this = this;
-    	var myValidator = new go.Validator();
+        var myValidator = new go.Validator();
         myValidator.validate(this.$.form1Data,onSuccessValidate,onFailValidate);
         function onSuccessValidate(response){
             var myPayLoad = _this.getFormData();
