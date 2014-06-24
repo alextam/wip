@@ -277,6 +277,7 @@ enyo.kind({
          //this.scrollToTop();
     },
     resetForm:function(){
+        this.$.question1.scrollTop();
         this.$.txtTitle.setValue("Mr");
         this.$.txtFirstName.setValue("");
         this.$.txtLastName.setValue("");
