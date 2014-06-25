@@ -35,6 +35,9 @@ enyo.kind({
 		document.addEventListener("hidekeyboard", _this.keyboardHide, false);
 		document.addEventListener("backbutton", _this.handleExitApp, false);
 	},
+	handleExitApp: function() {
+		navigator.app.exitApp(); 
+	},
 	keyboardHide:function() {
 		this.$.question1.scrollToTop();
 	},
