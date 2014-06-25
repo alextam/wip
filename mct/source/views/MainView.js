@@ -28,6 +28,12 @@ enyo.kind({
 	],
 	create: function() {
 	    this.inherited(arguments);
+	    this.registerBackButton();
+	},
+	registerBackButton:function() {
+		var _this = this;
+		document.addEventListener("hidekeyboard", _this.keyboardHide, false);
+		document.addEventListener("backbutton", _this.handleExitApp, false);
 	},
 	keyboardHide:function() {
 		this.$.question1.scrollToTop();
