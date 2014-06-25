@@ -326,6 +326,5 @@ enyo.kind({
             this.feedBackUser.handleFormError(error);
         }
         //this.$.txtTitle.setValue("Ms");
-        this.scrollToTop();        
     }
 });

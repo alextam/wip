@@ -29,14 +29,11 @@ enyo.kind({
 	create: function() {
 	    this.inherited(arguments);
 	    if (cordova != null){
-	    	cordova.plugins.SoftKeyboard.show(function(){
-	    		// success
-	    		console.log("success");
-	    	},function() {
-	    		// fail
-	    		alert("failed");
-	    	});
+	    	document.addEventListener("hidekeyboard", this.keyboardHide, false);
 	    }
+	},
+	keyboardHide:function() {
+		this.$.question1.scrollToTop();
 	},
 	handleFormReset:function(inSender,inEvent) {
 		if (this.global.getObject("PAYLOAD") != null){
