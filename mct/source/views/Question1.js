@@ -308,7 +308,6 @@ enyo.kind({
         
     },
     handleButtonTapped:function(inSender,inEvent) {
-        this.scrollToTop();
         var _this = this;
         var myValidator = new go.Validator();
         myValidator.validate(this.$.form1Data,onSuccessValidate,onFailValidate);
@@ -323,6 +322,7 @@ enyo.kind({
             this.feedBackUser = new FeedBackUser();
             this.feedBackUser.handleFormError(error);
         }
-        //this.resetForm();
+        //this.$.txtTitle.setValue("Ms");
+        //this.scrollToTop();        
     }
 });
