@@ -225,7 +225,7 @@ enyo.kind({
                             {
                                 kind:"Button",
                                 classes:"blueButton",
-                                ontap:"handleButtonTapped",
+                                onclick:"handleButtonTapped",
                                 content:"Next"
                             }
                         ]

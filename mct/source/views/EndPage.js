@@ -22,7 +22,7 @@ enyo.kind({
                     kind:"Button",
                     name:"submitButton",
                     classes:"blueButton endButton",
-                    ontap:"handleButtonTapped",
+                    onclick:"handleButtonTapped",
                     content:"New Registration"
                 }
             ]
@@ -30,5 +30,6 @@ enyo.kind({
     ],
     handleButtonTapped:function(inSender,inEvent) {
     	this.bubble("onResetForm");
+        return false;
     }
 });
