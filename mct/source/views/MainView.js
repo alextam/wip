@@ -26,41 +26,32 @@ enyo.kind({
 			]
 		}
 	],
+	create: function() {
+	    this.inherited(arguments);
+	    if (cordova != null){
+	    	cordova.plugins.SoftKeyboard.show(function(){
+	    		// success
+	    		console.log("success");
+	    	},function() {
+	    		// fail
+	    		alert("failed");
+	    	});
+	    }
+	},
 	handleFormReset:function(inSender,inEvent) {
 		if (this.global.getObject("PAYLOAD") != null){
 			this.global.setObject("PAYLOAD",null);
 		}
-        this.$.question1.resetForm();
+		this.$.question1.resetForm();
 		this.$.question2.resetForm();
 		this.$.question3.resetForm();
 		this.$.myPanel.setIndex(0);
 	},
 	handleBackTapped:function(inSender,inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()-1);
-		switch(this.$.myPanel.getIndex()) {
-			case 0:
-				this.$.header.setWithBack(false);
-			break;
-			case 3:
-				this.$.header.setWithBack(false);
-			break;
-			default:
-				this.$.header.setWithBack(true);
-			break;
-		}
 	},
 	handleButtonTapped: function(inSender, inEvent) {
 		this.$.myPanel.setIndex(this.$.myPanel.getIndex()+1);
-		switch(this.$.myPanel.getIndex()) {
-			case 0:
-				this.$.header.setWithBack(false);
-			break;
-			case 3:
-				this.$.header.setWithBack(false);
-			break;
-			default:
-				this.$.header.setWithBack(true);
-			break;
-		}
 	}
+
 });
