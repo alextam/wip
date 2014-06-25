@@ -3,7 +3,8 @@ enyo.kind({
     kind: "Control",
     classes:"panel-view",
     components: [
-        { style:"height:150px" },
+        { kind:"Header" },
+        { style:"height:75px" },
         {
         	style:"width:62%;margin-left:auto;margin-right:auto;",
         	components:[

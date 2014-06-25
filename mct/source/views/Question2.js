@@ -11,7 +11,8 @@ enyo.kind({
         {
             classes:"scrimCover",
             components:[
-                { style:"height:80px" },
+                { kind:"Header" },
+                { style:"height:40px" },
                 {
                     layoutKind: "FittableColumnsLayout",
                     style:"text-align:center",                    
@@ -228,10 +229,17 @@ enyo.kind({
                 { style:"height:40px" },
                 {
                     classes:"mct-inputBoxGroup align-right",
+                    layoutKind: "FittableColumnsLayout",
                     components:[
                         {
                             kind:"Button",
-                            name:"submitButton",
+                            classes:"blueButton",
+                            onclick:"handleBackTapped",
+                            content:"Back"
+                        },
+                        { style:"width:10px" },
+                        {
+                            kind:"Button",
                             classes:"blueButton",
                             onclick:"handleButtonTapped",
                             content:"Next"
@@ -266,6 +274,9 @@ enyo.kind({
         payLoad.incomegroup = this.$.txtIncome.getValue();
         payLoad.finance = this.$.txtFinanceGroup.getValue();
         return payLoad;
+    },
+    handleBackTapped:function(inSender,inEvent) {
+        this.bubble("onBackTapped");
     },
     handleButtonTapped:function(inSender,inEvent) {
         this.myPayLoad = this.global.getObject("PAYLOAD");

@@ -11,8 +11,9 @@ enyo.kind({
             name:"form1Data",
             classes:"scrimCover",
             components:[
+                    { kind:"Header" },
                     {
-                        style:"height:50px;"
+                        style:"height:25px;"
                     },
                     {
                         tag:"h2",
@@ -221,7 +222,9 @@ enyo.kind({
                     { style:"height:10px" },
                     {
                         classes:"mct-inputBoxGroup align-right",
+                        layoutKind: "FittableColumnsLayout",
                         components:[
+                            { style:"width:5px" },
                             {
                                 kind:"Button",
                                 classes:"blueButton",
@@ -323,6 +326,6 @@ enyo.kind({
             this.feedBackUser.handleFormError(error);
         }
         //this.$.txtTitle.setValue("Ms");
-        //this.scrollToTop();        
+        this.scrollToTop();        
     }
 });

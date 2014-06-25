@@ -12,7 +12,8 @@ enyo.kind({
         {
             classes:"scrimCover",
             components:[
-                { style:"height:80px" },
+                { kind:"Header" },
+                { style:"height:40px" },
                 {
                     layoutKind: "FittableColumnsLayout",
                     style:"text-align:center",                    
@@ -220,10 +221,17 @@ enyo.kind({
                         }
                         ]
                 },
-                
                 {
                     classes:"mct-inputBoxGroup align-right",
+                    layoutKind: "FittableColumnsLayout",
                     components:[
+                        {
+                            kind:"Button",
+                            classes:"blueButton",
+                            onclick:"handleBackTapped",
+                            content:"Back"
+                        },
+                        { style:"width:10px" },
                         {
                             kind:"Button",
                             name:"submitButton",
@@ -281,6 +289,9 @@ enyo.kind({
             //this.bubble("onHandleButtonTapped");
             this.submitForm(this.myPayLoad);
         }
+    },
+    handleBackTapped:function(inSender,inEvent) {
+        this.bubble("onBackTapped");
     },
     submitForm:function(payload){
         this.$.submitButton.setDisabled(true);
