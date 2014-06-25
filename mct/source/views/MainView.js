@@ -28,9 +28,6 @@ enyo.kind({
 	],
 	create: function() {
 	    this.inherited(arguments);
-	    if (cordova != null){
-	    	document.addEventListener("hidekeyboard", this.keyboardHide, false);
-	    }
 	},
 	keyboardHide:function() {
 		this.$.question1.scrollToTop();
