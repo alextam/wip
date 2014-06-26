@@ -301,7 +301,7 @@ enyo.kind({
             break;
 
             case "txtEmail" :
-                this.setScrollTop(200);
+                this.setScrollTop(210);
                 return true;
             break;
 
