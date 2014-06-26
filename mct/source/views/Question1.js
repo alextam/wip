@@ -10,6 +10,7 @@ enyo.kind({
     components: [{
             name:"form1Data",
             classes:"scrimCover",
+            onclick:"handleZoomBack",
             components:[
                     { kind:"Header" },
                     {
@@ -95,7 +96,6 @@ enyo.kind({
                                         validation: "required",
                                         placeholder:"Correspondence Address",
                                         onfocus:"handleZoom",
-                                        onblur:"handleZoomBack",
                                         attributes:{
                                             required: "required",
                                             maxlength:150  
@@ -119,7 +119,6 @@ enyo.kind({
                                         kind:"Input",
                                         name:"txtContactNo",
                                         onfocus:"handleZoom",
-                                        onblur:"handleZoomBack",
                                         placeholder:"Mobile No (60123467890)",
                                         attributes:{
                                             required: 'pattern ^601[0-9]{6,8}$|^601[0-9][0-9]{6,8}$ true',
@@ -150,7 +149,6 @@ enyo.kind({
                                         name:"txtEmail",
                                         placeholder:"Email",
                                         onfocus:"handleZoom",
-                                        onblur:"handleZoomBack",
                                         attributes:{
                                             required: "email",
                                             maxlength:255  
@@ -178,7 +176,6 @@ enyo.kind({
                                         kind:"Input",
                                         name:"txtNRICPassport",
                                         onfocus:"handleZoom",
-                                        onblur:"handleZoomBack",
                                         placeholder:"NRIC or Passport",
                                         attributes:{
                                             maxlength:50  
@@ -277,7 +274,7 @@ enyo.kind({
         return payLoad;
     },
     handleZoomBack:function(inSender,inEvent) {
-         //this.scrollToTop();
+        this.scrollToTop();
     },
     resetForm:function(){
         this.scrollToTop();
@@ -294,18 +291,22 @@ enyo.kind({
         switch(inSender.name) {
             case "txtAddress" :
                 this.setScrollTop(100);
+                return true;
             break;
 
             case "txtContactNo" :
                 this.setScrollTop(150);
+                return true;
             break;
 
             case "txtEmail" :
                 this.setScrollTop(200);
+                return true;
             break;
 
             case "txtNRICPassport" :
                 this.setScrollTop(250);
+                return true;
             break;
         }
         
