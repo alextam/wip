@@ -299,7 +299,7 @@ enyo.kind({
         var _this = this;
         var myPostman = new go.Postman();
         console.log(this.getUrl());
-        myPostman.init(this.getUrl(),80,3000);
+        myPostman.init(this.getUrl(),80,10000);
         var extraParam = {};
         extraParam.contentType = "form";
 
