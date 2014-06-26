@@ -314,6 +314,7 @@ enyo.kind({
         var _this = this;
         var myValidator = new go.Validator();
         myValidator.validate(this.$.form1Data,onSuccessValidate,onFailValidate);
+        this.scrollToTop();
         function onSuccessValidate(response){
             var myPayLoad = _this.getFormData();
             _this.global.setObject("PAYLOAD",myPayLoad);
@@ -325,6 +326,5 @@ enyo.kind({
             this.feedBackUser = new FeedBackUser();
             this.feedBackUser.handleFormError(error);
         }
-        //this.$.txtTitle.setValue("Ms");
     }
 });
