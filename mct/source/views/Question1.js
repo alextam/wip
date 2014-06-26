@@ -121,6 +121,7 @@ enyo.kind({
                                         onfocus:"handleZoom",
                                         placeholder:"Mobile No (60123467890)",
                                         attributes:{
+                                            type:'tel',
                                             required: 'pattern ^601[0-9]{6,8}$|^601[0-9][0-9]{6,8}$ true',
                                             maxlength:12  
                                         }
