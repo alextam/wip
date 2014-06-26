@@ -29,7 +29,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Occupation...",
                                             datasource:[
-                                                { content:"Professional", value:"Professional", active:true},
+                                                { content:"Select", value:"0", active:true},
+                                                { content:"Professional", value:"Professional"},
                                                 { content:"Businessman", value:"Businessman" },
                                                 { content:"Manager", value:"Manager" },
                                                 { content:"Executive", value:"Executive" },
@@ -53,7 +54,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Race...",
                                             datasource:[
-                                                { content:"Malay", value:"Malay", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Malay", value:"Malay"},
                                                 { content:"Chinese", value:"Chinese" },
                                                 { content:"Indian", value:"Indian" },
                                                 { content:"Others", value:"Others" }
@@ -83,7 +85,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Maritial Status...",
                                             datasource:[
-                                                { content:"Single", value:"Single", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Single", value:"Single" },
                                                 { content:"Married", value:"Married" },
                                                 { content:"Others", value:"Others" }
                                             ]
@@ -104,7 +107,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Nationality...",
                                             datasource:[
-                                                { content:"Malaysian", value:"Malaysian", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Malaysian", value:"Malaysian" },
                                                 { content:"Others", value:"Others" }
                                             ]
                                         }
@@ -131,7 +135,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Age Group...",
                                             datasource:[
-                                                { content:"20 - 30 years old", value:"20 - 30", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"20 - 30 years old", value:"20 - 30" },
                                                 { content:"31 - 40 years old", value:"31 - 40" },
                                                 { content:"40 - 50 years old", value:"40 - 50" },
                                                 { content:"51 years old & above", value:"51 &amp; above" }
@@ -153,7 +158,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Finance Group...",
                                             datasource:[
-                                                { content:"Bank", value:"Bank", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Bank", value:"Bank" },
                                                 { content:"Company", value:"Company" },
                                                 { content:"Government", value:"Government" },
                                                 { content:"Cash", value:"Cash" }
@@ -182,7 +188,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Business Nature...",
                                             datasource:[
-                                                { content:"Accounting / Finance", value:"Accounting / Finance", active:true },
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Accounting / Finance", value:"Accounting / Finance" },
                                                 { content:"Admin / Human Resources", value:"Admin / Human Resources" },
                                                 { content:"Arts / Media / Communications", value:"Arts / Media / Communications" },
                                                 { content:"Building / Construction", value:"Building / Construction" },
@@ -214,7 +221,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Income...",
                                             datasource:[
-                                                { content:"Below RM 4,000", value:"Below RM4,000", active:true},
+                                                { content:"Select", value:"0", active:true },
+                                                { content:"Below RM 4,000", value:"Below RM4,000"},
                                                 { content:"RM 4001 - RM 6,000", value:"RM4001 - RM6,000" },
                                                 { content:"RM 6001 - RM 8,000", value:"RM6001 - RM8,000" },
                                                 { content:"RM 8,001 & above", value:"RM8,001 &amp; above" }

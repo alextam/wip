@@ -54,6 +54,7 @@ enyo.kind({
                                         classes:"mct-realInput",
                                         kind:"Input",
                                         name:"txtFirstName",
+                                        onfocus:"handleZoom",
                                         placeholder:"First Name",
                                         attributes:{
                                             required: "required",
@@ -70,6 +71,7 @@ enyo.kind({
                                         classes:"mct-realInput",
                                         kind:"Input",
                                         name:"txtLastName",
+                                        onfocus:"handleZoom",
                                         placeholder:"Last Name",
                                         attributes:{
                                             required: "required",
@@ -206,7 +208,8 @@ enyo.kind({
                                         name:"txtCurrentHome",
                                         defaultText:"Select Current Home...",
                                         datasource:[
-                                            { content:"Owner", value:"Owner", active:true},
+                                            { content:"Select", value:"0", active:true },
+                                            { content:"Owner", value:"Owner" },
                                             { content:"Rented", value:"Rented"},
                                             { content:"Stay with Family", value:"Stay with Family"},
                                             { content:"Others", value:"Others"}
@@ -289,6 +292,8 @@ enyo.kind({
         this.$.txtCurrentHome.setValue("Owner");
     },
     handleZoom:function(inSender,inEvent) {
+        console.log(inSender);
+        inSender.parent.removeClass("errorDecorator");
         switch(inSender.name) {
             case "txtAddress" :
                 this.setScrollTop(100);

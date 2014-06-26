@@ -30,7 +30,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Project Group...",
                                             datasource:[
-                                                { content:"Sgl/Double Storey Link",value:"Sgl/Double Storey Link", active:true },
+                                                { content:"Select",value:"0", active:true },
+                                                { content:"Sgl/Double Storey Link",value:"Sgl/Double Storey Link" },
                                                 { content:"Townhouse",value:"Townhouse" },
                                                 { content:"Semi-D/Zero-lot",value:"Semi-D/Zero-lot" },
                                                 { content:"Bungalow/Villa",value:"Bungalow/Villa" },
@@ -58,7 +59,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Attendee...",
                                             datasource:[
-                                                { content:"Adam",value:"1", active:true },
+                                                { content:"Select", value:"0", active:true},
+                                                { content:"Adam",value:"1" },
                                                 { content:"Ammy",value:"2" },
                                                 { content:"Andrew",value:"3" },
                                                 { content:"Bryan",value:"4" },
@@ -96,7 +98,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Group...",
                                              datasource:[
-                                                { content:"Lakefront Residence",value:"1", active:true},
+                                                { content:"Select", value:"0", active:true},
+                                                { content:"Lakefront Residence",value:"1"},
                                                 { content:"Lakefront Villa",value:"2" },
                                                 { content:"Cyber South",value:"3" },
                                                 { content:"MCT Mall",value:"4" }
@@ -119,7 +122,8 @@ enyo.kind({
                                             kind:"StandardPicker",
                                             defaultText:"Select Group...",
                                             datasource:[
-                                                { content:"Internet",value:"Internet", active:true },
+                                                { content:"Select", value:"0", active:true},
+                                                { content:"Internet",value:"Internet" },
                                                 { content:"Newspaper",value:"Newspaper" },
                                                 { content:"Exhibition",value:"Exhibition" },
                                                 { content:"Brochure",value:"Brochure" },
@@ -156,6 +160,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
+                                    ontap:"handleCheckNotify",
                                     style:"line-height:35px;font-weight:bold !important;",
                                     content:"Call"
                                 },
@@ -170,6 +175,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
+                                    ontap:"handleCheckSMS",
                                     style:"line-height:35px;font-weight:bold !important;",
                                     content:"SMS"
                                 },
@@ -184,6 +190,7 @@ enyo.kind({
                                 },
                                 {
                                     tag:"h2",
+                                    ontap:"handleCheckEmail",
                                     style:"line-height:35px;font-weight:bold !important;",
                                     content:"Email"
                                 }
@@ -214,6 +221,7 @@ enyo.kind({
                                 {
                                     fit:true,
                                     tag:"p",
+                                    ontap:"handleCheckAgree",
                                     style:"line-height:20px;text-align:justify;padding-right:15px;",
                                     content:"* I hereby agree and expressly give consent to MCT Consortium Berhad and its group of companies to collect and process my personal data for their records so as to enable them to keep me informed of any updates/ information with regard to MCT Consortium Berhad’s event and any other future events, promotion, products, services, and marketing related information, provided that the use of my personal data will not breach any applicable data protection legislation."
                                 }
@@ -270,6 +278,18 @@ enyo.kind({
         payLoad.notifyemail = this.$.txtNotifyEmail.getValue();
         payLoad.secret_key = "eregmct2640e6d";
         return payLoad;
+    },
+    handleCheckNotify:function(inSender,inEvent) {
+        this.$.txtNotifyCall.setValue(!this.$.txtNotifyCall.getValue());
+    },
+    handleCheckEmail:function(inSender,inEvent) {
+        this.$.txtNotifyEmail.setValue(!this.$.txtNotifyEmail.getValue());
+    },
+    handleCheckSMS:function(inSender,inEvent) {
+        this.$.txtNotifySMS.setValue(!this.$.txtNotifySMS.getValue());
+    },
+    handleCheckAgree:function(inSender,inEvent) {
+        this.$.txtAgree.setValue(!this.$.txtAgree.getValue());
     },
     handleButtonTapped:function(inSender,inEvent) {
         this.myPayLoad = this.global.getObject("PAYLOAD");
