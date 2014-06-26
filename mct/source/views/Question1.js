@@ -293,19 +293,19 @@ enyo.kind({
     handleZoom:function(inSender,inEvent) {
         switch(inSender.name) {
             case "txtAddress" :
-                this.scrollTo(0,100);
+                this.setScrollTop(100);
             break;
 
             case "txtContactNo" :
-                this.scrollTo(0,150);
+                this.setScrollTop(150);
             break;
 
             case "txtEmail" :
-                this.scrollTo(0,200);
+                this.setScrollTop(200);
             break;
 
             case "txtNRICPassport" :
-                this.scrollTo(0,250);
+                this.setScrollTop(250);
             break;
         }
         
