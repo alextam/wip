@@ -10,7 +10,7 @@ enyo.kind({
     components: [{
             name:"form1Data",
             classes:"scrimCover",
-            onclick:"handleZoomBack",
+            //onclick:"handleZoomBack",
             components:[
                     { kind:"Header" },
                     {
