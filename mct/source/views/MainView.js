@@ -19,7 +19,7 @@ enyo.kind({
 			classes:"main-view",
 			arrangerKind: "CardSlideInArranger",
 			components:[
-				{name:"question1",kind:"Question3",onHandleButtonTapped:"handleButtonTapped"},
+				{name:"question1",kind:"Question1",onHandleButtonTapped:"handleButtonTapped"},
 				{name:"question2",kind:"Question2",onHandleButtonTapped:"handleButtonTapped",onBackTapped:"handleBackTapped"},
 				{name:"question3",kind:"Question3",onHandleButtonTapped:"handleButtonTapped",onBackTapped:"handleBackTapped"},
 				{kind:"EndPage",onResetForm:"handleFormReset"}
