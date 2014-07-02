@@ -13,7 +13,7 @@ enyo.kind({
             classes:"scrimCover",
             components:[
                 { kind:"Header" },
-                { style:"height:40px" },
+                //{ style:"height:20px" },
                 {
                     layoutKind: "FittableColumnsLayout",
                     style:"text-align:center",                    
@@ -27,10 +27,10 @@ enyo.kind({
                                     components:[
                                         {
                                             name:"txtDevInterest",
-                                            kind:"StandardPicker",
+                                            kind:"StandardPickerMulti",
                                             defaultText:"Select Project Group...",
                                             datasource:[
-                                                { content:"Select",value:"0", active:true },
+                                                //{ content:"Select",value:"0", active:true },
                                                 { content:"Sgl/Double Storey Link",value:"Sgl/Double Storey Link" },
                                                 { content:"Townhouse",value:"Townhouse" },
                                                 { content:"Semi-D/Zero-lot",value:"Semi-D/Zero-lot" },
@@ -47,6 +47,36 @@ enyo.kind({
                                 }
                             ]
                         },
+                        {
+                            classes:"width50",
+                            components:[
+                               { tag:"h2", content:"Type of project interested" },
+                               {
+                                    classes:"mct-inputBoxGroupForSplit",
+                                    components:[
+                                        {
+                                            name:"txtProjectInterest",
+                                            kind:"StandardPickerMulti",
+                                            defaultText:"Select Group...",
+                                             datasource:[
+                                                //{ content:"Select", value:"0", active:true},
+                                                { content:"Lakefront Residence",value:"1"},
+                                                { content:"Lakefront Villa",value:"2" },
+                                                { content:"Cyber South",value:"3" },
+                                                { content:"MCT Mall",value:"4" }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+
+                        }
+                    ]
+                },
+                {
+                    layoutKind: "FittableColumnsLayout",
+                    style:"text-align:center",                    
+                    components:[
                         {
                             classes:"width50",
                             components:[
@@ -73,36 +103,6 @@ enyo.kind({
                                                 { content:"Tony",value:"11" },
                                                 { content:"Vernon",value:"12" },
                                                 { content:"Others",value:"13" }
-                                            ]
-                                        }
-                                    ]
-                                }
-                            ]
-
-                        }
-                    ]
-                },
-                {
-                    layoutKind: "FittableColumnsLayout",
-                    style:"text-align:center",                    
-                    components:[
-                        {
-                            classes:"width50",
-                            components:[
-                               { tag:"h2", content:"Type of project interested" },
-                               {
-                                    classes:"mct-inputBoxGroupForSplit",
-                                    components:[
-                                        {
-                                            name:"txtProjectInterest",
-                                            kind:"StandardPicker",
-                                            defaultText:"Select Group...",
-                                             datasource:[
-                                                { content:"Select", value:"0", active:true},
-                                                { content:"Lakefront Residence",value:"1"},
-                                                { content:"Lakefront Villa",value:"2" },
-                                                { content:"Cyber South",value:"3" },
-                                                { content:"MCT Mall",value:"4" }
                                             ]
                                         }
                                     ]
@@ -138,7 +138,7 @@ enyo.kind({
                         
                     ]
                 },
-                { style:"height:30px" },
+                { style:"height:20px" },
                 {
                     classes:"mct-inputBox",
                     components:[
@@ -293,7 +293,9 @@ enyo.kind({
     },
     handleButtonTapped:function(inSender,inEvent) {
         this.myPayLoad = this.global.getObject("PAYLOAD");
+        this.myPayLoad = {};
         var formData = this.getFormData();
+
         this.myPayLoad.devinterest = formData.devinterest;
         this.myPayLoad.projectinterest = formData.projectinterest;
         this.myPayLoad.attendedby = formData.attendedby;
@@ -302,11 +304,11 @@ enyo.kind({
         this.myPayLoad.notifysms = formData.notifysms;
         this.myPayLoad.notifyemail = formData.notifyemail;
         this.myPayLoad.secret_key = "eregmct2640e6d";
-        
+        console.log(this.myPayLoad);
         if (this.$.txtAgree.getValue() == false) {
             this.phoneGap.alert("Please agree with the disclaimer before submitting the registration form.");
         } else {
-            //this.bubble("onHandleButtonTapped");
+            this.bubble("onHandleButtonTapped");
             this.submitForm(this.myPayLoad);
         }
     },
@@ -337,8 +339,8 @@ enyo.kind({
     },
     resetForm:function(){
         this.$.txtAgree.setValue(true);
-        this.$.txtProjectInterest.setValue("1");
-        this.$.txtKnowAbout.setValue("Internet");
+        this.$.txtProjectInterest.reset();
+        this.$.txtKnowAbout.reset();
         this.$.txtDevInterest.setValue("Sgl/Double Storey Link");
         this.$.txtAttendedBy.setValue("1");
         this.$.txtNotifyEmail.setValue(true);

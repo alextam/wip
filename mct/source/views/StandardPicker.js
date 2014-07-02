@@ -3,6 +3,7 @@ enyo.kind({
     kind: "Select",
     classes:"pickerButton",
     published: {
+        multiple:false,
         datasource: null,
         validation:"none"
     },

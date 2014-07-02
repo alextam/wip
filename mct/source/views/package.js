@@ -1,4 +1,6 @@
 enyo.depends(
+	"SelectorCheck.js",
+	"StandardPickerMulti.js",
 	"FeedBackUser.js",
 	"RaceGroup.js",
 	"AboutGroup.js",

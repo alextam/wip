@@ -24,7 +24,7 @@
 */
 
 enyo.kind({
-	name: "enyo.Select",
+	name: "SelectMulti",
 	published: {
 		//* Index of the selected option in the list
 		selected: 0
@@ -69,7 +69,7 @@ enyo.kind({
 	//* Returns the value of the selected option.
 	getValue: function() {
 		if (this.hasNode()) {
- 			return this.node.value;
+			return this.node.value;
 		}
 	}
 });

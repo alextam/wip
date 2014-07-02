@@ -69,7 +69,7 @@ enyo.kind({
 	//* Returns the value of the selected option.
 	getValue: function() {
 		if (this.hasNode()) {
- 			return this.node.value;
+			return this.node.value;
 		}
 	}
 });
