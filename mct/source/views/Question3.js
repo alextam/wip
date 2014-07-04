@@ -308,7 +308,7 @@ enyo.kind({
         if (this.$.txtAgree.getValue() == false) {
             this.phoneGap.alert("Please agree with the disclaimer before submitting the registration form.");
         } else {
-            this.bubble("onHandleButtonTapped");
+            //this.bubble("onHandleButtonTapped");
             this.submitForm(this.myPayLoad);
         }
     },
