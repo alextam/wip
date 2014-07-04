@@ -60,10 +60,10 @@ enyo.kind({
                                             defaultText:"Select Group...",
                                              datasource:[
                                                 //{ content:"Select", value:"0", active:true},
-                                                { content:"Lakefront Residence",value:"1"},
-                                                { content:"Lakefront Villa",value:"2" },
-                                                { content:"Cyber South",value:"3" },
-                                                { content:"MCT Mall",value:"4" }
+                                                { content:"Lakefront Residence",value:"Lakefront Residence"},
+                                                { content:"Lakefront Villa",value:"Lakefront Villa" },
+                                                { content:"Cyber South",value:"Cyber South" },
+                                                { content:"MCT Mall",value:"MCT Mall" }
                                             ]
                                         }
                                     ]
