@@ -277,7 +277,7 @@ enyo.kind({
         payLoad.nationality = this.$.txtNationality.getValue();
         payLoad.race = this.$.txtRace.getValue();
         payLoad.naturebusiness = this.$.txtBusinessNature.getValue();
-        payLoad.nricpassport = this.$.txtFinanceGroup.getValue();
+        //payLoad.nricpassport = this.$.txtN.getValue();
         payLoad.agegroup = this.$.txtAgeGroup.getValue();
         payLoad.incomegroup = this.$.txtIncome.getValue();
         payLoad.finance = this.$.txtFinanceGroup.getValue();
@@ -294,7 +294,6 @@ enyo.kind({
         this.myPayLoad.nationality = formData.nationality;
         this.myPayLoad.race = formData.race;
         this.myPayLoad.naturebusiness = formData.naturebusiness;
-        this.myPayLoad.nricpassport = formData.nricpassport;
         this.myPayLoad.agegroup = formData.agegroup;
         this.myPayLoad.incomegroup = formData.incomegroup;
         this.myPayLoad.finance = formData.finance;

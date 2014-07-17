@@ -292,8 +292,8 @@ enyo.kind({
         this.$.txtAgree.setValue(!this.$.txtAgree.getValue());
     },
     handleButtonTapped:function(inSender,inEvent) {
-        this.myPayLoad = this.global.getObject("PAYLOAD");
         this.myPayLoad = {};
+        this.myPayLoad = this.global.getObject("PAYLOAD");
         var formData = this.getFormData();
 
         this.myPayLoad.devinterest = formData.devinterest;
@@ -318,13 +318,14 @@ enyo.kind({
     submitForm:function(payload){
         this.$.submitButton.setDisabled(true);
         console.log("Submitting Payload...");
+        console.info(payLoad);
         var _this = this;
         var myPostman = new go.Postman();
         console.log(this.getUrl());
         myPostman.init(this.getUrl(),80,10000);
         var extraParam = {};
         extraParam.contentType = "form";
-
+        
         myPostman.postTo("",payload,onPostSuccess,onPostError,extraParam);
         function onPostSuccess(inEvent,inResponse){
             _this.phoneGap.alert("Registration Successful.");
