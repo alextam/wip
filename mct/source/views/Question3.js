@@ -318,7 +318,7 @@ enyo.kind({
     submitForm:function(payload){
         this.$.submitButton.setDisabled(true);
         console.log("Submitting Payload...");
-        console.info(payLoad);
+        console.log(JSON.stringify(payload));
         var _this = this;
         var myPostman = new go.Postman();
         console.log(this.getUrl());
